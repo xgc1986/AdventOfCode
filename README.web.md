@@ -54,7 +54,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.676}}$ |
 | **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
-| **Day 5** | $\color{lightgreen}{\texttt{0.698}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.364}}$ |
+| **Day 5** | $\color{lightgreen}{\texttt{0.786}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.364}}$ |
 | **Day 6** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.047}}$ |
 | **Day 7** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.683}}$ |
 | **Day 8** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.333}}$ |
@@ -85,7 +85,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.221}}$ |
 | **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
-| **Day 5** | $\color{orange}{\texttt{1.665}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>8m}}$ |
+| **Day 5** | $\color{orange}{\texttt{1.833}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>8m}}$ |
 | **Day 6** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.041}}$ |
 | **Day 7** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.344}}$ |
 | **Day 8** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.380}}$ |

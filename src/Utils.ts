@@ -96,6 +96,20 @@ export class UNumber {
 }
 
 export class UArray {
+
+    static matrix<T>(rows: number, columns: number, value: T): T[][] {
+        const ret: T[][] = [];
+        for (let y = 0; y < rows; y++) {
+            const row: T[] = [];
+            for (let x = 0; x < columns; x++) {
+                row.push(value);
+            }
+            ret.push(row);
+        }
+
+        return ret;
+    }
+
     static matrixValue<T>(matrix: T[][], x: number, y: number) {
         if (y < 0 || y >= matrix.length || x < 0 || x >= matrix[y].length) {
             return undefined;

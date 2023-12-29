@@ -25,22 +25,26 @@ import {Debug, UMap} from "src/Utils.ts";
     function createTable(content: UMap<number[][]>, part: number): string[] {
         let tableApp = '| **Day** |';
         let tableWeb = '| **Day** |';
+        let tableIDE = '| **Day** |';
         let sep = '|---------|';
 
         for (const y in content) {
             tableApp += ` **${y}** |`;
             tableWeb += ` **${y}** |`;
+            tableIDE += ` **${y}** |`;
             sep += `---------:|`;
         }
 
         tableApp += '\n' + sep + '\n';
         tableWeb += '\n' + sep + '\n';
+        tableIDE += '\n' + sep + '\n';
 
         let complete: UMap<number> = {};
         for (let i = 0; i < 25; i++) {
             const day = i + 1;
             let lineWeb = `| **Day ${day}** |`;
             let lineApp = `| **Day ${day}** |`;
+            let lineIDE = `| **Day ${day}** |`;
             for (const year in content) {
                 complete[year] ??= 50;
                 const time = content[year][i][part] ?? -1;
@@ -59,46 +63,58 @@ import {Debug, UMap} from "src/Utils.ts";
                     if (complete[year] >= 49) {
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
+                        lineIDE += ` <span style="color:#FFFF66">* × 50</span> |`;
                     } if (complete[year] > 0) {
                         lineApp += ` * × ${complete[year]}        |`;
                         lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`;
+                        lineIDE += ` <span style="color:#9999CC">* × ${complete[year]}</span> |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
+                        lineIDE += `         |`;
                     }
                 } else if (time === -1) {
                     lineApp += `         |`;
                     lineWeb += `         |`;
+                    lineIDE += `         |`;
                 } else if (time === -10) {
                     lineApp += ` _❌ INF_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`;
+                    lineIDE += ` <span style="color:darkred">INF</span> |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
                     lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
+                    lineIDE += ` <span style="color:lightgreen">${ms}</span> |`;
                 } else if (time > 0 && time <= 10_000) {
                     lineApp += ` ✅ _${ms}_ |`;
                     lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
+                    lineIDE += ` <span style="color:orange">${ms}</span> |`;
                 } else if (time > 0 && time <= 100_000) {
                     lineApp += ` ⚠️ _${ms}_ |`;
                     lineWeb += ` $\\color{darkorange}{\\texttt{${ms}}}$ |`;
+                    lineIDE += ` <span style="color:darkorange">${ms}</span> |`;
                 } else if (time > 0 && time <= 1_000_000) {
                     lineApp += ` ⚠️⚠️ _${ms}_ |`;
                     lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`;
+                    lineIDE += ` <span style="color:red">${ms}</span> |`;
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
                     lineApp += ` ❌ _~${t}s_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
+                    lineIDE += ` <span style="color:darkred">>${t}s</span> |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
                     lineApp += ` ❌ _~${t}m_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
+                    lineIDE += ` <span style="color:darkred">>${t}m</span> |`;
                 }
             }
             tableApp += lineApp + '\n';
             tableWeb += lineWeb + '\n';
+            tableIDE += lineIDE + '\n';
         }
 
-        return [tableApp, tableWeb];
+        return [tableApp, tableWeb, tableIDE];
     }
 
     function registerTimes(year: number, day: number, time1: number, time2: number): void {
@@ -144,6 +160,22 @@ import {Debug, UMap} from "src/Utils.ts";
         );
         fs.writeFileSync('README.md', web);
         fs.writeFileSync('README.web.md', web);
+
+        let ide = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[2]);
+        ide = ide.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[2]);
+        ide = ide.replaceAll('%%LINK%%', '');
+        ide = ide.replaceAll('%%STARS1%%', '<span style="color:#FFFF66">*</span>');
+        ide = ide.replaceAll('%%STARS2%%', '<span style="color:#FFFF66">**</span>');
+        ide = ide.replaceAll(
+            '%%LEGEND_TABLE%%',
+            '<span style="color:lightgreen">Less than 1 milisecond</span>\n\n' +
+            '<span style="color:orange">More than 1 milisecond</span>\n\n' +
+            '<span style="color:darkorange">More than 10 milisecond</span>\n\n' +
+            '<span style="color:red">More than 100 milisecond</span>\n\n' +
+            '<span style="color:darkred">More than 1 second</span>\n\n'
+        );
+        fs.writeFileSync('README.md', ide);
+        fs.writeFileSync('README.ide.md', ide);
     }
 
     async function execute(puzzle: Puzzle<unknown>, input: unknown, part: string, mode: string): Promise<number> {
