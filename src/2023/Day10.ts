@@ -122,24 +122,24 @@ export default class Day10 extends Puzzle<Input> {
                     const fromLeft = left === '─' || left === '┌' || left === '└';
 
                     if (fromTop && fromRight) {
-                        return {x: j, y: i, direction: 'top'};
+                        return {col: j, row: i, direction: 'top'};
                     } else if (fromTop && fromLeft) {
-                        return {x: j, y: i, direction: 'top'};
+                        return {col: j, row: i, direction: 'top'};
                     } else if (fromBottom && fromRight) {
-                        return {x: j, y: i, direction: 'bottom'};
+                        return {col: j, row: i, direction: 'bottom'};
                     } else if (fromBottom && fromLeft) {
-                        return {x: j, y: i, direction: 'bottom'};
+                        return {col: j, row: i, direction: 'bottom'};
                     } else if (fromTop && fromBottom) {
-                        return {x: j, y: i, direction: 'top'};
+                        return {col: j, row: i, direction: 'top'};
                     } else if (fromLeft && fromRight) {
-                        return {x: j, y: i, direction: 'right'};
+                        return {col: j, row: i, direction: 'right'};
                     }
                     break;
                 }
             }
         }
 
-        return {x: 0, y: 0, direction: 'top'};
+        return {col: 0, row: 0, direction: 'top'};
     }
 
     async run1(map: Input): Promise<number> {

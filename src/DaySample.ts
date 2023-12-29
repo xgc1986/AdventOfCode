@@ -5,7 +5,7 @@
 
 import Puzzle from "src/Puzzle.ts";
 
-type Solution = number | string| undefined;
+type Solution = number | undefined;
 
 type Input = string[];
 

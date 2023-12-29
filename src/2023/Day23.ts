@@ -28,7 +28,7 @@ export default class Day23 extends Puzzle<Input> {
             w: number,
             slope: number,
             prev: { x: number, y: number }
-        }[] = [{x: 1, y: 0, v, w: 0, slope: 1, prev: {x: -10, y: -10}}];
+        }[] = [{col: 1, row: 0, v, w: 0, slope: 1, prev: {col: -10, row: -10}}];
 
         graph.addVertex(`"${map[0].length - 2},${map.length - 1}"`);
         map[map.length - 1][map[0].length - 2] = 'O';
@@ -104,12 +104,12 @@ export default class Day23 extends Puzzle<Input> {
                     s = -1;
                 }
                 queue.push({
-                    x: pos.x,
-                    y: pos.y - 1,
+                    col: pos.x,
+                    row: pos.y - 1,
                     v: source,
                     w: weight + 1,
                     slope: s,
-                    prev: {x: pos.x, y: pos.y}
+                    prev: {col: pos.x, row: pos.y}
                 });
             }
 
@@ -120,12 +120,12 @@ export default class Day23 extends Puzzle<Input> {
                 }
 
                 queue.push({
-                    x: pos.x,
-                    y: pos.y + 1,
+                    col: pos.x,
+                    row: pos.y + 1,
                     v: source,
                     w: weight + 1,
                     slope: s,
-                    prev: {x: pos.x, y: pos.y}
+                    prev: {col: pos.x, row: pos.y}
                 });
             }
 
@@ -135,12 +135,12 @@ export default class Day23 extends Puzzle<Input> {
                     s = -1;
                 }
                 queue.push({
-                    x: pos.x - 1,
-                    y: pos.y,
+                    col: pos.x - 1,
+                    row: pos.y,
                     v: source,
                     w: weight + 1,
                     slope: s,
-                    prev: {x: pos.x, y: pos.y}
+                    prev: {col: pos.x, row: pos.y}
                 });
             }
 
@@ -150,12 +150,12 @@ export default class Day23 extends Puzzle<Input> {
                     s = -1;
                 }
                 queue.push({
-                    x: pos.x + 1,
-                    y: pos.y,
+                    col: pos.x + 1,
+                    row: pos.y,
                     v: source,
                     w: weight + 1,
                     slope: s,
-                    prev: {x: pos.x, y: pos.y}
+                    prev: {col: pos.x, row: pos.y}
                 });
             }
         }

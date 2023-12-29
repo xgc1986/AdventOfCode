@@ -141,7 +141,7 @@ export default class Day16 extends Puzzle<Input> {
     async run1(mirror: Input): Promise<Solution> {
         let coords = [{x: 0, y: 0, dir: 'E'}];
         if (mirror[0][0].char === '\\') {
-            coords = [{x: 0, y: 0, dir: 'S'}];
+            coords = [{col: 0, row: 0, dir: 'S'}];
         }
         return this.energyze(UObject.deepCopy(mirror), coords as Beam[]);
     }
@@ -157,11 +157,11 @@ export default class Day16 extends Puzzle<Input> {
 
             let coord = [{x, y, dir: 'S'}];
             if (mirror[0][i].char === '\\') {
-                coord = [{x, y, dir: 'E'}];
+                coord = [{x: col, y: row, dir: 'E'}];
             } else if (mirror[0][i].char === '-') {
-                coord = [{x, y, dir: 'E'}, {x, y, dir: 'W'}];
+                coord = [{x: col, y: row, dir: 'E'}, {x: col, y: row, dir: 'W'}];
             } else if (mirror[0][i].char === '/') {
-                coord = [{x, y, dir: 'W'}];
+                coord = [{x: col, y: row, dir: 'W'}];
             }
             coords.push(coord);
         }
@@ -173,11 +173,11 @@ export default class Day16 extends Puzzle<Input> {
 
             let coord = [{x, y, dir: 'N'}];
             if (mirror[0][i].char === '\\') {
-                coord = [{x, y, dir: 'W'}];
+                coord = [{x: col, y: row, dir: 'W'}];
             } else if (mirror[0][i].char === '-') {
-                coord = [{x, y, dir: 'E'}, {x, y, dir: 'W'}];
+                coord = [{x: col, y: row, dir: 'E'}, {x: col, y: row, dir: 'W'}];
             } else if (mirror[0][i].char === '/') {
-                coord = [{x, y, dir: 'E'}];
+                coord = [{x: col, y: row, dir: 'E'}];
             }
             coords.push(coord);
         }
@@ -189,11 +189,11 @@ export default class Day16 extends Puzzle<Input> {
 
             let coord = [{x, y, dir: 'E'}];
             if (mirror[0][i].char === '\\') {
-                coord = [{x, y, dir: 'S'}];
+                coord = [{x: col, y: row, dir: 'S'}];
             } else if (mirror[0][i].char === '|') {
-                coord = [{x, y, dir: 'N'}, {x, y, dir: 'S'}];
+                coord = [{x: col, y: row, dir: 'N'}, {x: col, y: row, dir: 'S'}];
             } else if (mirror[0][i].char === '/') {
-                coord = [{x, y, dir: 'N'}];
+                coord = [{x: col, y: row, dir: 'N'}];
             }
 
             coords.push(coord);
@@ -206,11 +206,11 @@ export default class Day16 extends Puzzle<Input> {
 
             let coord = [{x, y, dir: 'W'}];
             if (mirror[0][i].char === '\\') {
-                coord = [{x, y, dir: 'N'}];
+                coord = [{x: col, y: row, dir: 'N'}];
             } else if (mirror[0][i].char === '|') {
-                coord = [{x, y, dir: 'N'}, {x, y, dir: 'S'}];
+                coord = [{x: col, y: row, dir: 'N'}, {x: col, y: row, dir: 'S'}];
             } else if (mirror[0][i].char === '/') {
-                coord = [{x, y, dir: 'S'}];
+                coord = [{x: col, y: row, dir: 'S'}];
             }
 
             coords.push(coord);
