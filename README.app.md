@@ -42,7 +42,7 @@ Execution program is **Ts-Node**
 
 ⚠️⚠️ _More than 100 milisecond_
 
-❌ More than 1 second_
+❌ _More than 1 second_
 
 
 ### Part 1
