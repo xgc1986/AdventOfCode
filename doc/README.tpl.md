@@ -40,6 +40,6 @@ Execution program is **Ts-Node**
 
 %%PERFOMANCE_TABLE_1%%
 
-### Part 2 $\color{yellow}{\texttt{**}}$
+### > $\color{yellow}{\texttt{**}}$ Part 2 $\color{yellow}{\texttt{**}}$
 
 %%PERFOMANCE_TABLE_2%%
