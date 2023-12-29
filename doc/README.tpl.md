@@ -40,6 +40,6 @@ Execution program is **Ts-Node**
 
 %%PERFOMANCE_TABLE_1%%
 
-### Part 2 %%STARS2%%
+### %%STARS2%% Part 2
 
 %%PERFOMANCE_TABLE_2%%
