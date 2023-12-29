@@ -60,7 +60,7 @@ import {Debug, UMap} from "src/Utils.ts";
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
                     } if (complete[year] > 0) {
-                        lineApp += `         |`;
+                        lineApp += ` * × ${complete[year]}        |`;
                         lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`;
                     } else {
                         lineApp += `         |`;
