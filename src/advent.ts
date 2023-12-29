@@ -47,7 +47,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 if (time === -100) {
                     if (complete[year]) {
                         lineApp += ` ⭐️ |`;
-                        lineWeb += ` $\\color{yellow}{\\texttt{\\textbf{*}}}$ |`;
+                        lineWeb += ` $\\color{yellow}{\\texttt{\\textbf{* × 50}}}$ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
