@@ -90,7 +90,8 @@ Execution program is **Ts-Node**
 | **Day 9**  |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.787_</span>             |
 | **Day 10** |          |          |          |          |          |          |          |          | <span style="color:orange">_7.080_</span>                 |
 | **Day 11** |          |          |          |          |          |          |          |          | <span style="color:orange">_5.198_</span>                 |
-| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{_555.160_}}$                         |
+| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{555.160}}$                         |
+| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{lorem ipsum}}$                       |
 | **Day 13** |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.549_</span>             |
 | **Day 14** |          |          |          |          |          |          |          |          | <span style="color:red">_488.850_</span>                  |
 | **Day 15** |          |          |          |          |          |          |          |          | <span style="color:orange">_1.111_</span>                 |
@@ -106,4 +107,3 @@ Execution program is **Ts-Node**
 | **Day 25** |          |          |          |          |          |          |          |          | <span style="color:lightgreen">⭐️</span>                  |
 
 **1**: _It took around eight minutes, I'll optimize it later, I think I can do it that requires less than 10ms._
-
