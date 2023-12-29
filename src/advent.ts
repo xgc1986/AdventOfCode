@@ -55,7 +55,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 }
 
                 const ms = (time / 1000).toFixed(3);
-                if (i === 24) {
+                if (day === 25 && part === 1) {
                     if (complete[year] >= 49) {
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
