@@ -73,7 +73,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
                     lineApp += ` ❌ _~${t}s_ |`;
-                    lineWeb += ` $\\color{darkred}{\\textsf{\\~${t}s}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\textsf{\\\~${t}s}}$ |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
                     lineApp += ` ❌ _~${t}m_ |`;
