@@ -57,10 +57,10 @@ import {Debug, UMap} from "src/Utils.ts";
                     complete = false;
                 } else if (time === -10) {
                     lineApp += ` _❌ ∞_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{∞}}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
-                    lineWeb += ` $\\color{lightgreen}{\\texttt{\\textbf{${ms}}}}$ |`;
+                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 10_000) {
                     lineApp += ` ✅ _${ms}_ |`;
                     lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
@@ -73,11 +73,11 @@ import {Debug, UMap} from "src/Utils.ts";
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
                     lineApp += ` ❌ _~${t}s_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{>${t}s}}}$ |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
                     lineApp += ` ❌ _~${t}m_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{>${t}m}}}$ |`;
                 }
             }
             tableApp += lineApp + '\n';
