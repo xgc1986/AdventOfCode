@@ -50,7 +50,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| **Day 1** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.676}}$ |
+| **Day 1** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.652}}$ |
 | **Day 2** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.106}}$ |
 | **Day 3** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{2.676}}$ |
 | **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.426}}$ |
@@ -81,11 +81,11 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| **Day 1** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{1.655}}$ |
+| **Day 1** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{1.559}}$ |
 | **Day 2** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.103}}$ |
 | **Day 3** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{1.221}}$ |
 | **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.475}}$ |
-| **Day 5** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~8m}}$ |
+| **Day 5** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~8m}}$ |
 | **Day 6** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.041}}$ |
 | **Day 7** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{5.344}}$ |
 | **Day 8** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{6.380}}$ |
@@ -96,13 +96,13 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 13** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.569}}$ |
 | **Day 14** |         |         |         |         |         |         |         |         | $\color{red}{\textsf{482.525}}$ |
 | **Day 15** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{1.341}}$ |
-| **Day 16** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~1s}}$ |
-| **Day 17** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~2s}}$ |
+| **Day 16** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~1s}}$ |
+| **Day 17** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~2s}}$ |
 | **Day 18** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\textsf{0.112}}$ |
 | **Day 19** |         |         |         |         |         |         |         |         | $\color{orange}{\textsf{2.112}}$ |
 | **Day 20** |         |         |         |         |         |         |         |         | $\color{darkorange}{\textsf{17.168}}$ |
-| **Day 21** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~18s}}$ |
-| **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~1m}}$ |
-| **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~5s}}$ |
-| **Day 24** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{~7s}}$ |
+| **Day 21** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~18s}}$ |
+| **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~1m}}$ |
+| **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~5s}}$ |
+| **Day 24** |         |         |         |         |         |         |         |         | $\color{darkred}{\textsf{\~7s}}$ |
 | **Day 25** |         |         |         |         |         |         |         |         |         |
