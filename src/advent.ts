@@ -99,7 +99,7 @@ import {Debug, UMap} from "src/Utils.ts";
 
         let app = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[0]);
         app = app.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[0]);
-        app = app.replaceAll('%%LINK%%', 'Web version of [Readme.web.md](./README.web.md)');
+        app = app.replaceAll('%%LINK%%', 'Web version of [Readme](./README.web.md)');
         app = app.replaceAll(
             '%%LEGEND_TABLE%%',
             '✅✅ _Less than 1 milisecond_\n\n' +
@@ -112,7 +112,7 @@ import {Debug, UMap} from "src/Utils.ts";
 
         let web = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[1]);
         web = web.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[1]);
-        web = web.replaceAll('%%LINK%%', 'App version of [Readme.app.md](./README.app.md)');
+        web = web.replaceAll('%%LINK%%', 'App version of [Readme](./README.app.md)');
         web = web.replaceAll(
             '%%LEGEND_TABLE%%',
             '$\\color{lightgreen}{\\textsf{Less than 1 milisecond}}$\n\n' +
