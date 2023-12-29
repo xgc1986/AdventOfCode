@@ -36,17 +36,18 @@ import {Debug, UMap} from "src/Utils.ts";
         tableApp += '\n' + sep + '\n';
         tableWeb += '\n' + sep + '\n';
 
-        let complete = true;
+        let complete: UMap<boolean> = {};
         for (let i = 0; i < 25; i++) {
             let lineWeb = `| **Day ${i + 1}** |`;
             let lineApp = `| **Day ${i + 1}** |`;
             for (const year in content) {
+                complete[year] ??= true;
                 const time = content[year][i][part] ?? -1;
                 const ms = (time / 1000).toFixed(3);
                 if (time === -100) {
-                    if (complete) {
+                    if (complete[year]) {
                         lineApp += ` ⭐️ |`;
-                        lineWeb += ` ⭐️ |`;
+                        lineWeb += ` $\\color{yellow}{\\texttt{\\textbf{*}}}$ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
@@ -54,7 +55,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 } else if (time === -1) {
                     lineApp += `         |`;
                     lineWeb += `         |`;
-                    complete = false;
+                    complete[year] = false;
                 } else if (time === -10) {
                     lineApp += ` _❌ ∞_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{∞}}}$ |`;
