@@ -47,10 +47,10 @@ export default class Day3 extends Puzzle<Input> {
         let santaPos: Pos = {col: 0, row: 0};
         let robotPos: Pos = {col: 0, row: 0};
 
-        const visited = new Set();
+        const visited = new Set<string>();
         visited.add(`${santaPos.col},${santaPos.row}`);
 
-        for (const d in directions) {
+        for (let d = 0; 0 < directions.length; d++) {
             const direction = directions[d];
 
             if (d % 2 === 0) {
