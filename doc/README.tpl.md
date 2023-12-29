@@ -36,10 +36,10 @@ Execution program is **Ts-Node**
 
 %%LEGEND_TABLE%%
 
-### $\color{yellow}{\texttt{*}}$ Part 1 $\color{yellow}{\texttt{*}}$
+### $\color{yellow}{\texttt{\textbf{*}}}$ Part 1 $\color{yellow}{\texttt{\textbf{*}}}$
 
 %%PERFOMANCE_TABLE_1%%
 
-### $\color{yellow}{\texttt{**}}$ Part 2 $\color{yellow}{\texttt{**}}$
+### $\color{yellow}{\texttt{\textbf{**}}}$ Part 2 $\color{yellow}{\texttt{\textbf{**}}}$
 
 %%PERFOMANCE_TABLE_2%%
