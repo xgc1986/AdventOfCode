@@ -36,7 +36,7 @@ Execution program is **Ts-Node**
 
 %%LEGEND_TABLE%%
 
-### Part 2 %%STARS1%%
+### %%STARS1%% Part 1
 
 %%PERFOMANCE_TABLE_1%%
 
