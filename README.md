@@ -71,7 +71,7 @@ Execution program is **Ts-Node**
 | **Day 22** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{207.238}}$            |
 | **Day 23** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.884}}$       |
 | **Day 24** |          |          |          |          |          |          |          |          | $\color{darkorange}{\textsf{34.876}}$      |
-| **Day 25** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{∞<sup> 1</sup>}}$ |
+| **Day 25** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{∞}}$<sup> 1</sup> |
 
 **1**: _I tried to use MinCut algorithm, but it took too long, then I solved it using [Graphviz](https://graphviz.org)_
 
@@ -83,7 +83,7 @@ Execution program is **Ts-Node**
 | **Day 2**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.095}}$            |
 | **Day 3**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.577}}$                |
 | **Day 4**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.352}}$            |
-| **Day 5**  |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~8m_**<sup> 1</sup>}}$ |
+| **Day 5**  |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~8m_**}}$<sup> 1</sup> |
 | **Day 6**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.034}}$            |
 | **Day 7**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.465}}$                |
 | **Day 8**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{6.317}}$                |
@@ -94,15 +94,15 @@ Execution program is **Ts-Node**
 | **Day 13** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.549}}$            |
 | **Day 14** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{488.850}}$                 |
 | **Day 15** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.111}}$                |
-| **Day 16** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1s_**}}$              |
-| **Day 17** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~3s_**}}$              |
+| **Day 16** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1s}}$                 |
+| **Day 17** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~3s}}$                 |
 | **Day 18** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.109}}$            |
 | **Day 19** |          |          |          |          |          |          |          |          |                                                 |
 | **Day 20** |          |          |          |          |          |          |          |          |                                                 |
-| **Day 21** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~17s_**}}$             |
-| **Day 22** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1m_**}}$              |
+| **Day 21** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~17s}}$                |
+| **Day 22** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1m}}$                 |
 | **Day 23** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.559}}$                |
-| **Day 24** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~7s_**}}$              |
+| **Day 24** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~7s}}$                 |
 | **Day 25** |          |          |          |          |          |          |          |          | ⭐️                                              |
 
 **1**: _It took around eight minutes, I'll optimize it later, I think I can do it that requires less than 10ms._
