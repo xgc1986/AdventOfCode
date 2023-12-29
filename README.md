@@ -34,7 +34,7 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
-$\color{lightgreen}{\textsf{Less than 1 milisecond_}}$
+$\color{lightgreen}{\textsf{Less than 1 milisecond}}$
 
 $\color{orange}{\textsf{More than 1 milisecond}}$
 
