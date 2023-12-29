@@ -46,7 +46,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 if (time === -100) {
                     if (complete) {
                         lineApp += ` ⭐️ |`;
-                        lineWeb += ` $\\color{yellow}{\\textsf{*}}$ |`;
+                        lineWeb += ` $\\color{yellow}{\\textsf{\*}}$ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
@@ -57,27 +57,27 @@ import {Debug, UMap} from "src/Utils.ts";
                     complete = false;
                 } else if (time === -10) {
                     lineApp += ` _❌ ∞_ |`;
-                    lineWeb += ` $\\color{darkred}{\\textsf{∞}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
-                    lineWeb += ` $\\color{lightgreen}{\\textsf{${ms}}}$ |`;
+                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 10_000) {
                     lineApp += ` ✅ _${ms}_ |`;
-                    lineWeb += ` $\\color{orange}{\\textsf{${ms}}}$ |`;
+                    lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 100_000) {
                     lineApp += ` ⚠️ _${ms}_ |`;
-                    lineWeb += ` $\\color{darkorange}{\\textsf{${ms}}}$ |`;
+                    lineWeb += ` $\\color{darkorange}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 1_000_000) {
                     lineApp += ` ⚠️⚠️ _${ms}_ |`;
-                    lineWeb += ` $\\color{red}{\\textsf{${ms}}}$ |`;
+                    lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
                     lineApp += ` ❌ _~${t}s_ |`;
-                    lineWeb += ` $\\color{darkred}{\\textsf{>${t}s}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
                     lineApp += ` ❌ _~${t}m_ |`;
-                    lineWeb += ` $\\color{darkred}{\\textsf{>${t}m}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
                 }
             }
             tableApp += lineApp + '\n';
@@ -115,7 +115,7 @@ import {Debug, UMap} from "src/Utils.ts";
         web = web.replaceAll('%%LINK%%', 'App version of [Readme.app.md](./README.app.md)');
         web = web.replaceAll(
             '%%LEGEND_TABLE%%',
-            '$\\color{lightgreen}{\\textsf{Less than 1 milisecond_}}$\n\n' +
+            '$\\color{lightgreen}{\\textsf{Less than 1 milisecond}}$\n\n' +
             '$\\color{orange}{\\textsf{More than 1 milisecond}}$\n\n' +
             '$\\color{darkorange}{\\textsf{More than 10 milisecond}}$\n\n' +
             '$\\color{red}{\\textsf{More than 100 milisecond}}$\n\n' +
