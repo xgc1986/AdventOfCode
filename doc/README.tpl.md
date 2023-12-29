@@ -1,6 +1,6 @@
 # Advent of Code
 
-App version of [Readme.app.md](./README.app.md)
+%%LINK%%
 
 ## Configure
 
@@ -34,15 +34,7 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
-✅✅ _Less than 1 milisecond_
-
-✅ _More than 1 milisecond_
-
-⚠️ _More than 10 milisecond_
-
-⚠️⚠️ _More than 100 milisecond_
-
-❌ _More than 1 second_
+%%LEGEND_TABLE%%
 
 ### Part 1
 

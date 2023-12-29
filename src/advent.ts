@@ -6,7 +6,7 @@ import * as fs from "node:fs";
 import * as https from "node:https";
 import { request } from "node:https";
 import Puzzle from "src/Puzzle.ts";
-import {Debug} from "src/Utils.ts";
+import {Debug, UMap} from "src/Utils.ts";
 
 (async function (): Promise<void> {
     const INFO = '\x1b[1m\x1b[92m';
@@ -22,7 +22,110 @@ import {Debug} from "src/Utils.ts";
         process.exit(0);
     }
 
-    async function execute(puzzle: Puzzle<unknown>, input: unknown, part: string, mode: string): Promise<void> {
+    function createTable(content: UMap<number[][]>, part: number): string[] {
+        let tableApp = '| **Day** |';
+        let tableWeb = '| **Day** |';
+        let sep = '|---------|';
+
+        for (const y in content) {
+            tableApp += ` **${y}** |`;
+            tableWeb += ` **${y}** |`;
+            sep += `----------|`;
+        }
+
+        tableApp += '\n' + sep + '\n';
+        tableWeb += '\n' + sep + '\n';
+
+        let complete = true;
+        for (let i = 0; i < 25; i++) {
+            let lineWeb = `| **Day ${i + 1}** |`;
+            let lineApp = `| **Day ${i + 1}** |`;
+            for (const year in content) {
+                const time = content[year][i][part] ?? -1;
+                const ms = (time / 1000).toFixed(3);
+                if (time === -100) {
+                    if (complete) {
+                        lineApp += ` ⭐️ |`;
+                        lineWeb += ` $\\color{yellow}{\\textsf{*}}$ |`;
+                    } else {
+                        lineApp += `         |`;
+                        lineWeb += `         |`;
+                    }
+                } else if (time === -1) {
+                    lineApp += `         |`;
+                    lineWeb += `         |`;
+                    complete = false;
+                } else if (time === -10) {
+                    lineApp += ` _❌ ∞_ |`;
+                    lineWeb += ` $\\color{darkred}{\\textsf{∞}}$ |`;
+                } else if (time > 0 && time <= 1_000) {
+                    lineApp += ` ✅✅ _${ms}_ |`;
+                    lineWeb += ` $\\color{lightgreen}{\\textsf{${ms}}}$ |`;
+                } else if (time > 0 && time <= 10_000) {
+                    lineApp += ` ✅ _${ms}_ |`;
+                    lineWeb += ` $\\color{orange}{\\textsf{${ms}}}$ |`;
+                } else if (time > 0 && time <= 100_000) {
+                    lineApp += ` ⚠️ _${ms}_ |`;
+                    lineWeb += ` $\\color{darkorange}{\\textsf{${ms}}}$ |`;
+                } else if (time > 0 && time <= 1_000_000) {
+                    lineApp += ` ⚠️⚠️ _${ms}_ |`;
+                    lineWeb += ` $\\color{red}{\\textsf{${ms}}}$ |`;
+                } else if (time > 0 && time <= 60_000_000) {
+                    const t =  Math.floor(time/1000000);
+                    lineApp += ` ❌ _~${t}s_ |`;
+                    lineWeb += ` $\\color{darkred}{\\textsf{~${t}s}}$ |`;
+                } else if (time > 0) {
+                    const t =  Math.floor(time/60000000);
+                    lineApp += ` ❌ _~${t}m_ |`;
+                    lineWeb += ` $\\color{darkred}{\\textsf{~${t}m}}$ |`;
+                }
+            }
+            tableApp += lineApp + '\n';
+            tableWeb += lineWeb + '\n';
+        }
+
+        return [tableApp, tableWeb];
+    }
+
+    function registerTimes(year: number, day: number, time1: number, time2: number): void {
+        const content: UMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
+        content[year][day - 1] = [Math.round(time1 * 1000) , Math.round(time2 * 1000)];
+        fs.writeFileSync(`doc/results.json`, JSON.stringify(content));
+
+        const tables1 = createTable(content, 0);
+        const tables2 = createTable(content, 1);
+
+        const template = fs.readFileSync(`doc/README.tpl.md`).toString();
+
+        let app = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[0]);
+        app = app.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[0]);
+        app = app.replaceAll('%%LINK%%', 'Web version of [Readme.web.md](./README.web.md)');
+        app = app.replaceAll(
+            '%%LEGEND_TABLE%%',
+            '✅✅ _Less than 1 milisecond_\n\n' +
+            '✅ _More than 1 milisecond_\n\n' +
+            '⚠️ _More than 10 milisecond_\n\n' +
+            '⚠️⚠️ _More than 100 milisecond_\n\n' +
+            '❌ _More than 1 second_\n\n'
+        );
+        fs.writeFileSync('README.app.md', app);
+
+        let web = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[1]);
+        web = web.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[1]);
+        web = web.replaceAll('%%LINK%%', 'App version of [Readme.app.md](./README.app.md)');
+        web = web.replaceAll(
+            '%%LEGEND_TABLE%%',
+            '$\\color{lightgreen}{\\textsf{Less than 1 milisecond_}}$\n\n' +
+            '$\\color{orange}{\\textsf{More than 1 milisecond}}$\n\n' +
+            '$\\color{darkorange}{\\textsf{More than 10 milisecond}}$\n\n' +
+            '$\\color{red}{\\textsf{More than 100 milisecond}}$\n\n' +
+            '$\\color{darkred}{\\textsf{More than 1 second}}$\n\n'
+        );
+        fs.writeFileSync('README.md', web);
+        fs.writeFileSync('README.web.md', web);
+    }
+
+    async function execute(puzzle: Puzzle<unknown>, input: unknown, part: string, mode: string): Promise<number> {
         let result: undefined | string | number;
         await puzzle.onStart();
         const start = performance.now();
@@ -34,6 +137,7 @@ import {Debug} from "src/Utils.ts";
         }
         if (result !== undefined) {
             let time = (performance.now() - start);
+            const executionTime = time;
             await puzzle.onEnd();
             if (hideResult) {
                 result = '********';
@@ -73,9 +177,12 @@ import {Debug} from "src/Utils.ts";
             console.log(`   ${GREEN}║${RESET} ` + line1 + ` ${GREEN}║${RESET}`);
             console.log(`   ${GREEN}║${RESET} ` + line3 + ` ${GREEN}║${RESET}`);
             console.log(`   ${GREEN}╚═` + ''.padEnd(maxLength - extra.length, '═') + `═╝${RESET}`);
-        } else {
             await puzzle.onEnd();
+
+            return executionTime;
         }
+
+        return -1;
     }
 
     const year = process.argv[2];
@@ -133,17 +240,20 @@ import {Debug} from "src/Utils.ts";
 
         Debug.enable(mode !== 'input');
         Debug.executing(true);
-        await execute(puzzle, input1, 'a', mode);
+        const time1 = await execute(puzzle, input1, 'a', mode);
         Debug.executing(false);
         Debug.clear();
         Debug.enable(mode !== 'input');
         Debug.setFile(+year, +day, 'b');
         Debug.executing(true);
-        await execute(puzzle, input2, 'b', mode);
+        const time2 = await execute(puzzle, input2, 'b', mode);
         Debug.executing(false);
         Debug.clear();
         console.log();
 
+        if (mode === 'input') {
+            registerTimes(+year, +day, time1, time2);
+        }
     } catch (e) {
         console.error("Error reading file or running the code.");
         console.log(e);
