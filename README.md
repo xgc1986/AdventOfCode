@@ -79,7 +79,7 @@ Execution program is **Ts-Node**
 
 | **Day**    | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023**                                                  |
 |------------|----------|----------|----------|----------|----------|----------|----------|----------|-----------------------------------------------------------|
-| **Day 1**  |          |          |          |          |          |          |          |          | ```diff ! _1.643_ ```                                     |
+| **Day 1**  |          |          |          |          |          |          |          |          | <span style="color:orange">_1.643_</span>                 |
 | **Day 2**  |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.095_</span>             |
 | **Day 3**  |          |          |          |          |          |          |          |          | <span style="color:orange">_1.577_</span>                 |
 | **Day 4**  |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.352_</span>             |
@@ -90,13 +90,13 @@ Execution program is **Ts-Node**
 | **Day 9**  |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.787_</span>             |
 | **Day 10** |          |          |          |          |          |          |          |          | <span style="color:orange">_7.080_</span>                 |
 | **Day 11** |          |          |          |          |          |          |          |          | <span style="color:orange">_5.198_</span>                 |
-| **Day 12** |          |          |          |          |          |          |          |          | <span style="color:red">_555.160_</span>                  |
+| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{_555.160_}}$                         |
 | **Day 13** |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.549_</span>             |
 | **Day 14** |          |          |          |          |          |          |          |          | <span style="color:red">_488.850_</span>                  |
 | **Day 15** |          |          |          |          |          |          |          |          | <span style="color:orange">_1.111_</span>                 |
 | **Day 16** |          |          |          |          |          |          |          |          | <span style="color:darkred">**_~1s_**</span>              |
 | **Day 17** |          |          |          |          |          |          |          |          | <span style="color:darkred">**_~3s_**</span>              |
-| **Day 18** |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_109_</span>               |
+| **Day 18** |          |          |          |          |          |          |          |          | <span style="color:lightgreen">_0.109_</span>             |
 | **Day 19** |          |          |          |          |          |          |          |          |                                                           |
 | **Day 20** |          |          |          |          |          |          |          |          |                                                           |
 | **Day 21** |          |          |          |          |          |          |          |          | <span style="color:darkred">**_~17s_**</span>             |
