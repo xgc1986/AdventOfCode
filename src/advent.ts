@@ -74,7 +74,7 @@ import {Debug, UMap} from "src/Utils.ts";
                     lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
-                    lineWeb += ` $\\color{lightgreen}{\\texttt{\\textit{${ms}}}}$ |`;
+                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
                 } else if (time > 0 && time <= 10_000) {
                     lineApp += ` ✅ _${ms}_ |`;
                     lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
