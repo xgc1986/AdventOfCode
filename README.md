@@ -1,5 +1,7 @@
 # Advent of Code
 
+App version of [Readme.app.md](./README.app.md)
+
 ## Configure
 
 ```sh

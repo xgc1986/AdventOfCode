@@ -1,5 +1,7 @@
 # Advent of Code
 
+Web version of [Readme.md](./README.md)
+
 ## Configure
 
 ```sh
