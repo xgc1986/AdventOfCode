@@ -56,7 +56,7 @@ import {Debug, UMap} from "src/Utils.ts";
 
                 const ms = (time / 1000).toFixed(3);
                 if (i === 24) {
-                    if (complete[year] === 50) {
+                    if (complete[year] >= 49) {
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
                     } if (complete[year] > 0) {
