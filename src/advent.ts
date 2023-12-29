@@ -71,7 +71,7 @@ import {Debug, UMap} from "src/Utils.ts";
                     lineWeb += `         |`;
                 } else if (time === -10) {
                     lineApp += ` _❌ INF_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
                     lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;

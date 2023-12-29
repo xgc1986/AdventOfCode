@@ -53,7 +53,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 1** | $\color{lightgreen}{\texttt{0.241}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.676}}$ |
-| **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
+| **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
 | **Day 5** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.364}}$ |
 | **Day 6** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.047}}$ |
 | **Day 7** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.683}}$ |
@@ -74,7 +74,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
 | **Day 23** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.016}}$ |
 | **Day 24** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.950}}$ |
-| **Day 25** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{∞}}$ |
+| **Day 25** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
 
 
 ### $\color{#FFFF66}{\texttt{**}}$ Part 2
@@ -84,7 +84,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 1** | $\color{lightgreen}{\texttt{0.110}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{1.598}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.221}}$ |
-| **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
+| **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
 | **Day 5** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>8m}}$ |
 | **Day 6** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.041}}$ |
 | **Day 7** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.344}}$ |
@@ -105,4 +105,4 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
 | **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
 | **Day 24** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>7s}}$ |
-| **Day 25** | $\color{#9999CC}{\texttt{* × 6}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         |         | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 49}}$ |
+| **Day 25** | $\color{#9999CC}{\texttt{* × 8}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         |         | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 49}}$ |

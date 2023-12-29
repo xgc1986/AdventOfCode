@@ -12,7 +12,7 @@ type Input = string[];
 export default class DaySample extends Puzzle<Input> {
 
     parseInput(input: string): Input {
-        return input.split('\n').filter((line) => line !== '');
+        return input.split('\n');
     }
 
     async run1(_: Input): Promise<Solution> {
