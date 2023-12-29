@@ -1,0 +1,9 @@
+.idea
+outputs
+node_modules
+!inputs/**/*.input.txt
+inputs
+*.js
+*.mjs
+qadana.yaml
+.DS_Store

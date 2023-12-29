@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ts-node --swc src/advent.ts "$@"
