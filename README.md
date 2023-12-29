@@ -50,7 +50,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| **Day 1** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.659}}$ |
+| **Day 1** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.676}}$ |
 | **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
@@ -81,7 +81,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| **Day 1** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.615}}$ |
+| **Day 1** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.598}}$ |
 | **Day 2** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.221}}$ |
 | **Day 4** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
@@ -105,4 +105,4 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
 | **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
 | **Day 24** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>7s}}$ |
-| **Day 25** |         |         |         |         |         |         |         |         | $\color{yellow}{\texttt{* × 50}}$ |
+| **Day 25** |         |         |         |         |         |         |         |         | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 50}}$ |
