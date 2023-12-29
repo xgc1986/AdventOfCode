@@ -47,7 +47,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 if (time === -100) {
                     if (complete[year]) {
                         lineApp += ` ⭐️ |`;
-                        lineWeb += ` $\\color{yellow}{\\texttt{\\textbf{* × 50}}}$ |`;
+                        lineWeb += ` $\\color{yellow}{\\texttt{* × 50}}$ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
@@ -58,7 +58,7 @@ import {Debug, UMap} from "src/Utils.ts";
                     complete[year] = false;
                 } else if (time === -10) {
                     lineApp += ` _❌ ∞_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{∞}}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
                     lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
@@ -74,11 +74,11 @@ import {Debug, UMap} from "src/Utils.ts";
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
                     lineApp += ` ❌ _~${t}s_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{>${t}s}}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
                     lineApp += ` ❌ _~${t}m_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{\\textbf{>${t}m}}}$ |`;
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
                 }
             }
             tableApp += lineApp + '\n';
