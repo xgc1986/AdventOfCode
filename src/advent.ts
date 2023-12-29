@@ -38,19 +38,30 @@ import {Debug, UMap} from "src/Utils.ts";
 
         let complete: UMap<number> = {};
         for (let i = 0; i < 25; i++) {
-            let lineWeb = `| **Day ${i + 1}** |`;
-            let lineApp = `| **Day ${i + 1}** |`;
+            const day = i + 1;
+            let lineWeb = `| **Day ${day}** |`;
+            let lineApp = `| **Day ${day}** |`;
             for (const year in content) {
                 complete[year] ??= 50;
                 const time = content[year][i][part] ?? -1;
+                const time2 = content[year][i][part === 0 ? 1 : 0] ?? -1;
+
+                if (time === -1) {
+                    complete[year]--;
+                }
+
+                if (time2 === -1) {
+                    complete[year]--;
+                }
+
                 const ms = (time / 1000).toFixed(3);
-                if (time === -100) {
+                if (i === 24) {
                     if (complete[year] === 50) {
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
                     } if (complete[year] > 0) {
                         lineApp += `         |`;
-                        lineWeb += ` $\\color{#9999CC}{\\texttt{* × 50}}$ |`;
+                        lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
@@ -58,7 +69,6 @@ import {Debug, UMap} from "src/Utils.ts";
                 } else if (time === -1) {
                     lineApp += `         |`;
                     lineWeb += `         |`;
-                    complete[year]--;
                 } else if (time === -10) {
                     lineApp += ` _❌ ∞_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
@@ -93,7 +103,10 @@ import {Debug, UMap} from "src/Utils.ts";
 
     function registerTimes(year: number, day: number, time1: number, time2: number): void {
         const content: UMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
-        content[year][day - 1] = [Math.round(time1 * 1000) , Math.round(time2 * 1000)];
+        content[year][day - 1] = [
+            time1 > 0 ? Math.round(time1 * 1000): time1 ,
+            time2 > 0 ? Math.round(time2 * 1000): time2
+        ];
         fs.writeFileSync(`doc/results.json`, JSON.stringify(content));
 
         const tables1 = createTable(content, 0);
@@ -119,8 +132,8 @@ import {Debug, UMap} from "src/Utils.ts";
         let web = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[1]);
         web = web.replaceAll('%%PERFOMANCE_TABLE_2%%', tables2[1]);
         web = web.replaceAll('%%LINK%%', 'App version of [Readme](./README.app.md)');
-        web = web.replaceAll('%%STARS1%%', '$\\color{yellow}{\\texttt{*}}$');
-        web = web.replaceAll('%%STARS2%%', '$\\color{yellow}{\\texttt{**}}$');
+        web = web.replaceAll('%%STARS1%%', '$\\color{#FFFF66}{\\texttt{*}}$');
+        web = web.replaceAll('%%STARS2%%', '$\\color{#FFFF66}{\\texttt{**}}$');
         web = web.replaceAll(
             '%%LEGEND_TABLE%%',
             '$\\color{lightgreen}{\\textsf{Less than 1 milisecond}}$\n\n' +
@@ -243,7 +256,7 @@ import {Debug, UMap} from "src/Utils.ts";
         Debug.enable(mode !== 'input');
 
         const puzzle: Puzzle<unknown> = new (await import(`src/${year}/Day${day}.ts`)).default(mode);
-        const input1 = puzzle.parseInput(fileContents);
+        const input1 = puzzle.parseInput(fileContents.trim());
         const input2 = puzzle.SINGLE_INPUT_PARSE ? input1 : puzzle.parseInput(fileContents);
 
         Debug.enable(mode !== 'input');
