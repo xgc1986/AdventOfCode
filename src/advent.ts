@@ -46,7 +46,7 @@ import {Debug, UMap} from "src/Utils.ts";
                 if (time === -100) {
                     if (complete) {
                         lineApp += ` ⭐️ |`;
-                        lineWeb += ` $\\color{yellow}{\\textsf{\*}}$ |`;
+                        lineWeb += ` ⭐️ |`;
                     } else {
                         lineApp += `         |`;
                         lineWeb += `         |`;
@@ -60,7 +60,7 @@ import {Debug, UMap} from "src/Utils.ts";
                     lineWeb += ` $\\color{darkred}{\\texttt{∞}}$ |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
-                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
+                    lineWeb += ` $\\color{lightgreen}{\\texttt{\\textbf{${ms}}}}$ |`;
                 } else if (time > 0 && time <= 10_000) {
                     lineApp += ` ✅ _${ms}_ |`;
                     lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
