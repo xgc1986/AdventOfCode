@@ -269,10 +269,6 @@ import {Debug, UMap} from "src/Utils.ts";
             fs.openSync(`inputs/${year}/day${day}.input.txt`, 'w');
         }
 
-        if (!fs.existsSync(`inputs/${year}/day${day}.test.txt`)) {
-            fs.openSync(`inputs/${year}/day${day}.test.txt`, 'w');
-        }
-
         if (!fs.existsSync(`inputs/${year}/day${day}.${mode}.txt`)) {
             fs.openSync(`inputs/${year}/day${day}.${mode}.txt`, 'w');
         }
