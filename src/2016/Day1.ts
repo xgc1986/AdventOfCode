@@ -72,7 +72,114 @@ export default class Day1 extends Puzzle<Input> {
         return Math.abs(x) + Math.abs(y);
     }
 
-    async run2(_: Input): Promise<Solution> {
-        return undefined;
+    async run2(movements: Input): Promise<Solution> {
+        let dir = 'N'
+        let x = 0;
+        let y = 0;
+
+        const set = new Set();
+        set.add(`${x}-${y}`);
+
+        for (const movement of movements) {
+            let found = false;
+            const turn = movement.direction;
+            const amount = movement.distance;
+
+            if (dir === 'N') {
+                if (turn === 'L') {
+                    dir = 'W';
+                    for (let i = 1; i <= amount; i++) {
+                        x--;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                } else {
+                    dir = 'E';
+                    for (let i = 1; i <= amount; i++) {
+                        x++;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                }
+            } else if (dir === 'S') {
+                if (turn === 'L') {
+                    dir = 'E';
+                    for (let i = 1; i <= amount; i++) {
+                        x++;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                } else {
+                    dir = 'W';
+                    for (let i = 1; i <= amount; i++) {
+                        x--;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                }
+            } else if (dir === 'E') {
+                if (turn === 'L') {
+                    dir = 'N';
+                    for (let i = 1; i <= amount; i++) {
+                        y++;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                } else {
+                    dir = 'S';
+                    for (let i = 1; i <= amount; i++) {
+                        y--;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                }
+            } else if (dir === 'W') {
+                if (turn === 'L') {
+                    dir = 'S';
+                    for (let i = 1; i <= amount; i++) {
+                        y--;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                } else {
+                    dir = 'N';
+                    for (let i = 1; i <= amount; i++) {
+                        y++;
+                        if (set.has(`${x}-${y}`)) {
+                            found = true;
+                            break;
+                        }
+                        set.add(`${x}-${y}`);
+                    }
+                }
+            }
+
+            if (found) {
+                break;
+            }
+        }
+
+        return Math.abs(x) + Math.abs(y);
     }
 }
