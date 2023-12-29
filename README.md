@@ -77,32 +77,32 @@ Execution program is **Ts-Node**
 
 ### Part 2
 
-| **Day**    | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023**                                        |
-|------------|----------|----------|----------|----------|----------|----------|----------|----------|-------------------------------------------------|
-| **Day 1**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.643}}$                |
-| **Day 2**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.095}}$            |
-| **Day 3**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.577}}$                |
-| **Day 4**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.352}}$            |
-| **Day 5**  |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~8m_**}}$<sup> 1</sup> |
-| **Day 6**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.034}}$            |
-| **Day 7**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.465}}$                |
-| **Day 8**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{6.317}}$                |
-| **Day 9**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.787}}$            |
-| **Day 10** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{7.080}}$                |
-| **Day 11** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.198}}$                |
-| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{555.160}}$                 |
-| **Day 13** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.549}}$            |
-| **Day 14** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{488.850}}$                 |
-| **Day 15** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.111}}$                |
-| **Day 16** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1s}}$                 |
-| **Day 17** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~3s}}$                 |
-| **Day 18** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.109}}$            |
-| **Day 19** |          |          |          |          |          |          |          |          |                                                 |
-| **Day 20** |          |          |          |          |          |          |          |          |                                                 |
-| **Day 21** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~17s}}$                |
-| **Day 22** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1m}}$                 |
-| **Day 23** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.559}}$                |
-| **Day 24** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~7s}}$                 |
-| **Day 25** |          |          |          |          |          |          |          |          | ⭐️                                              |
+| **Day**    | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023**                                                                 |
+|------------|----------|----------|----------|----------|----------|----------|----------|----------|--------------------------------------------------------------------------|
+| **Day 1**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.643}}$                                         |
+| **Day 2**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.095}}$                                     |
+| **Day 3**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.577}}$                                         |
+| **Day 4**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.352}}$                                     |
+| **Day 5**  |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~8m}}$<sup> $\color{darkred}{\textsf{1}}$</sup> |
+| **Day 6**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.034}}$                                     |
+| **Day 7**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.465}}$                                         |
+| **Day 8**  |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{6.317}}$                                         |
+| **Day 9**  |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.787}}$                                     |
+| **Day 10** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{7.080}}$                                         |
+| **Day 11** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.198}}$                                         |
+| **Day 12** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{555.160}}$                                          |
+| **Day 13** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.549}}$                                     |
+| **Day 14** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{488.850}}$                                          |
+| **Day 15** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.111}}$                                         |
+| **Day 16** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1s}}$                                          |
+| **Day 17** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~3s}}$                                          |
+| **Day 18** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.109}}$                                     |
+| **Day 19** |          |          |          |          |          |          |          |          |                                                                          |
+| **Day 20** |          |          |          |          |          |          |          |          |                                                                          |
+| **Day 21** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~17s}}$                                         |
+| **Day 22** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1m}}$                                          |
+| **Day 23** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.559}}$                                         |
+| **Day 24** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~7s}}$                                          |
+| **Day 25** |          |          |          |          |          |          |          |          | ⭐️                                                                       |
 
 **1**: _It took around eight minutes, I'll optimize it later, I think I can do it that requires less than 10ms._
