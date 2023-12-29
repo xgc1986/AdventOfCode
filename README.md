@@ -32,15 +32,15 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
-<span style="color:lightgreen">Less than 1 milisecond}}$
+$\color{lightgreen}{\textsf{Less than 1 milisecond}}$
 
-<span style="color:orange">More than 1 milisecond}}$
+$\color{orange}{\textsf{More than 1 milisecond}}$
 
-<span style="color:darkorange">More than 10 milisecond}}$
+$\color{darkorange}{\textsf{More than 10 milisecond}}$
 
-<span style="color:red">More than 100 milisecond}}$
+$\color{red}{\textsf{More than 100 milisecond}}$
 
-<span style="color:darkred">More than 1 second}}$
+$\color{darkred}{\textsf{More than 1 second}}$
 
 
 ### Part 1
