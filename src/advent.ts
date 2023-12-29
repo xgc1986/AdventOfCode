@@ -30,7 +30,7 @@ import {Debug, UMap} from "src/Utils.ts";
         for (const y in content) {
             tableApp += ` **${y}** |`;
             tableWeb += ` **${y}** |`;
-            sep += `:--------:|`;
+            sep += `---------:|`;
         }
 
         tableApp += '\n' + sep + '\n';
