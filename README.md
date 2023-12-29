@@ -67,8 +67,8 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 16** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{6.827}}$                                       |
 | **Day 17** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{778.990}}$                                        |
 | **Day 18** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.212}}$                                   |
-| **Day 19** |          |          |          |          |          |          |          |          |                                                                        |
-| **Day 20** |          |          |          |          |          |          |          |          |                                                                        |
+| **Day 19** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{1.620}}$                                       |
+| **Day 20** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{9.497}}$                                       |
 | **Day 21** |          |          |          |          |          |          |          |          | $\color{darkorange}{\textsf{47.354}}$                                  |
 | **Day 22** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{207.238}}$                                        |
 | **Day 23** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.884}}$                                   |
@@ -99,8 +99,8 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 16** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1s}}$                                          |
 | **Day 17** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~3s}}$                                          |
 | **Day 18** |          |          |          |          |          |          |          |          | $\color{lightgreen}{\textsf{0.109}}$                                     |
-| **Day 19** |          |          |          |          |          |          |          |          |                                                                          |
-| **Day 20** |          |          |          |          |          |          |          |          |                                                                          |
+| **Day 19** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{2.107}}$                                         |
+| **Day 20** |          |          |          |          |          |          |          |          | $\color{red}{\textsf{139.362}}$                                          |
 | **Day 21** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~17s}}$                                         |
 | **Day 22** |          |          |          |          |          |          |          |          | $\color{darkred}{\textsf{~1m}}$                                          |
 | **Day 23** |          |          |          |          |          |          |          |          | $\color{orange}{\textsf{5.559}}$                                         |
