@@ -76,7 +76,7 @@ Results marked as INF means that solved by hand
 | **Day 22** |         |         |         |         |         |         |         |         | <span style="color:red">209.524</span> |
 | **Day 23** |         |         |         |         |         |         |         |         | <span style="color:orange">1.394</span> |
 | **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkorange">35.310</span> |
-| **Day 25** |         |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
+| **Day 25** | <span style="color:red">736.831</span> |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
 
 
 ### <span style="color:#FFFF66">**</span> Part 2
@@ -107,4 +107,4 @@ Results marked as INF means that solved by hand
 | **Day 22** |         |         |         |         |         |         |         |         | <span style="color:darkred">>1m</span> |
 | **Day 23** |         |         |         |         |         |         |         |         | <span style="color:darkred">>5s</span> |
 | **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkred">>6s</span> |
-| **Day 25** | <span style="color:#9999CC">* × 36</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 2</span> | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 49</span> |
+| **Day 25** | <span style="color:#9999CC">* × 37</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 2</span> | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 49</span> |
