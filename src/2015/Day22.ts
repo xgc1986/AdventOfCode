@@ -37,11 +37,11 @@ type Input = Stats;
 export default class Day22 extends Puzzle<Input> {
 
     private readonly SPELLS: Spells[] = [
-        { name: "Magic Missile", cost: 53,  damage: 4, hp: 0, mp: 0, armor: 0, poison: 0 },
-        { name: "Drain",         cost: 73,  damage: 2, hp: 2, mp: 0, armor: 0, poison: 0 },
-        { name: "Shield",        cost: 113, damage: 0, hp: 0, mp: 0, armor: 6, poison: 0 },
-        { name: "Poison",        cost: 173, damage: 0, hp: 0, mp: 0, armor: 0, poison: 6 },
-        { name: "Recharge",      cost: 229, damage: 0, hp: 0, mp: 5, armor: 0, poison: 0 },
+        {name: "Magic Missile", cost: 53, damage: 4, hp: 0, mp: 0, armor: 0, poison: 0},
+        {name: "Drain", cost: 73, damage: 2, hp: 2, mp: 0, armor: 0, poison: 0},
+        {name: "Shield", cost: 113, damage: 0, hp: 0, mp: 0, armor: 6, poison: 0},
+        {name: "Poison", cost: 173, damage: 0, hp: 0, mp: 0, armor: 0, poison: 6},
+        {name: "Recharge", cost: 229, damage: 0, hp: 0, mp: 5, armor: 0, poison: 0},
     ];
 
     parseInput(input: string): Input {
