@@ -54,7 +54,7 @@ export class Debug {
         }
     }
 
-    static generateGraph(graph: Graph, withWeight: boolean = false, bin: string = 'neato') {
+    static generateGraph(graph: Graph, withWeight: boolean = false, bin: 'neato'|'dot' = 'neato') {
         let path = `outputs/${Debug.year}/day${Debug.day}`;
         if (Debug.isExecuting) {
             path += Debug.part;
