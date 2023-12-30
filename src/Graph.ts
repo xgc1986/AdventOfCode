@@ -308,6 +308,10 @@ export class UndirectedGraph implements Graph {
 
         return lines + '}';
     }
+
+    transformToDirectedGraph(): DirectedGraph {
+        return new DirectedGraph(this);
+    }
 }
 
 export class Vertex {

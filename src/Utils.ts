@@ -2,6 +2,7 @@ import * as fs from "fs";
 import {execSync} from "child_process";
 import Graph from "src/Graph.ts";
 import * as console from "console";
+import uuid4 from "uuid4";
 
 export interface UMap<T> {
     [key: string]: T
@@ -197,5 +198,9 @@ export class UMath {
 export class UString {
     static nextChar(c: string): string {
         return String.fromCharCode(c.charCodeAt(0) + 1);
+    }
+
+    static uuid(): string {
+        return uuid4();
     }
 }

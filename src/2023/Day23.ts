@@ -6,7 +6,7 @@
 import Puzzle from "src/Puzzle.ts";
 import Graph, {DirectedGraph, Vertex} from "src/Graph.ts";
 import {UArray} from "src/Utils.ts";
-import MaxDistance from "src/Algorithm/Graph/MaxDistance.ts";
+import MaxDistanceBetweenTwoVertices from "src/Algorithm/Graph/MaxDistanceBetweenTwoVertices.ts";
 
 type Solution = number | string | undefined;
 
@@ -178,7 +178,7 @@ export default class Day23 extends Puzzle<Input> {
             }
         }
 
-        return MaxDistance.solve(graph, '"1,1"', `"${input.map[0].length - 2},${input.map.length - 1}"`, path);
+        return MaxDistanceBetweenTwoVertices.solve(graph, '"1,1"', `"${input.map[0].length - 2},${input.map.length - 1}"`, path);
     }
 
     async run2(input: Input): Promise<Solution> {
@@ -193,6 +193,6 @@ export default class Day23 extends Puzzle<Input> {
             }
         }
 
-        return MaxDistance.solve(graph, '"1,1"', `"${input.map[0].length - 2},${input.map.length - 1}"`, path);
+        return MaxDistanceBetweenTwoVertices.solve(graph, '"1,1"', `"${input.map[0].length - 2},${input.map.length - 1}"`, path);
     }
 }
