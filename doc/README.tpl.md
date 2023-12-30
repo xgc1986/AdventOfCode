@@ -34,6 +34,8 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
+Results marked as INF means that solved by hand
+
 %%LEGEND_TABLE%%
 
 ### %%STARS1%% Part 1

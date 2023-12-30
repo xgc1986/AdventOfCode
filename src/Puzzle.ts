@@ -15,25 +15,26 @@ export default abstract class Puzzle<T> {
 
     private z3Info: Z3Info|undefined = undefined;
 
-    constructor(public readonly mode: string) {
-    }
+    constructor(public readonly mode: string) {}
 
     public async onStart(): Promise<void> {}
 
-    public async onEnd(): Promise<void> {}
-
-    public test(): void {
-        console.log('test');
+    public async onEnd(): Promise<void> {
+        if (this.z3Info !== undefined) {
+            this.z3Info.em.PThread.terminateAllThreads();
+            this.z3Info = undefined;
+        }
     }
 
-    protected async loadZ3(): Promise<Z3Info> {
+    protected async loadZ3(): Promise<Context> {
         if (this.z3Info === undefined) {
             const {Context, em, setParam} = await init();
             setParam('pp.decimal', true);
             setParam('pp.decimal_precision', 3);
             this.z3Info = {em, Z3: Context('main')};
         }
-        return this.z3Info;
+
+        return this.z3Info.Z3;
     }
 
     public abstract parseInput(input: string): T;

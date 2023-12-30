@@ -13,12 +13,8 @@ type Input = Line3D[];
 export default class Day24 extends Puzzle<Input> {
 
     async onStart(): Promise<void> {
+        await super.onStart();
         await this.loadZ3();
-    }
-
-    async onEnd(): Promise<void> {
-        const {em} = await this.loadZ3();
-        em.PThread.terminateAllThreads();
     }
 
     parseInput(input: string): Input {
@@ -71,7 +67,7 @@ export default class Day24 extends Puzzle<Input> {
     }
 
     async run2(input: Input): Promise<number> {
-        const {Z3} = await this.loadZ3();
+        const Z3 = await this.loadZ3();
         const solver = new Z3.Solver();
 
         const x = Z3.Int.const('x');

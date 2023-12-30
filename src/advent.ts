@@ -235,6 +235,8 @@ import {Debug, UMap} from "src/Utils.ts";
             return executionTime;
         }
 
+        await puzzle.onEnd();
+
         return -1;
     }
 

@@ -34,6 +34,8 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
+Results marked as INF means that solved by hand
+
 <span style="color:lightgreen">Less than 1 milisecond</span>
 
 <span style="color:orange">More than 1 milisecond</span>
@@ -59,8 +61,8 @@ Execution program is **Ts-Node**
 | **Day 7** | <span style="color:lightgreen">0.857</span> |         |         |         |         |         |         |         | <span style="color:orange">2.683</span> |
 | **Day 8** | <span style="color:lightgreen">0.257</span> |         |         |         |         |         |         |         | <span style="color:orange">1.333</span> |
 | **Day 9** | <span style="color:darkorange">86.531</span> |         |         |         |         |         |         |         | <span style="color:orange">2.433</span> |
-| **Day 10** | <span style="color:darkorange">55.183</span> |         |         |         |         |         |         |         | <span style="color:orange">1.766</span> |
-| **Day 11** |         |         |         |         |         |         |         |         | <span style="color:orange">7.678</span> |
+| **Day 10** | <span style="color:darkorange">61.356</span> |         |         |         |         |         |         |         | <span style="color:orange">1.766</span> |
+| **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">7.652</span> |
 | **Day 12** |         |         |         |         |         |         |         |         | <span style="color:darkorange">23.652</span> |
 | **Day 13** |         |         |         |         |         |         |         |         | <span style="color:orange">2.605</span> |
 | **Day 14** |         |         |         |         |         |         |         |         | <span style="color:orange">3.359</span> |
@@ -73,7 +75,7 @@ Execution program is **Ts-Node**
 | **Day 21** |         |         |         |         |         |         |         |         | <span style="color:darkorange">47.542</span> |
 | **Day 22** |         |         |         |         |         |         |         |         | <span style="color:red">209.524</span> |
 | **Day 23** |         |         |         |         |         |         |         |         | <span style="color:orange">1.016</span> |
-| **Day 24** |         |         |         |         |         |         |         |         | <span style="color:darkorange">35.950</span> |
+| **Day 24** |         |         |         |         |         |         |         |         | <span style="color:darkorange">35.310</span> |
 | **Day 25** |         |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
 
 
@@ -91,7 +93,7 @@ Execution program is **Ts-Node**
 | **Day 8** | <span style="color:lightgreen">0.269</span> |         |         |         |         |         |         |         | <span style="color:orange">6.380</span> |
 | **Day 9** | <span style="color:darkorange">94.315</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.925</span> |
 | **Day 10** | <span style="color:darkred">>1s</span> |         |         |         |         |         |         |         | <span style="color:orange">7.517</span> |
-| **Day 11** |         |         |         |         |         |         |         |         | <span style="color:orange">5.206</span> |
+| **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">5.165</span> |
 | **Day 12** |         |         |         |         |         |         |         |         | <span style="color:red">528.548</span> |
 | **Day 13** |         |         |         |         |         |         |         |         | <span style="color:lightgreen">0.569</span> |
 | **Day 14** |         |         |         |         |         |         |         |         | <span style="color:red">482.525</span> |
@@ -104,5 +106,5 @@ Execution program is **Ts-Node**
 | **Day 21** |         |         |         |         |         |         |         |         | <span style="color:darkred">>18s</span> |
 | **Day 22** |         |         |         |         |         |         |         |         | <span style="color:darkred">>1m</span> |
 | **Day 23** |         |         |         |         |         |         |         |         | <span style="color:darkred">>5s</span> |
-| **Day 24** |         |         |         |         |         |         |         |         | <span style="color:darkred">>7s</span> |
-| **Day 25** | <span style="color:#9999CC">* × 20</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 2</span> | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 49</span> |
+| **Day 24** |         |         |         |         |         |         |         |         | <span style="color:darkred">>6s</span> |
+| **Day 25** | <span style="color:#9999CC">* × 22</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 2</span> | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 49</span> |
