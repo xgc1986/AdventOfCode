@@ -146,7 +146,7 @@ export class DirectedGraph implements Graph {
             for (const edge of vertex.edges) {
                 lines += `    ${vertex.id} -> ${edge.vertex.id}`;
                 if (withWeight) {
-                    lines += ` [weight=${edge.weight}]`;
+                    lines += ` [label="${edge.weight}"]`;
                 }
                 lines += '\n';
             }
@@ -300,7 +300,7 @@ export class UndirectedGraph implements Graph {
                 visited[hash2] = true;
                 lines += `    ${vertex.id} -- ${edge.vertex.id}`;
                 if (withWeight) {
-                    lines += ` [weight=${edge.weight}]`;
+                    lines += ` [label=${edge.weight}]`;
                 }
                 lines += ';\n';
             }

@@ -59,6 +59,7 @@ export class Debug {
         if (Debug.isExecuting) {
             path += Debug.part;
         }
+
         fs.writeFileSync(`${path}.gv`, graph.dotString(withWeight));
         execSync(`${bin} -Tsvg ${path}.gv > ${path}.svg`);
         fs.rmSync(`${path}.gv`);
