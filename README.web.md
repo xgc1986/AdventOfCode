@@ -76,7 +76,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
 | **Day 23** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.394}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
-| **Day 25** | $\color{red}{\texttt{736.831}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
+| **Day 25** | $\color{red}{\texttt{737.135}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
 
 
 ### $\color{#FFFF66}{\texttt{**}}$ Part 2

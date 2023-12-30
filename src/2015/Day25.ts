@@ -12,7 +12,7 @@ type Input = number[];
 export default class Day25 extends Puzzle<Input> {
 
     parseInput(input: string): Input {
-        const data =  input.match(/To continue, please consult the code grid in the manual.  Enter the code at row (\d+), column (\d+)./)?.map(Number) || [];
+        const data =  input.match(/To continue, please consult the code grid in the manual. {2}Enter the code at row (\d+), column (\d+)./)?.map(Number) || [];
         data.shift();
         return data;
     }
