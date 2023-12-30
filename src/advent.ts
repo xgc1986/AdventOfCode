@@ -64,7 +64,7 @@ import {Debug, UMap} from "src/Utils.ts";
                         lineApp += ` ⭐️ |`;
                         lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
                         lineIDE += ` <span style="color:#FFFF66">* × 50</span> |`;
-                    } if (complete[year] > 0) {
+                    } else if (complete[year] > 0) {
                         lineApp += ` * × ${complete[year]}        |`;
                         lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`;
                         lineIDE += ` <span style="color:#9999CC">* × ${complete[year]}</span> |`;
