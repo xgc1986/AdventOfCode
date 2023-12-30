@@ -73,7 +73,7 @@ export default class Day14 extends Puzzle<Input> {
     }
 
     async run1(deers: Input): Promise<Solution> {
-        return this.race(deers, 2503).distance;
+        return this.race(deers, 2503).points;
     }
 
     async run2(deers: Input): Promise<Solution> {
