@@ -1,6 +1,6 @@
 # Advent of Code
 
-
+App version of [Readme](./README.app.md)
 
 ## Configure
 
@@ -36,75 +36,75 @@ Execution program is **Ts-Node**
 
 Results marked as INF means that solved by hand
 
-<span style="color:lightgreen">Less than 1 milisecond</span>
+$\color{lightgreen}{\textsf{Less than 1 milisecond}}$
 
-<span style="color:orange">More than 1 milisecond</span>
+$\color{orange}{\textsf{More than 1 milisecond}}$
 
-<span style="color:darkorange">More than 10 milisecond</span>
+$\color{darkorange}{\textsf{More than 10 milisecond}}$
 
-<span style="color:red">More than 100 milisecond</span>
+$\color{red}{\textsf{More than 100 milisecond}}$
 
-<span style="color:darkred">More than 1 second</span>
-
-
-
-### <span style="color:#FFFF66">*</span> Part 1
-
-| **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
-|---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | <span style="color:lightgreen">0.241</span> | <span style="color:lightgreen">0.121</span> |         |         |         |         |         | <span style="color:lightgreen">0.107</span> | <span style="color:lightgreen">0.640</span> |
-| **Day 2** | <span style="color:lightgreen">0.257</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.106</span> |
-| **Day 3** | <span style="color:orange">1.619</span> |         |         |         |         |         |         |         | <span style="color:orange">2.676</span> |
-| **Day 4** | <span style="color:red">215.132</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.426</span> |
-| **Day 5** | <span style="color:lightgreen">0.786</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.364</span> |
-| **Day 6** | <span style="color:darkorange">63.910</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.047</span> |
-| **Day 7** | <span style="color:lightgreen">0.857</span> |         |         |         |         |         |         |         | <span style="color:orange">2.683</span> |
-| **Day 8** | <span style="color:lightgreen">0.257</span> |         |         |         |         |         |         |         | <span style="color:orange">1.333</span> |
-| **Day 9** | <span style="color:darkorange">86.531</span> |         |         |         |         |         |         |         | <span style="color:orange">2.433</span> |
-| **Day 10** | <span style="color:darkorange">61.356</span> |         |         |         |         |         |         |         | <span style="color:orange">1.766</span> |
-| **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">7.652</span> |
-| **Day 12** | <span style="color:lightgreen">0.309</span> |         |         |         |         |         |         |         | <span style="color:darkorange">23.652</span> |
-| **Day 13** | <span style="color:orange">6.308</span> |         |         |         |         |         |         |         | <span style="color:orange">2.605</span> |
-| **Day 14** | <span style="color:orange">2.755</span> |         |         |         |         |         |         |         | <span style="color:orange">3.359</span> |
-| **Day 15** | <span style="color:darkorange">83.276</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.928</span> |
-| **Day 16** |         |         |         |         |         |         |         |         | <span style="color:orange">6.506</span> |
-| **Day 17** |         |         |         |         |         |         |         |         | <span style="color:red">731.511</span> |
-| **Day 18** |         |         |         |         |         |         |         |         | <span style="color:lightgreen">0.195</span> |
-| **Day 19** |         |         |         |         |         |         |         |         | <span style="color:orange">1.710</span> |
-| **Day 20** |         |         |         |         |         |         |         |         | <span style="color:darkorange">11.904</span> |
-| **Day 21** |         |         |         |         |         |         |         |         | <span style="color:darkorange">47.542</span> |
-| **Day 22** |         |         |         |         |         |         |         |         | <span style="color:red">209.524</span> |
-| **Day 23** |         |         |         |         |         |         |         |         | <span style="color:orange">1.016</span> |
-| **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkorange">35.310</span> |
-| **Day 25** |         |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
+$\color{darkred}{\textsf{More than 1 second}}$
 
 
-### <span style="color:#FFFF66">**</span> Part 2
+
+### $\color{#FFFF66}{\texttt{*}}$ Part 1
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | <span style="color:lightgreen">0.110</span> | <span style="color:lightgreen">0.273</span> |         |         |         |         |         | <span style="color:lightgreen">0.109</span> | <span style="color:orange">1.598</span> |
-| **Day 2** | <span style="color:lightgreen">0.130</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.103</span> |
-| **Day 3** | <span style="color:orange">1.988</span> |         |         |         |         |         |         |         | <span style="color:orange">1.221</span> |
-| **Day 4** | <span style="color:darkred">>7s</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.475</span> |
-| **Day 5** | <span style="color:orange">1.833</span> |         |         |         |         |         |         |         | <span style="color:darkred">>8m</span> |
-| **Day 6** | <span style="color:darkorange">66.922</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.041</span> |
-| **Day 7** | <span style="color:lightgreen">0.513</span> |         |         |         |         |         |         |         | <span style="color:orange">5.344</span> |
-| **Day 8** | <span style="color:lightgreen">0.269</span> |         |         |         |         |         |         |         | <span style="color:orange">6.380</span> |
-| **Day 9** | <span style="color:darkorange">94.315</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.925</span> |
-| **Day 10** | <span style="color:darkred">>1s</span> |         |         |         |         |         |         |         | <span style="color:orange">7.517</span> |
-| **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">5.165</span> |
-| **Day 12** | <span style="color:lightgreen">0.762</span> |         |         |         |         |         |         |         | <span style="color:red">528.548</span> |
-| **Day 13** | <span style="color:darkorange">29.090</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.569</span> |
-| **Day 14** | <span style="color:lightgreen">0.260</span> |         |         |         |         |         |         |         | <span style="color:red">482.525</span> |
-| **Day 15** | <span style="color:darkorange">63.617</span> |         |         |         |         |         |         |         | <span style="color:orange">1.341</span> |
-| **Day 16** |         |         |         |         |         |         |         |         | <span style="color:darkred">>1s</span> |
-| **Day 17** |         |         |         |         |         |         |         |         | <span style="color:darkred">>2s</span> |
-| **Day 18** |         |         |         |         |         |         |         |         | <span style="color:lightgreen">0.112</span> |
-| **Day 19** |         |         |         |         |         |         |         |         | <span style="color:orange">2.112</span> |
-| **Day 20** |         |         |         |         |         |         |         |         | <span style="color:darkorange">17.168</span> |
-| **Day 21** |         |         |         |         |         |         |         |         | <span style="color:darkred">>18s</span> |
-| **Day 22** |         |         |         |         |         |         |         |         | <span style="color:darkred">>1m</span> |
-| **Day 23** |         |         |         |         |         |         |         |         | <span style="color:darkred">>5s</span> |
-| **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkred">>6s</span> |
-| **Day 25** | <span style="color:#9999CC">* × 32</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 2</span> | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 49</span> |
+| **Day 1** | $\color{lightgreen}{\texttt{0.241}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.107}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
+| **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
+| **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.676}}$ |
+| **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
+| **Day 5** | $\color{lightgreen}{\texttt{0.786}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.364}}$ |
+| **Day 6** | $\color{darkorange}{\texttt{63.910}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.047}}$ |
+| **Day 7** | $\color{lightgreen}{\texttt{0.857}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.683}}$ |
+| **Day 8** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.333}}$ |
+| **Day 9** | $\color{darkorange}{\texttt{86.531}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.433}}$ |
+| **Day 10** | $\color{darkorange}{\texttt{61.356}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.766}}$ |
+| **Day 11** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.652}}$ |
+| **Day 12** | $\color{lightgreen}{\texttt{0.309}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{23.652}}$ |
+| **Day 13** | $\color{orange}{\texttt{6.308}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.605}}$ |
+| **Day 14** | $\color{orange}{\texttt{2.755}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{3.359}}$ |
+| **Day 15** | $\color{darkorange}{\texttt{84.058}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.928}}$ |
+| **Day 16** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.506}}$ |
+| **Day 17** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{731.511}}$ |
+| **Day 18** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.195}}$ |
+| **Day 19** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.710}}$ |
+| **Day 20** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{11.904}}$ |
+| **Day 21** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{47.542}}$ |
+| **Day 22** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
+| **Day 23** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.016}}$ |
+| **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
+| **Day 25** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
+
+
+### $\color{#FFFF66}{\texttt{**}}$ Part 2
+
+| **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
+|---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
+| **Day 1** | $\color{lightgreen}{\texttt{0.110}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.109}}$ | $\color{orange}{\texttt{1.598}}$ |
+| **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ |
+| **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.221}}$ |
+| **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
+| **Day 5** | $\color{orange}{\texttt{1.833}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>8m}}$ |
+| **Day 6** | $\color{darkorange}{\texttt{66.922}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.041}}$ |
+| **Day 7** | $\color{lightgreen}{\texttt{0.513}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.344}}$ |
+| **Day 8** | $\color{lightgreen}{\texttt{0.269}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.380}}$ |
+| **Day 9** | $\color{darkorange}{\texttt{94.315}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.925}}$ |
+| **Day 10** | $\color{darkred}{\texttt{>1s}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.517}}$ |
+| **Day 11** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.165}}$ |
+| **Day 12** | $\color{lightgreen}{\texttt{0.762}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{528.548}}$ |
+| **Day 13** | $\color{darkorange}{\texttt{29.090}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.569}}$ |
+| **Day 14** | $\color{lightgreen}{\texttt{0.260}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{482.525}}$ |
+| **Day 15** | $\color{darkorange}{\texttt{65.303}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.341}}$ |
+| **Day 16** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1s}}$ |
+| **Day 17** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>2s}}$ |
+| **Day 18** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.112}}$ |
+| **Day 19** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.112}}$ |
+| **Day 20** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{17.168}}$ |
+| **Day 21** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>18s}}$ |
+| **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
+| **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
+| **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ |
+| **Day 25** | $\color{#9999CC}{\texttt{* × 32}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 2}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 49}}$ |
