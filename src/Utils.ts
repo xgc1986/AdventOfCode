@@ -5,7 +5,9 @@ import * as console from "console";
 import uuid4 from "uuid4";
 
 export type BASIC_TYPES = number | string | undefined | null | boolean;
-export type JSON_OBJECT = UMap<BASIC_TYPES | JSON_OBJECT | (BASIC_TYPES | JSON_OBJECT)[]> | (BASIC_TYPES | JSON_OBJECT)[];
+export type JSON_OBJECT =
+    UMap<BASIC_TYPES | JSON_OBJECT | (BASIC_TYPES | JSON_OBJECT)[]>
+    | (BASIC_TYPES | JSON_OBJECT)[];
 
 export interface UMap<T> {
     [key: string]: T
@@ -54,7 +56,7 @@ export class Debug {
         }
     }
 
-    static generateGraph(graph: Graph, withWeight: boolean = false, bin: 'neato'|'dot' = 'neato') {
+    static generateGraph(graph: Graph, withWeight: boolean = false, bin: 'neato' | 'dot' = 'neato') {
         let path = `outputs/${Debug.year}/day${Debug.day}`;
         if (Debug.isExecuting) {
             path += Debug.part;
@@ -115,33 +117,33 @@ export class UArray {
         return ret;
     }
 
-    static matrixValue<T>(matrix: T[][], x: number, y: number) {
-        if (y < 0 || y >= matrix.length || x < 0 || x >= matrix[y].length) {
+    static matrixValue<T>(matrix: T[][], row: number, col: number) {
+        if (row < 0 || row >= matrix.length || col < 0 || col >= matrix[row].length) {
             return undefined;
         }
 
-        return matrix[y][x];
+        return matrix[row][col];
     }
 
-    static surround4<T>(matrix: T[][], x: number, y: number): T[] {
+    static surround4<T>(matrix: T[][], row: number, col: number): T[] {
         return [
-            UArray.matrixValue(matrix, x, y - 1),
-            UArray.matrixValue(matrix, x + 1, y),
-            UArray.matrixValue(matrix, x, y + 1),
-            UArray.matrixValue(matrix, x - 1, y)
+            UArray.matrixValue(matrix, row - 1, col),
+            UArray.matrixValue(matrix, row, col - 1),
+            UArray.matrixValue(matrix, row, col + 1),
+            UArray.matrixValue(matrix, row + 1, col),
         ].filter((v) => v !== undefined) as T[];
     }
 
-    static surround8<T>(matrix: T[][], x: number, y: number): T[] {
+    static surround8<T>(matrix: T[][], row: number, col: number): T[] {
         return [
-            UArray.matrixValue(matrix, x - 1, y - 1),
-            UArray.matrixValue(matrix, x, y - 1),
-            UArray.matrixValue(matrix, x + 1, y - 1),
-            UArray.matrixValue(matrix, x - 1, y),
-            UArray.matrixValue(matrix, x + 1, y),
-            UArray.matrixValue(matrix, x - 1, y + 1),
-            UArray.matrixValue(matrix, x, y + 1),
-            UArray.matrixValue(matrix, x + 1, y + 1),
+            UArray.matrixValue(matrix, row - 1, col - 1),
+            UArray.matrixValue(matrix, row - 1, col),
+            UArray.matrixValue(matrix, row - 1, col + 1),
+            UArray.matrixValue(matrix, row, col - 1),
+            UArray.matrixValue(matrix, row, col + 1),
+            UArray.matrixValue(matrix, row + 1, col - 1),
+            UArray.matrixValue(matrix, row + 1, col),
+            UArray.matrixValue(matrix, row + 1, col + 1),
         ].filter((v) => v !== undefined) as T[];
     }
 

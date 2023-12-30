@@ -111,10 +111,10 @@ export default class Day10 extends Puzzle<Input> {
         for (let i = 0; i < map.length; i++) {
             for (let j = 0; j < map[i].length; j++) {
                 if (map[i][j] === 'S') {
-                    const top = UArray.matrixValue(map, j, i - 1);
-                    const right = UArray.matrixValue(map, j + 1, i);
-                    const bottom = UArray.matrixValue(map, j, i + 1);
-                    const left = UArray.matrixValue(map, j - 1, i);
+                    const top = UArray.matrixValue(map, i - 1, j);
+                    const right = UArray.matrixValue(map, i, j + 1);
+                    const bottom = UArray.matrixValue(map, i + 1, j);
+                    const left = UArray.matrixValue(map, i, j - 1);
 
                     const fromTop = top === '│' || top === '┌' || top === '┐';
                     const fromRight = right === '─' || right === '┐' || right === '┘';

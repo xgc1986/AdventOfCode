@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day3.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
-import {UArray, UMap} from "src/Utils.ts";
+import {UArray, UMap, UObject} from "src/Utils.ts";
 
 interface Value {
     value: number;
@@ -81,12 +81,13 @@ export default class Day3 extends Puzzle<Input> {
     }
 
     async run1(input: Input): Promise<number> {
+        input = UObject.deepCopy(input);
         let total = 0;
 
         for (let i = 0; i < input.length; i++) {
             for (let j = 0; j < input[i].length; j++) {
                 if (!input[i][j].symbol && input[i][j].value.value > 0) {
-                    const surround = UArray.surround8(input, j, i);
+                    const surround = UArray.surround8(input, i, j);
                     let found = false;
                     for (const sur of surround) {
                         if (sur.symbol) {
@@ -113,7 +114,7 @@ export default class Day3 extends Puzzle<Input> {
             for (let j = 0; j < input[i].length; j++) {
                 if (input[i][j].symbol) {
                     const values: number[] = [];
-                    const surround = UArray.surround8(input, j, i);
+                    const surround = UArray.surround8(input, i, j);
                     for (const sur of surround) {
                         if (sur.value.value > 0) {
                             values.push(sur.value.value);

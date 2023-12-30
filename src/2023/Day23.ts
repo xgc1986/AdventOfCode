@@ -58,10 +58,10 @@ export default class Day23 extends Puzzle<Input> {
             let weight = pos.w;
             let slope = pos.slope;
             let options = 0;
-            let top = UArray.matrixValue(map, pos.x, pos.y - 1);
-            let bottom = UArray.matrixValue(map, pos.x, pos.y + 1);
-            let left = UArray.matrixValue(map, pos.x - 1, pos.y);
-            let right = UArray.matrixValue(map, pos.x + 1, pos.y);
+            let top = UArray.matrixValue(map, pos.y - 1, pos.x);
+            let bottom = UArray.matrixValue(map, pos.y + 1, pos.x);
+            let left = UArray.matrixValue(map, pos.y, pos.x - 1);
+            let right = UArray.matrixValue(map, pos.y, pos.x + 1);
             let canGoTop = false;
             let canGoBottom = false;
             let canGoLeft = false;
