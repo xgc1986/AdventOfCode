@@ -65,7 +65,7 @@ Results marked as INF means that solved by hand
 | **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">7.652</span> |
 | **Day 12** | <span style="color:lightgreen">0.309</span> |         |         |         |         |         |         |         | <span style="color:darkorange">23.652</span> |
 | **Day 13** | <span style="color:orange">6.308</span> |         |         |         |         |         |         |         | <span style="color:orange">2.605</span> |
-| **Day 14** | <span style="color:orange">2.621</span> |         |         |         |         |         |         |         | <span style="color:orange">3.359</span> |
+| **Day 14** | <span style="color:orange">2.755</span> |         |         |         |         |         |         |         | <span style="color:orange">3.359</span> |
 | **Day 15** |         |         |         |         |         |         |         |         | <span style="color:lightgreen">0.928</span> |
 | **Day 16** |         |         |         |         |         |         |         |         | <span style="color:orange">6.506</span> |
 | **Day 17** |         |         |         |         |         |         |         |         | <span style="color:red">731.511</span> |
@@ -96,7 +96,7 @@ Results marked as INF means that solved by hand
 | **Day 11** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:orange">5.165</span> |
 | **Day 12** | <span style="color:lightgreen">0.762</span> |         |         |         |         |         |         |         | <span style="color:red">528.548</span> |
 | **Day 13** | <span style="color:darkorange">29.090</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.569</span> |
-| **Day 14** | <span style="color:lightgreen">0.216</span> |         |         |         |         |         |         |         | <span style="color:red">482.525</span> |
+| **Day 14** | <span style="color:lightgreen">0.260</span> |         |         |         |         |         |         |         | <span style="color:red">482.525</span> |
 | **Day 15** |         |         |         |         |         |         |         |         | <span style="color:orange">1.341</span> |
 | **Day 16** |         |         |         |         |         |         |         |         | <span style="color:darkred">>1s</span> |
 | **Day 17** |         |         |         |         |         |         |         |         | <span style="color:darkred">>2s</span> |
