@@ -4,6 +4,9 @@ import Graph from "src/Graph.ts";
 import * as console from "console";
 import uuid4 from "uuid4";
 
+export type BASIC_TYPES = number | string | undefined | null | boolean;
+export type JSON_OBJECT = UMap<BASIC_TYPES | JSON_OBJECT | (BASIC_TYPES | JSON_OBJECT)[]> | (BASIC_TYPES | JSON_OBJECT)[];
+
 export interface UMap<T> {
     [key: string]: T
 }
