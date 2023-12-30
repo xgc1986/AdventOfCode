@@ -174,7 +174,6 @@ import {Debug, UMap} from "src/Utils.ts";
             '<span style="color:red">More than 100 milisecond</span>\n\n' +
             '<span style="color:darkred">More than 1 second</span>\n\n'
         );
-        fs.writeFileSync('README.md', ide);
         fs.writeFileSync('README.ide.md', ide);
     }
 
