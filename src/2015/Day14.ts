@@ -4,7 +4,6 @@
 // Input file [[inputs/2015/day14.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
 
 type Solution = number | undefined;
 

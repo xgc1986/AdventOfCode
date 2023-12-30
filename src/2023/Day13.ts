@@ -4,7 +4,6 @@
 // Input file [[inputs/2023/day13.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
-import * as console from "console";
 
 type Input = string[][];
 
@@ -76,8 +75,6 @@ export default class Day13 extends Puzzle<Input> {
     }
 
     findSymmetry(mirror: string[], nudges: number): number[] {
-        let x = 0;
-        let y = 0;
         for (let i = 1; i < mirror.length; i++) {
             if (this.isHorizontalSymmetric(mirror, i, nudges)) {
                 return [0, i];

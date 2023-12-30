@@ -141,7 +141,7 @@ export default class Day16 extends Puzzle<Input> {
     async run1(mirror: Input): Promise<Solution> {
         let coords = [{x: 0, y: 0, dir: 'E'}];
         if (mirror[0][0].char === '\\') {
-            coords = [{col: 0, row: 0, dir: 'S'}];
+            coords = [{x: 0, y: 0, dir: 'S'}];
         }
         return this.energyze(UObject.deepCopy(mirror), coords as Beam[]);
     }
@@ -152,10 +152,10 @@ export default class Day16 extends Puzzle<Input> {
 
         // Up
         for (let i = 0; i < mirror[0].length; i++) {
-            const x = i;
-            const y = 0;
+            const col = i;
+            const row = 0;
 
-            let coord = [{x, y, dir: 'S'}];
+            let coord = [{x: col, y: row, dir: 'S'}];
             if (mirror[0][i].char === '\\') {
                 coord = [{x: col, y: row, dir: 'E'}];
             } else if (mirror[0][i].char === '-') {
@@ -168,10 +168,10 @@ export default class Day16 extends Puzzle<Input> {
 
         // Down
         for (let i = 0; i < mirror[0].length; i++) {
-            const x = i;
-            const y = mirror.length - 1;
+            const col = i;
+            const row = mirror.length - 1;
 
-            let coord = [{x, y, dir: 'N'}];
+            let coord = [{x: col, y: row, dir: 'N'}];
             if (mirror[0][i].char === '\\') {
                 coord = [{x: col, y: row, dir: 'W'}];
             } else if (mirror[0][i].char === '-') {
@@ -184,10 +184,10 @@ export default class Day16 extends Puzzle<Input> {
 
         // Right
         for (let i = 0; i < mirror.length; i++) {
-            const x = 0;
-            const y = i;
+            const col = 0;
+            const row = i;
 
-            let coord = [{x, y, dir: 'E'}];
+            let coord = [{x: col, y: row, dir: 'E'}];
             if (mirror[0][i].char === '\\') {
                 coord = [{x: col, y: row, dir: 'S'}];
             } else if (mirror[0][i].char === '|') {
@@ -201,10 +201,10 @@ export default class Day16 extends Puzzle<Input> {
 
         // Left
         for (let i = 0; i < mirror.length; i++) {
-            const x = mirror[0].length - 1;
-            const y = i;
+            const col = mirror[0].length - 1;
+            const row = i;
 
-            let coord = [{x, y, dir: 'W'}];
+            let coord = [{x: col, y: row, dir: 'W'}];
             if (mirror[0][i].char === '\\') {
                 coord = [{x: col, y: row, dir: 'N'}];
             } else if (mirror[0][i].char === '|') {

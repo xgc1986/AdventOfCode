@@ -53,10 +53,6 @@ export default class Day5 extends Puzzle<Input> {
     }
 
     async run2(lines: Input): Promise<Solution> {
-        const invalidStrings = [
-            'ab', 'cd', 'pq', 'xy'
-        ];
-
         let score = 0;
 
         for (const line of lines) {

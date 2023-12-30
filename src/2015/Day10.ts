@@ -7,11 +7,6 @@ import Puzzle from "src/Puzzle.ts";
 
 type Solution = number | undefined;
 
-interface Say {
-    times: number;
-    number: number;
-}
-
 type Input = string;
 
 export default class Day10 extends Puzzle<Input> {

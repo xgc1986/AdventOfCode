@@ -6,8 +6,6 @@
 import Puzzle from "src/Puzzle.ts";
 import Graph, {UndirectedGraph} from "src/Graph.ts";
 import MinCut from "src/Algorithm/Graph/MinCut.ts";
-import {execSync} from 'child_process';
-import fs from "node:fs";
 import {Debug} from "src/Utils.ts";
 
 type Input = Graph;

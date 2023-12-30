@@ -61,20 +61,20 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 7** | $\color{lightgreen}{\texttt{0.857}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.683}}$ |
 | **Day 8** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.333}}$ |
 | **Day 9** | $\color{darkorange}{\texttt{86.531}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.433}}$ |
-| **Day 10** | $\color{darkorange}{\texttt{61.356}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.766}}$ |
+| **Day 10** | $\color{darkorange}{\texttt{61.356}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.752}}$ |
 | **Day 11** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.652}}$ |
 | **Day 12** | $\color{lightgreen}{\texttt{0.309}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{23.652}}$ |
 | **Day 13** | $\color{orange}{\texttt{6.308}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.605}}$ |
 | **Day 14** | $\color{orange}{\texttt{2.755}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{3.359}}$ |
 | **Day 15** | $\color{darkorange}{\texttt{84.058}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.928}}$ |
-| **Day 16** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.506}}$ |
+| **Day 16** | $\color{lightgreen}{\texttt{0.091}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.538}}$ |
 | **Day 17** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{731.511}}$ |
 | **Day 18** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.195}}$ |
 | **Day 19** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.710}}$ |
 | **Day 20** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{11.904}}$ |
 | **Day 21** |         |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{47.542}}$ |
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
-| **Day 23** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.016}}$ |
+| **Day 23** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.394}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
 | **Day 25** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
 
@@ -92,13 +92,13 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 7** | $\color{lightgreen}{\texttt{0.513}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.344}}$ |
 | **Day 8** | $\color{lightgreen}{\texttt{0.269}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.380}}$ |
 | **Day 9** | $\color{darkorange}{\texttt{94.315}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.925}}$ |
-| **Day 10** | $\color{darkred}{\texttt{>1s}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.517}}$ |
+| **Day 10** | $\color{darkred}{\texttt{>1s}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.542}}$ |
 | **Day 11** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.165}}$ |
 | **Day 12** | $\color{lightgreen}{\texttt{0.762}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{528.548}}$ |
 | **Day 13** | $\color{darkorange}{\texttt{29.090}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.569}}$ |
 | **Day 14** | $\color{lightgreen}{\texttt{0.260}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{482.525}}$ |
 | **Day 15** | $\color{darkorange}{\texttt{65.303}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.341}}$ |
-| **Day 16** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1s}}$ |
+| **Day 16** | $\color{lightgreen}{\texttt{0.081}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1s}}$ |
 | **Day 17** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>2s}}$ |
 | **Day 18** |         |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.112}}$ |
 | **Day 19** |         |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.112}}$ |
@@ -107,4 +107,4 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
 | **Day 23** |         |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ |
-| **Day 25** | $\color{#9999CC}{\texttt{* × 32}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 2}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 49}}$ |
+| **Day 25** | $\color{#9999CC}{\texttt{* × 34}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 2}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 49}}$ |

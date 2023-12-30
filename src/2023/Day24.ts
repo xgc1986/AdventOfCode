@@ -6,7 +6,6 @@
 import Puzzle from "src/Puzzle.ts";
 import {UNumber} from "src/Utils.ts";
 import {Line3D, Point3D, Vector3D} from "src/Algebra.ts";
-import * as console from "console";
 
 type Input = Line3D[];
 

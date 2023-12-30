@@ -6,8 +6,6 @@
 import Puzzle from "src/Puzzle.ts";
 import {Debug, UMap, UMath} from "src/Utils.ts";
 import {DirectedGraph} from "src/Graph.ts";
-import fs from "node:fs";
-import {execSync} from "child_process";
 
 interface Camel {
     direction: string,

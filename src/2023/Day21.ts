@@ -4,9 +4,7 @@
 // Input file [[inputs/2023/day21.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
-import {UArray, UMap, UMath} from "src/Utils.ts";
-import * as console from "console";
-import * as process from "process";
+import {UMath} from "src/Utils.ts";
 
 type Solution = number | string | undefined;
 
@@ -20,8 +18,6 @@ export default class Day21 extends Puzzle<Input> {
         [0, -1],
         [0, 1],
     ];
-
-    private counts = [1];
 
     parseInput(input: string): Input {
         return input.split('\n').filter((line) => line !== '').map((line) => line.split(''));

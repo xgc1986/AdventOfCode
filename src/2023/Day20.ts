@@ -5,7 +5,6 @@
 
 import Puzzle from "src/Puzzle.ts";
 import {UMap} from "src/Utils.ts";
-import * as console from "console";
 
 type Solution = number | string | undefined;
 

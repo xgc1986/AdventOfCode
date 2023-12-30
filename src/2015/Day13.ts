@@ -4,9 +4,8 @@
 // Input file [[inputs/2015/day13.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
-import Graph, {DirectedGraph, UndirectedGraph, Vertex} from "src/Graph.ts";
+import Graph, {UndirectedGraph, Vertex} from "src/Graph.ts";
 import {Debug, UMap} from "src/Utils.ts";
-import * as console from "console";
 
 type Solution = number | undefined;
 
