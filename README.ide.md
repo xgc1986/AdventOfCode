@@ -76,7 +76,7 @@ Results marked as INF means that solved by hand
 | **Day 22** |         |         |         |         |         |         |         |         | <span style="color:red">209.524</span> |
 | **Day 23** |         |         |         |         |         |         |         |         | <span style="color:orange">1.394</span> |
 | **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkorange">35.310</span> |
-| **Day 25** | <span style="color:red">737.135</span> |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
+| **Day 25** | <span style="color:red">738.586</span> |         |         |         |         |         |         |         | <span style="color:darkred">INF</span> |
 
 
 ### <span style="color:#FFFF66">**</span> Part 2
