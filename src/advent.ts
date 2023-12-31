@@ -124,7 +124,7 @@ import * as console from "console";
                     lineIDE += `         |`;
                 } else if (time === -10) {
                     lineApp += ` _❌ INF_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`;
+                    lineWeb += ` \\href{https://adventofcode.com/2022/day/10}{$\\color{darkred}{\\texttt{INF}}}$ |`;
                     lineIDE += ` <span style="color:darkred">INF</span> |`;
                 } else if (time > 0 && time <= 1_000) {
                     lineApp += ` ✅✅ _${ms}_ |`;
