@@ -68,7 +68,7 @@ export default class Day14 extends Puzzle<Input> {
         let amount = 0;
         let flowing = false;
         while (!flowing) {
-            flowing = this.dropSand(sandX, cave);
+            flowing = this.dropSand(sandX, cave, false);
             if (flowing) {
                 break;
             }
@@ -79,8 +79,57 @@ export default class Day14 extends Puzzle<Input> {
         return amount;
     }
 
-    async run2(_: Input): Promise<Solution> {
-        return undefined;
+    async run2(lines: Input): Promise<Solution> {
+        let sizeX = 0;
+        let sizeY = 0;
+
+        for (const line of lines) {
+            const movements = line.split(' -> ');
+            for (const movement of movements) {
+                const coords = movement.split(',');
+                sizeX = Math.max(parseInt(coords[0]), sizeX);
+                sizeY = Math.max(parseInt(coords[1]) + 2, sizeY);
+            }
+        }
+
+        sizeX = Math.max(sizeX, 500 + sizeY);
+
+        const cave = [];
+
+        for (let i = 0; i < sizeY; i++) {
+            const row = [];
+            for (let j = 0; j < sizeX; j++) {
+                row.push('.');
+            }
+            cave.push(row);
+        }
+
+        for (const line of lines) {
+            const movements = line.split(' -> ');
+            for (let i = 0; i < movements.length - 1; i++) {
+                const coords0 = movements[i].split(',');
+                const x0 = parseInt(coords0[0]);
+                const y0 = parseInt(coords0[1]);
+
+                const coords1 = movements[i + 1].split(',');
+                const x1 = parseInt(coords1[0]);
+                const y1 = parseInt(coords1[1]);
+
+                this.drawLine(x0, y0, x1, y1, cave);
+            }
+        }
+
+        const sandX = 500;
+        cave[0][sandX] = '+';
+
+        let amount = 0;
+        let flowing = false;
+        while (!flowing) {
+            flowing = this.dropSand(sandX, cave, true);
+            amount++;
+        }
+
+        return amount;
     }
 
     drawLine(x0: number, y0: number, x1: number, y1: number, cave: string[][]) {
@@ -91,12 +140,15 @@ export default class Day14 extends Puzzle<Input> {
         }
     }
 
-    dropSand(x: number, cave: string[][]) {
+    dropSand(x: number, cave: string[][], tillTheEnd: boolean) {
         let sy = 0
         let sx = x;
 
         while (true) {
             if (sy === cave.length - 1) {
+                if (tillTheEnd) {
+                    break;
+                }
                 return true;
             }
 
@@ -115,7 +167,7 @@ export default class Day14 extends Puzzle<Input> {
 
         cave[sy][sx] = 'o';
 
-        return false;
+        return sy === 0 && sx === x;
     }
 
     markSand(x: number, cave: string[][]): void {
