@@ -1,7 +1,7 @@
 "use strict";
 
-// [[https://adventofcode.com/2022/day/22]]
-// Input file [[inputs/2022/day22.input.txt]]
+// [[https://adventofcode.com/2015/day/11]]
+// Input file [[inputs/2015/day11.input.txt]]
 
 import Puzzle from "src/Puzzle.ts";
 
@@ -9,7 +9,7 @@ type Solution = number | undefined;
 
 type Input = string[];
 
-export default class Day22 extends Puzzle<Input> {
+export default class Day11 extends Puzzle<Input> {
 
     parseInput(input: string): Input {
         return input.split('\n');

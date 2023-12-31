@@ -3,3 +3,5 @@
 ts-node --swc src/advent.ts "$@"
 
 git add .
+
+git add -f "inputs/$1/day$2.input.txt"

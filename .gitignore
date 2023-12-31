@@ -1,7 +1,7 @@
 .idea
 outputs
 node_modules
-inputs/*
+inputs/**/*
 !inputs/**/*.input.txt
 *.js
 *.mjs
