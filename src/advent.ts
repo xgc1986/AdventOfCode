@@ -9,6 +9,7 @@ import Puzzle from "src/Puzzle.ts";
 import {Debug, UMap} from "src/Utils.ts";
 import * as process from "process";
 import * as path from "path";
+import * as console from "console";
 
 (async function (): Promise<void> {
     const INFO = '\x1b[1m\x1b[92m';
