@@ -8,6 +8,18 @@
 yarn install
 ```
 
+```sh
+cp config.dist.json config.json
+```
+
+**Optional** If you want to download the input automatically, you need to set the session cookie in the config.js file. You can find it in the browser console.
+
+```json
+{
+  "cookie": "MY_COOKIE"
+}
+```
+
 ## How to run
 
 With ts-node

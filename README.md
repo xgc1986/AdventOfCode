@@ -8,6 +8,18 @@ App version of [Readme](./README.app.md)
 yarn install
 ```
 
+```sh
+cp config.dist.json config.json
+```
+
+**Optional** If you want to download the input automatically, you need to set the session cookie in the config.js file. You can find it in the browser console.
+
+```json
+{
+  "cookie": "MY_COOKIE"
+}
+```
+
 ## How to run
 
 With ts-node
@@ -52,7 +64,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.107}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.114}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.207}}$ |
 | **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.426}}$ |
@@ -67,7 +79,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 13** | $\color{orange}{\texttt{6.308}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.605}}$ |
 | **Day 14** | $\color{orange}{\texttt{2.755}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{3.359}}$ |
 | **Day 15** | $\color{darkorange}{\texttt{84.058}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.928}}$ |
-| **Day 16** | $\color{lightgreen}{\texttt{0.091}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{6.538}}$ |
+| **Day 16** | $\color{lightgreen}{\texttt{0.091}}$ |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ | $\color{orange}{\texttt{6.538}}$ |
 | **Day 17** | $\color{red}{\texttt{202.985}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{731.511}}$ |
 | **Day 18** | $\color{darkorange}{\texttt{97.254}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.195}}$ |
 | **Day 19** | $\color{orange}{\texttt{3.220}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.710}}$ |
@@ -83,7 +95,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.108}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.109}}$ | $\color{orange}{\texttt{1.598}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.108}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.111}}$ | $\color{orange}{\texttt{1.598}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.475}}$ |
@@ -98,7 +110,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 13** | $\color{darkorange}{\texttt{29.090}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.569}}$ |
 | **Day 14** | $\color{lightgreen}{\texttt{0.260}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{482.525}}$ |
 | **Day 15** | $\color{darkorange}{\texttt{65.303}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.341}}$ |
-| **Day 16** | $\color{lightgreen}{\texttt{0.081}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1s}}$ |
+| **Day 16** | $\color{lightgreen}{\texttt{0.081}}$ |         |         |         |         |         |         | $\color{darkred}{\texttt{>3m}}$ | $\color{darkred}{\texttt{>1s}}$ |
 | **Day 17** | $\color{red}{\texttt{200.915}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>2s}}$ |
 | **Day 18** | $\color{darkorange}{\texttt{88.793}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.112}}$ |
 | **Day 19** | $\color{orange}{\texttt{3.257}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.112}}$ |
@@ -107,4 +119,4 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** | $\color{red}{\texttt{412.600}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
 | **Day 23** | $\color{lightgreen}{\texttt{0.095}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ |
-| **Day 25** | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 2}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ |
+| **Day 25** | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 4}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ |

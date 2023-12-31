@@ -7,6 +7,8 @@ import * as https from "node:https";
 import { request } from "node:https";
 import Puzzle from "src/Puzzle.ts";
 import {Debug, UMap} from "src/Utils.ts";
+import * as process from "process";
+import * as path from "path";
 
 (async function (): Promise<void> {
     const INFO = '\x1b[1m\x1b[92m';
@@ -20,6 +22,48 @@ import {Debug, UMap} from "src/Utils.ts";
     function usage(): void {
         console.error("./advent2.mjs {YEAR} {DAY} [type=input]");
         process.exit(0);
+    }
+
+    let config: {
+        cookie: string,
+    } = {
+        cookie: ""
+    };
+
+    try {
+        config = JSON.parse(fs.readFileSync(`config.json`).toString());
+    } catch (e) {
+        console.error("Missing config.json file or is not a json.");
+    }
+
+    async function downloadInput(year: string, day: string): Promise<string> {
+        if (config.cookie === "") {
+            console.error("Missing cookie in config.json");
+            return '';
+        }
+
+        const response = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, {
+            "headers": {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                "accept-language": "en-US,en;q=0.9,es;q=0.8,ca;q=0.7",
+                "cache-control": "max-age=0",
+                "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"macOS\"",
+                "sec-fetch-dest": "document",
+                "sec-fetch-mode": "navigate",
+                "sec-fetch-site": "same-origin",
+                "sec-fetch-user": "?1",
+                "upgrade-insecure-requests": "1",
+                "cookie": config.cookie,
+                "Referer": `https://adventofcode.com/${year}/day/${day}`,
+                "Referrer-Policy": "strict-origin-when-cross-origin"
+            },
+            "body": null,
+            "method": "GET"
+        });
+
+        return response.text();
     }
 
     function createTable(content: UMap<number[][]>, part: number): string[] {
@@ -222,13 +266,13 @@ import {Debug, UMap} from "src/Utils.ts";
             line1 = line1.padEnd(Math.max(maxLength), ' ');
             line3 = line3.padEnd(Math.max(maxLength), ' ');
 
-            console.log('');
-            console.log(`   ${GREEN}╔═` + ''.padEnd(maxLength - extra.length, '═') + `═╗${RESET}`);
-            console.log(`   ${GREEN}║${RESET} ` + line0 + ` ${GREEN}║${RESET}`);
-            console.log(`   ${GREEN}║ ` + ''.padEnd(line1.length - extra.length, ' ') + ` ║${RESET}`);
-            console.log(`   ${GREEN}║${RESET} ` + line1 + ` ${GREEN}║${RESET}`);
-            console.log(`   ${GREEN}║${RESET} ` + line3 + ` ${GREEN}║${RESET}`);
-            console.log(`   ${GREEN}╚═` + ''.padEnd(maxLength - extra.length, '═') + `═╝${RESET}`);
+            console.info('');
+            console.info(`   ${GREEN}╔═` + ''.padEnd(maxLength - extra.length, '═') + `═╗${RESET}`);
+            console.info(`   ${GREEN}║${RESET} ` + line0 + ` ${GREEN}║${RESET}`);
+            console.info(`   ${GREEN}║ ` + ''.padEnd(line1.length - extra.length, ' ') + ` ║${RESET}`);
+            console.info(`   ${GREEN}║${RESET} ` + line1 + ` ${GREEN}║${RESET}`);
+            console.info(`   ${GREEN}║${RESET} ` + line3 + ` ${GREEN}║${RESET}`);
+            console.info(`   ${GREEN}╚═` + ''.padEnd(maxLength - extra.length, '═') + `═╝${RESET}`);
             await puzzle.onEnd();
 
             return executionTime;
@@ -239,8 +283,8 @@ import {Debug, UMap} from "src/Utils.ts";
         return -1;
     }
 
-    const year = process.argv[2];
-    const day = process.argv[3];
+    const year = process.argv[2] ?? 2022;
+    const day = process.argv[3] ?? 16;
     const mode = process.argv[4] || 'input';
 
     if (
@@ -267,8 +311,12 @@ import {Debug, UMap} from "src/Utils.ts";
             fs.mkdirSync(`src/${year}`);
         }
         if (!fs.existsSync(`inputs/${year}/day${day}.input.txt`)) {
-            fs.openSync(`inputs/${year}/day${day}.input.txt`, 'w');
+            const input = await downloadInput(year, day);
+            console.info(`Downloaded input for ${year} day ${day}`);
+            fs.writeFileSync(`inputs/${year}/day${day}.input.txt`, input);
         }
+
+        console.info(`Using input '${GREEN}inputs/${year}/day${day}.${mode}.txt${RESET}'`);
 
         if (!fs.existsSync(`inputs/${year}/day${day}.${mode}.txt`)) {
             fs.openSync(`inputs/${year}/day${day}.${mode}.txt`, 'w');
@@ -299,14 +347,14 @@ import {Debug, UMap} from "src/Utils.ts";
         const time2 = await execute(puzzle, input2, 'b', mode);
         Debug.executing(false);
         Debug.clear();
-        console.log();
+        console.info();
 
         if (mode === 'input') {
             registerTimes(+year, +day, time1, time2);
         }
     } catch (e) {
         console.error("Error reading file or running the code.");
-        console.log(e);
+        console.error(e);
         process.exit(1);
     }
 })();

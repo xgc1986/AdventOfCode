@@ -56,16 +56,22 @@ export class Debug {
         }
     }
 
-    static generateGraph(graph: Graph, withWeight: boolean = false, bin: 'neato' | 'dot' = 'neato') {
-        let path = `outputs/${Debug.year}/day${Debug.day}`;
+    static generateGraph(graph: Graph, withWeight: boolean = false, bin: 'neato' | 'dot' = 'dot', filename: string | undefined = undefined) {
+        let route = filename === undefined
+            ? `outputs/${Debug.year}/day${Debug.day}`
+            : `outputs/${Debug.year}/${filename}`;
+
         if (Debug.isExecuting) {
-            path += Debug.part;
+            route += Debug.part;
         }
 
-        fs.writeFileSync(`${path}.gv`, graph.dotString(withWeight));
-        execSync(`${bin} -Tsvg ${path}.gv > ${path}.svg`);
-        fs.rmSync(`${path}.gv`);
-        console.log(`Generated grapth file '${path}.svg'`);
+        const GREEN = '\x1b[32m';
+        const RESET = '\x1b[0m';
+
+        fs.writeFileSync(`${route}.gv`, graph.dotString(withWeight));
+        execSync(`${bin} -Tsvg ${route}.gv > ${route}.svg`);
+        fs.rmSync(`${route}.gv`);
+        console.info(`Generated grapth file '${GREEN}${route}.svg${RESET}'`);
     }
 }
 
@@ -115,6 +121,14 @@ export class UArray {
         }
 
         return ret;
+    }
+
+    divide<T>(list: T[], index: number): T[][] {
+        const middle = Math.floor(list.length / 2);
+        const left = list.slice(0, middle);
+        const right = list.slice(middle);
+
+        return [left, right];
     }
 
     static matrixValue<T>(matrix: T[][], row: number, col: number) {
@@ -198,6 +212,15 @@ export class UMath {
         return a < 0
             ? (b - (-a % b)) % b
             : a % b;
+    }
+
+    static fact(n: number): number {
+        let ret = 1;
+        for (let i = 1; i <= n; i++) {
+            ret *= i;
+        }
+
+        return ret;
     }
 }
 

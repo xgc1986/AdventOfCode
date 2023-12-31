@@ -7,3 +7,4 @@ inputs
 *.mjs
 qadana.yaml
 .DS_Store
+config.json
