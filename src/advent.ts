@@ -333,6 +333,7 @@ import * as console from "console";
             sample = sample.replaceAll('year', year);
             fs.writeFileSync(`src/${year}/Day${day}.ts`, sample);
         }
+        console.info(`Description: https://adventofcode.com/${year}/day/${day}`);
         console.info(`Runnable: file://${process.cwd()}/src/${year}/Day${day}.ts`);
         console.info(`Input: file://${process.cwd()}/inputs/${year}/day${day}.${mode}.txt`);
         let fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
