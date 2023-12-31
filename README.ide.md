@@ -69,7 +69,7 @@ Results marked as INF means that solved by hand
 | **Day 3** | <span style="color:orange">1.619</span> |         |         |         |         |         |         | <span style="color:orange">1.967</span> | <span style="color:lightgreen">0.207</span> |
 | **Day 4** | <span style="color:red">215.132</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.359</span> | <span style="color:lightgreen">0.426</span> |
 | **Day 5** | <span style="color:lightgreen">0.786</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.394</span> | <span style="color:lightgreen">0.364</span> |
-| **Day 6** | <span style="color:darkorange">63.910</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.047</span> |
+| **Day 6** | <span style="color:darkorange">63.910</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.503</span> | <span style="color:lightgreen">0.047</span> |
 | **Day 7** | <span style="color:lightgreen">0.857</span> |         |         |         |         |         |         |         | <span style="color:orange">2.683</span> |
 | **Day 8** | <span style="color:lightgreen">0.257</span> |         |         |         |         |         |         |         | <span style="color:orange">1.333</span> |
 | **Day 9** | <span style="color:darkorange">86.531</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.002</span> |
@@ -100,7 +100,7 @@ Results marked as INF means that solved by hand
 | **Day 3** | <span style="color:orange">1.988</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.325</span> | <span style="color:lightgreen">0.106</span> |
 | **Day 4** | <span style="color:darkred">>7s</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.219</span> | <span style="color:lightgreen">0.475</span> |
 | **Day 5** | <span style="color:orange">1.833</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.430</span> | <span style="color:darkred">>8m</span> |
-| **Day 6** | <span style="color:darkorange">66.922</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.041</span> |
+| **Day 6** | <span style="color:darkorange">66.922</span> |         |         |         |         |         |         | <span style="color:orange">2.169</span> | <span style="color:lightgreen">0.041</span> |
 | **Day 7** | <span style="color:lightgreen">0.513</span> |         |         |         |         |         |         |         | <span style="color:orange">5.344</span> |
 | **Day 8** | <span style="color:lightgreen">0.269</span> |         |         |         |         |         |         |         | <span style="color:orange">6.380</span> |
 | **Day 9** | <span style="color:darkorange">94.315</span> |         |         |         |         |         |         |         | <span style="color:lightgreen">0.001</span> |
@@ -119,4 +119,4 @@ Results marked as INF means that solved by hand
 | **Day 22** | <span style="color:red">412.600</span> |         |         |         |         |         |         |         | <span style="color:darkred">>1m</span> |
 | **Day 23** | <span style="color:lightgreen">0.095</span> |         |         |         |         |         |         |         | <span style="color:darkred">>5s</span> |
 | **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkred">>6s</span> |
-| **Day 25** | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 12</span> | <span style="color:#FFFF66">* × 50</span> |
+| **Day 25** | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 14</span> | <span style="color:#FFFF66">* × 50</span> |

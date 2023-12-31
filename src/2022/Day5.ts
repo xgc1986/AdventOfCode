@@ -5,7 +5,6 @@
 
 import Puzzle from "src/Puzzle.ts";
 import {UArray, UObject, UString} from "src/Utils.ts";
-import * as console from "console";
 
 type Solution = string | undefined;
 
