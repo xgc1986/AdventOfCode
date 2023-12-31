@@ -232,4 +232,13 @@ export class UString {
     static uuid(): string {
         return uuid4();
     }
+
+    static divideInSubstringsBySize(input: string, size: number): string[] {
+        const ret: string[] = [];
+        for (let i = 0; i < input.length; i += size) {
+            ret.push(input.slice(i, i + size));
+        }
+
+        return ret;
+    }
 }

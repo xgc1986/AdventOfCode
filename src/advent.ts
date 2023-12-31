@@ -335,12 +335,15 @@ import * as console from "console";
         }
         console.info(`Runnable: file://${process.cwd()}/src/${year}/Day${day}.ts`);
         console.info(`Input: file://${process.cwd()}/inputs/${year}/day${day}.${mode}.txt`);
-        const fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
+        let fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
         Debug.setFile(+year, +day, 'a');
         Debug.enable(mode !== 'input');
 
         const puzzle: Puzzle<unknown> = new (await import(`src/${year}/Day${day}.ts`)).default(mode);
-        const input1 = puzzle.parseInput(fileContents.trim());
+        if (fileContents.endsWith('\n')) {
+            fileContents = fileContents.slice(0, -1);
+        }
+        const input1 = puzzle.parseInput(fileContents);
         const input2 = puzzle.SINGLE_INPUT_PARSE ? input1 : puzzle.parseInput(fileContents);
 
         Debug.enable(mode !== 'input');
