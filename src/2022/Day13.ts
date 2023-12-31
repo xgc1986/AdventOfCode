@@ -56,7 +56,7 @@ export default class Day13 extends Puzzle<Input> {
         return decoderKey;
     }
 
-    private readonly compare = (packet1: number[][]|number[], packet2: number[][]|number[]): number => {
+    private readonly compare = (packet1: number[][] | number[], packet2: number[][] | number[]): number => {
         const res = this.inOrder(packet1 as number[], packet2 as number[]);
 
         if (res === undefined) {
