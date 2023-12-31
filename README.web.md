@@ -66,7 +66,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
 | **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.168}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.261}}$ | $\color{lightgreen}{\texttt{0.106}}$ |
-| **Day 3** | $\href{http://www.overleaf.com}{\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{1.967}}$ | $\color{lightgreen}{\texttt{0.207}}}$ |
+| **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{1.967}}$ | $\color{lightgreen}{\texttt{0.207}}$ |
 | **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.359}}$ | $\color{lightgreen}{\texttt{0.426}}$ |
 | **Day 5** | $\color{lightgreen}{\texttt{0.786}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.394}}$ | $\color{lightgreen}{\texttt{0.364}}$ |
 | **Day 6** | $\color{darkorange}{\texttt{63.910}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.503}}$ | $\color{lightgreen}{\texttt{0.047}}$ |
@@ -88,7 +88,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** | $\color{darkred}{\texttt{>11s}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
 | **Day 23** | $\color{lightgreen}{\texttt{0.154}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.384}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
-| **Day 25** | $\color{red}{\texttt{738.586}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
+| **Day 25** | $\href{http://www.overleaf.com}{\color{red}{\texttt{738.586}}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
 
 
 ### $\color{#FFFF66}{\texttt{**}}$ Part 2
