@@ -312,7 +312,7 @@ import * as path from "path";
         }
         if (!fs.existsSync(`inputs/${year}/day${day}.input.txt`)) {
             const input = await downloadInput(year, day);
-            console.info(`Downloaded input for ${year} day ${day}`);
+            console.info(`Downloaded input for ${GREEN}${year}${RESET} day ${GREEN}${day}${RESET}`);
             fs.writeFileSync(`inputs/${year}/day${day}.input.txt`, input);
         }
 
