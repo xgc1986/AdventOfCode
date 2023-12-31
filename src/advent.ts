@@ -167,10 +167,10 @@ import * as path from "path";
         content[year][day - 1][0] ??= -1;
         content[year][day - 1][1] ??= -1;
         if (time1 !== -1) {
-            content[year][day - 1][0] = time1;  
+            content[year][day - 1][0] = Math.round(time1 * 1000);
         }
         if (time2 !== -1) {
-            content[year][day - 1][1] = time2;  
+            content[year][day - 1][1] = Math.round(time2 * 1000);
         }
 
         fs.writeFileSync(`doc/results.json`, JSON.stringify(content));
