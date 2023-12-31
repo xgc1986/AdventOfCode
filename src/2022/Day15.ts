@@ -42,7 +42,7 @@ export default class Day15 extends Puzzle<Input> {
     }
 
     async run2(lines: Input): Promise<Solution> {
-        const MAX = (this.mode !== 'sample' ? 20 : 4000000);
+        const MAX = (this.mode !== 'input' ? 20 : 4000000);
 
         for (let y = 0; y < MAX; y++) {
             let ranges: number[][] = [];
