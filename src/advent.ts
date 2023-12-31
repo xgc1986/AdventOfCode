@@ -289,8 +289,8 @@ import * as path from "path";
         return -1;
     }
 
-    const year = process.argv[2] ?? 2022;
-    const day = process.argv[3] ?? 16;
+    const year = process.argv[2];
+    const day = process.argv[3];
     const mode = process.argv[4] || 'input';
 
     if (
