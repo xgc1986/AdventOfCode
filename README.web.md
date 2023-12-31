@@ -88,7 +88,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 22** | $\color{darkred}{\texttt{>11s}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
 | **Day 23** | $\color{lightgreen}{\texttt{0.154}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.384}}$ |
 | **Day 24** | $\color{darkred}{\texttt{INF}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
-| **Day 25** | [$\color{red}{\texttt{738.586}}$](https://adventofcode.com/2022/day/10) |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
+| **Day 25** | $\color{red}{\texttt{738.586}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{INF}}$ |
 
 
 ### $\color{#FFFF66}{\texttt{**}}$ Part 2
