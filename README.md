@@ -64,7 +64,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.146}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.144}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.261}}$ | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{1.967}}$ | $\color{lightgreen}{\texttt{0.207}}$ |
 | **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.359}}$ | $\color{lightgreen}{\texttt{0.426}}$ |
@@ -74,7 +74,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 8** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.970}}$ | $\color{orange}{\texttt{1.333}}$ |
 | **Day 9** | $\color{darkorange}{\texttt{86.531}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{5.441}}$ | $\color{lightgreen}{\texttt{0.002}}$ |
 | **Day 10** | $\color{darkorange}{\texttt{61.356}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.095}}$ | $\color{orange}{\texttt{1.763}}$ |
-| **Day 11** | $\href{https://adventofcode.com/2022/day/10}{\color{darkred}{\texttt{INF}}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.652}}$ |
+| **Day 11** | $\href{https://adventofcode.com/2022/day/10}{$\color{darkred}{\texttt{INF}}$}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{7.652}}$ |
 | **Day 12** | $\color{lightgreen}{\texttt{0.309}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{23.652}}$ |
 | **Day 13** | $\color{orange}{\texttt{6.308}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{2.605}}$ |
 | **Day 14** | $\color{orange}{\texttt{2.755}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{3.359}}$ |
@@ -87,15 +87,15 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 21** | $\color{lightgreen}{\texttt{0.952}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{47.542}}$ |
 | **Day 22** | $\color{darkred}{\texttt{>11s}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{209.524}}$ |
 | **Day 23** | $\color{lightgreen}{\texttt{0.154}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{1.384}}$ |
-| **Day 24** | $\href{https://adventofcode.com/2022/day/10}{\color{darkred}{\texttt{INF}}}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
-| **Day 25** | $\color{red}{\texttt{738.586}}$ |         |         |         |         |         |         |         | $\href{https://adventofcode.com/2022/day/10}{\color{darkred}{\texttt{INF}}}$ |
+| **Day 24** | $\href{https://adventofcode.com/2022/day/10}{$\color{darkred}{\texttt{INF}}$}$ |         |         |         |         |         |         |         | $\color{darkorange}{\texttt{35.310}}$ |
+| **Day 25** | $\color{red}{\texttt{738.586}}$ |         |         |         |         |         |         |         | $\href{https://adventofcode.com/2022/day/10}{$\color{darkred}{\texttt{INF}}$}$ |
 
 
 ### $\color{#FFFF66}{\texttt{**}}$ Part 2
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.108}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.108}}$ | $\color{orange}{\texttt{1.598}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.108}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.103}}$ | $\color{orange}{\texttt{1.598}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.246}}$ | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.325}}$ | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.219}}$ | $\color{lightgreen}{\texttt{0.475}}$ |
@@ -105,7 +105,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 8** | $\color{lightgreen}{\texttt{0.269}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{3.299}}$ | $\color{orange}{\texttt{6.380}}$ |
 | **Day 9** | $\color{darkorange}{\texttt{94.315}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{6.718}}$ | $\color{lightgreen}{\texttt{0.001}}$ |
 | **Day 10** | $\color{darkred}{\texttt{>1s}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.186}}$ | $\color{orange}{\texttt{6.533}}$ |
-| **Day 11** | $\href{https://adventofcode.com/2022/day/10}{\color{darkred}{\texttt{INF}}}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.165}}$ |
+| **Day 11** | $\href{https://adventofcode.com/2022/day/10}{$\color{darkred}{\texttt{INF}}$}$ |         |         |         |         |         |         |         | $\color{orange}{\texttt{5.165}}$ |
 | **Day 12** | $\color{lightgreen}{\texttt{0.762}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{528.548}}$ |
 | **Day 13** | $\color{darkorange}{\texttt{29.090}}$ |         |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.569}}$ |
 | **Day 14** | $\color{lightgreen}{\texttt{0.260}}$ |         |         |         |         |         |         |         | $\color{red}{\texttt{482.525}}$ |
@@ -118,5 +118,5 @@ $\color{darkred}{\textsf{More than 1 second}}$
 | **Day 21** | $\color{lightgreen}{\texttt{0.540}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>18s}}$ |
 | **Day 22** | $\color{red}{\texttt{412.600}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>1m}}$ |
 | **Day 23** | $\color{lightgreen}{\texttt{0.095}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>5s}}$ |
-| **Day 24** | $\href{https://adventofcode.com/2022/day/10}{\color{darkred}{\texttt{INF}}}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ |
+| **Day 24** | $\href{https://adventofcode.com/2022/day/10}{$\color{darkred}{\texttt{INF}}$}$ |         |         |         |         |         |         |         | $\color{darkred}{\texttt{>6s}}$ |
 | **Day 25** | $\color{#FFFF66}{\texttt{* × 50}}$ | $\color{#9999CC}{\texttt{* × 2}}$ |         |         |         |         |         | $\color{#9999CC}{\texttt{* × 22}}$ | $\color{#FFFF66}{\texttt{* × 50}}$ |
