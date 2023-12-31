@@ -3,6 +3,7 @@ import {execSync} from "child_process";
 import Graph from "src/Graph.ts";
 import * as console from "console";
 import uuid4 from "uuid4";
+import * as process from "process";
 
 export type BASIC_TYPES = number | string | undefined | null | boolean;
 export type JSON_OBJECT =
@@ -71,7 +72,7 @@ export class Debug {
         fs.writeFileSync(`${route}.gv`, graph.dotString(withWeight));
         execSync(`${bin} -Tsvg ${route}.gv > ${route}.svg`);
         fs.rmSync(`${route}.gv`);
-        console.info(`Generated grapth file '${GREEN}${route}.svg${RESET}'`);
+        console.info(`Generated grapth file '${GREEN}file://${process.cwd()}/${route}.svg${RESET}'`);
     }
 }
 

@@ -163,10 +163,16 @@ import * as path from "path";
 
     function registerTimes(year: number, day: number, time1: number, time2: number): void {
         const content: UMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
-        content[year][day - 1] = [
-            time1 > 0 ? Math.round(time1 * 1000): time1 ,
-            time2 > 0 ? Math.round(time2 * 1000): time2
-        ];
+
+        content[year][day - 1][0] ??= -1;
+        content[year][day - 1][1] ??= -1;
+        if (time1 !== -1) {
+            content[year][day - 1][0] = time1;  
+        }
+        if (time2 !== -1) {
+            content[year][day - 1][1] = time2;  
+        }
+
         fs.writeFileSync(`doc/results.json`, JSON.stringify(content));
 
         const tables1 = createTable(content, 0);
@@ -316,8 +322,6 @@ import * as path from "path";
             fs.writeFileSync(`inputs/${year}/day${day}.input.txt`, input);
         }
 
-        console.info(`Using input '${GREEN}inputs/${year}/day${day}.${mode}.txt${RESET}'`);
-
         if (!fs.existsSync(`inputs/${year}/day${day}.${mode}.txt`)) {
             fs.openSync(`inputs/${year}/day${day}.${mode}.txt`, 'w');
         }
@@ -328,6 +332,8 @@ import * as path from "path";
             sample = sample.replaceAll('year', year);
             fs.writeFileSync(`src/${year}/Day${day}.ts`, sample);
         }
+        console.info(`Runnable: file://${process.cwd()}/src/${year}/Day${day}.ts`);
+        console.info(`Input: file://${process.cwd()}/inputs/${year}/day${day}.${mode}.txt`);
         const fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
         Debug.setFile(+year, +day, 'a');
         Debug.enable(mode !== 'input');
