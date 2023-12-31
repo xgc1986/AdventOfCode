@@ -124,10 +124,9 @@ export class UArray {
         return ret;
     }
 
-    divide<T>(list: T[], index: number): T[][] {
-        const middle = Math.floor(list.length / 2);
-        const left = list.slice(0, middle);
-        const right = list.slice(middle);
+    static divide<T>(list: T[], index: number): T[][] {
+        const left = list.slice(0, index);
+        const right = list.slice(index);
 
         return [left, right];
     }
