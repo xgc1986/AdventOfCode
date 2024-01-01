@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day3.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UArray, UMap, UObject} from "src/Utils";
+import {UArray, StringMap, UObject} from "src/Utils";
 
 interface Value {
     value: number;
@@ -21,7 +21,7 @@ export default class Day3 extends Puzzle<Input> {
 
     parseInput(input: string): Input {
         const lines = input.split('\n').filter((line) => line !== '');
-        const numbers: UMap<boolean> = {
+        const numbers: StringMap<boolean> = {
             '0': true,
             '1': true,
             '2': true,

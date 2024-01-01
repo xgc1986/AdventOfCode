@@ -5,7 +5,7 @@
 
 import Puzzle from "src/Puzzle";
 import Graph, {DirectedGraph, Vertex} from "src/Graph";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -28,7 +28,7 @@ export default class Day9 extends Puzzle<Input> {
         return graph;
     }
 
-    getMinimumDistance(flights: Graph, city: Vertex | undefined = undefined, visited: UMap<boolean> = {}, distance: number = 0): number {
+    getMinimumDistance(flights: Graph, city: Vertex | undefined = undefined, visited: StringMap<boolean> = {}, distance: number = 0): number {
         city = city ?? flights.getVertex('start');
 
         if (Object.values(visited).length === flights.size - 1) {
@@ -50,7 +50,7 @@ export default class Day9 extends Puzzle<Input> {
         return minimumScore;
     }
 
-    getMaximumDistance(flights: Graph, city: Vertex | undefined = undefined, visited: UMap<boolean> = {}, distance: number = 0): number {
+    getMaximumDistance(flights: Graph, city: Vertex | undefined = undefined, visited: StringMap<boolean> = {}, distance: number = 0): number {
         city = city ?? flights.getVertex('start');
 
         if (Object.values(visited).length === flights.size - 1) {

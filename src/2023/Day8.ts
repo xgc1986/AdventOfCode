@@ -4,12 +4,12 @@
 // Input file [[inputs/2023/day8.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Debug, UMap, UMath} from "src/Utils";
+import {Debug, StringMap, UMath} from "src/Utils";
 import {DirectedGraph} from "src/Graph";
 
 interface Camel {
     direction: string,
-    map: UMap<string[]>;
+    map: StringMap<string[]>;
 }
 
 type Input = Camel;

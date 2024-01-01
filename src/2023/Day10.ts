@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day10.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UArray, UMap} from "src/Utils";
+import {UArray, StringMap} from "src/Utils";
 
 type Char = '┌' | '┐' | '└' | '┘' | '─' | '│' | ' ' | 'S' | '#';
 type Directions = 'top' | 'right' | 'bottom' | 'left';
@@ -12,7 +12,7 @@ type Input = Char[][];
 
 export default class Day10 extends Puzzle<Input> {
 
-    private paths: UMap<UMap<Directions>> = {
+    private paths: StringMap<StringMap<Directions>> = {
         '┌': {
             bottom: 'left', // never
             left: 'bottom',

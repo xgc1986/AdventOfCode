@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day7.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 interface Hand {
     cards: string[];
@@ -46,7 +46,7 @@ export default class Day7 extends Puzzle<Input> {
             return;
         }
 
-        const cardReplaced: UMap<boolean> = {};
+        const cardReplaced: StringMap<boolean> = {};
 
         for (let j = 0; j < hand.cards.length; j++) {
             pair = 0;

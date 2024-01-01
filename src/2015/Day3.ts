@@ -4,7 +4,7 @@
 // Input file [[inputs/2015/day3.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 interface Pos {
     col: number;
@@ -17,7 +17,7 @@ type Input = string;
 
 export default class Day3 extends Puzzle<Input> {
 
-    private readonly directions: UMap<Pos> = {
+    private readonly directions: StringMap<Pos> = {
         '^': {col: 0, row: 1},
         '>': {col: 1, row: 0},
         'v': {col: 0, row: -1},

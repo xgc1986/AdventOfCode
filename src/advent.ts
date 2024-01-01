@@ -5,7 +5,7 @@
 import "src/Ext";
 import * as fs from "node:fs";
 import Puzzle from "src/Puzzle";
-import {Debug, UMap} from "src/Utils";
+import {Debug, StringMap} from "src/Utils";
 import * as process from "node:process";
 
 (async function (): Promise<void> {
@@ -64,7 +64,7 @@ import * as process from "node:process";
         return response.text();
     }
 
-    function createTable(content: UMap<number[][]>, part: number): string[] {
+    function createTable(content: StringMap<number[][]>, part: number): string[] {
         let tableApp = '| **Day** |';
         let tableWeb = '| **Day** |';
         let tableIDE = '| **Day** |';
@@ -81,7 +81,7 @@ import * as process from "node:process";
         tableWeb += '\n' + sep + '\n';
         tableIDE += '\n' + sep + '\n';
 
-        let complete: UMap<number> = {};
+        let complete: StringMap<number> = {};
         for (let i = 0; i < 25; i++) {
             const day = i + 1;
             let lineWeb = `| **Day ${day}** |`;
@@ -161,7 +161,7 @@ import * as process from "node:process";
     }
 
     function registerTimes(year: number, day: number, time1: number, time2: number): void {
-        const content: UMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
+        const content: StringMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
 
         content[year][day - 1][0] ??= -1;
         content[year][day - 1][1] ??= -1;

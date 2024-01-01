@@ -4,7 +4,7 @@
 // Input file [[inputs/2022/day17.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap, UMath} from "src/Utils";
+import {StringMap, UMath} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -152,7 +152,7 @@ export default class Day17 extends Puzzle<Input> {
     }
 
     private async play(platform: string[][], movements: string, maxPieces: number): Promise<number> {
-        const cache: UMap<{score: number, pieces: number}> = {};
+        const cache: StringMap<{score: number, pieces: number}> = {};
         let score = 0;
         let p = 0;
         let piece = this.PIECES[p];

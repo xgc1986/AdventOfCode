@@ -7,10 +7,10 @@ import * as process from "process";
 
 export type BASIC_TYPES = number | string | undefined | null | boolean;
 export type JSON_OBJECT =
-    UMap<BASIC_TYPES | JSON_OBJECT | (BASIC_TYPES | JSON_OBJECT)[]>
+    StringMap<BASIC_TYPES | JSON_OBJECT | (BASIC_TYPES | JSON_OBJECT)[]>
     | (BASIC_TYPES | JSON_OBJECT)[];
 
-export interface UMap<T> {
+export interface StringMap<T> {
     [key: string]: T
 }
 
@@ -86,6 +86,7 @@ export class Debug {
             if (data.toString() === '\u0003') { // Ctrl+C
                 process.exit();
             } else {
+                process.stdout.write('\x1b[1A\x1b[K');
                 process.stdin.setRawMode(false);
                 resolve();
             }

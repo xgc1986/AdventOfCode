@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day12.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 interface Map {
     springs: string[];
@@ -27,7 +27,7 @@ export default class Day12 extends Puzzle<Input> {
         return `${map.springs.slice(pos).join('')}-${condition}`;
     }
 
-    match(map: Map, currentPos: number, currentCondition: number, cache: UMap<number> = {}): number {
+    match(map: Map, currentPos: number, currentCondition: number, cache: StringMap<number> = {}): number {
 
         const key = this.buildKey(map, currentPos, currentCondition);
         if (cache[key] !== undefined) {

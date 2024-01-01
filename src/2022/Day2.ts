@@ -4,7 +4,7 @@
 // Input file [[inputs/2022/day2.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -25,7 +25,7 @@ export default class Day2 extends Puzzle<Input> {
     }
 
     async run1(matches: Input): Promise<Solution> {
-        const results: UMap<number> = {
+        const results: StringMap<number> = {
             'A X': 1 + 3,
             'A Y': 2 + 6,
             'A Z': 3,
@@ -43,7 +43,7 @@ export default class Day2 extends Puzzle<Input> {
     }
 
     async run2(matches: Input): Promise<Solution> {
-        const results: UMap<number> = {
+        const results: StringMap<number> = {
             'A X': 3,
             'A Y': 1 + 3,
             'A Z': 2 + 6,

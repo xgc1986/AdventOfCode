@@ -5,12 +5,12 @@
 
 import Puzzle from "src/Puzzle";
 import Graph, {UndirectedGraph} from "src/Graph";
-import {Debug, UMap} from "src/Utils";
+import {Debug, StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
 interface Cave {
-    flows: UMap<number>;
+    flows: StringMap<number>;
     map: Graph;
 }
 
@@ -21,8 +21,8 @@ export default class Day16 extends Puzzle<Input> {
     parseInput(input: string): Input {
         const graph = new UndirectedGraph();
         const lines = input.split('\n');
-        const flows: UMap<number> = {};
-        const distances: UMap<number> = {};
+        const flows: StringMap<number> = {};
+        const distances: StringMap<number> = {};
 
         for (const line of lines) {
             const [_, from, flow, __, destinations] = line.match(/Valve (\w+) has flow rate=(\d+); (tunnels lead to valves|tunnel leads to valve) ([\w, ]+)/) ?? ['', '', '', ''];
@@ -41,7 +41,7 @@ export default class Day16 extends Puzzle<Input> {
         };
     }
 
-    calculateFlow(cave: Cave, from: string, opened: UMap<boolean>, minutes: number, withElephant: boolean, cache: UMap<UMap<number>>): number {
+    calculateFlow(cave: Cave, from: string, opened: StringMap<boolean>, minutes: number, withElephant: boolean, cache: StringMap<StringMap<number>>): number {
         if (minutes === 0) {
             return !withElephant ? 0 : this.calculateFlow(cave, 'AA', opened, 26, false, cache);
         }
@@ -78,7 +78,7 @@ export default class Day16 extends Puzzle<Input> {
     }
 
     async run1(cave: Input): Promise<Solution> {
-        let opened: UMap<boolean> = {};
+        let opened: StringMap<boolean> = {};
         for (const id in cave.flows) {
             opened[id] = false;
         }
@@ -86,7 +86,7 @@ export default class Day16 extends Puzzle<Input> {
     }
 
     async run2(cave: Input): Promise<Solution> {
-        let opened: UMap<boolean> = {};
+        let opened: StringMap<boolean> = {};
         for (const id in cave.flows) {
             opened[id] = false;
         }

@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day20.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | string | undefined;
 
@@ -19,7 +19,7 @@ interface Module {
 }
 
 type Input = {
-    modules: UMap<Module>,
+    modules: StringMap<Module>,
     broadcaster: string[],
 };
 
@@ -28,7 +28,7 @@ export default class Day20 extends Puzzle<Input> {
     solve(input: Input, presses: number | undefined) {
         const map = input.modules;
 
-        const buttonCounts: UMap<number> = {};
+        const buttonCounts: StringMap<number> = {};
 
         for (const m in map) {
             if (map[m].outputs[0] === 'rx') {

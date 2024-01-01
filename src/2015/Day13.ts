@@ -5,7 +5,7 @@
 
 import Puzzle from "src/Puzzle";
 import Graph, {UndirectedGraph, Vertex} from "src/Graph";
-import {Debug, UMap} from "src/Utils";
+import {Debug, StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -37,7 +37,7 @@ export default class Day13 extends Puzzle<Input> {
         return graph;
     }
 
-    optimal(graph: Graph, visited: UMap<boolean> = {}, from: Vertex|undefined = undefined, score: number = 0): number {
+    optimal(graph: Graph, visited: StringMap<boolean> = {}, from: Vertex|undefined = undefined, score: number = 0): number {
         from ??= graph.vertices[0];
         visited[from.id] = true;
 

@@ -1,5 +1,5 @@
 import DirectedGraph, {Vertex} from "src/Graph";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 import * as console from "console";
 
 export default class MinCut {
@@ -10,7 +10,7 @@ export default class MinCut {
         }
 
         const residualGraph = graph.clone();
-        const parent: UMap<Vertex> = {};
+        const parent: StringMap<Vertex> = {};
 
         const s = residualGraph.vertices[0];
         const t = residualGraph.vertices[graph.size - 1];
@@ -32,7 +32,7 @@ export default class MinCut {
             }
         }
 
-        const isVisited: UMap<Vertex> = {};
+        const isVisited: StringMap<Vertex> = {};
         MinCut.dfs(residualGraph, s, isVisited);
         const ret: Vertex[][] = [];
         for (let i = 0; i < graph.vertices.length; i++) {
@@ -52,7 +52,7 @@ export default class MinCut {
         return ret;
     }
 
-    private static dfs(residualGraph: DirectedGraph, vertex: Vertex, visited: UMap<Vertex>): void {
+    private static dfs(residualGraph: DirectedGraph, vertex: Vertex, visited: StringMap<Vertex>): void {
         visited[vertex.id] = vertex;
 
         for (const edge of vertex.edges) {
@@ -62,9 +62,9 @@ export default class MinCut {
         }
     }
 
-    private static bfs(residualGraph: DirectedGraph, source: Vertex, sink: Vertex, parent: UMap<Vertex | undefined>): boolean {
+    private static bfs(residualGraph: DirectedGraph, source: Vertex, sink: Vertex, parent: StringMap<Vertex | undefined>): boolean {
         const queue: Vertex[] = [source];
-        const visited: UMap<boolean> = {};
+        const visited: StringMap<boolean> = {};
         parent[source.id] = undefined;
         visited[source.id] = true;
 

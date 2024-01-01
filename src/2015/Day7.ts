@@ -4,7 +4,7 @@
 // Input file [[inputs/2015/day7.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -29,7 +29,7 @@ export default class Day7 extends Puzzle<Input> {
         return input;
     }
 
-    loadVariable(input: string|number, map: UMap<number>): number {
+    loadVariable(input: string|number, map: StringMap<number>): number {
         if (typeof input === 'number') {
             return input;
         }
@@ -37,11 +37,11 @@ export default class Day7 extends Puzzle<Input> {
         return map[input] ?? 0;
     }
 
-    saveVariable(variable: string, value: number, map: UMap<number>): void {
+    saveVariable(variable: string, value: number, map: StringMap<number>): void {
         map[variable] = value;
     }
 
-    existsVariable(variable: string|number, map: UMap<number>): boolean {
+    existsVariable(variable: string|number, map: StringMap<number>): boolean {
         if (typeof variable === 'number') {
             return true;
         }
@@ -103,7 +103,7 @@ export default class Day7 extends Puzzle<Input> {
         });
     }
 
-    findVariable(instructions: Input, variable: string, dictionary: UMap<number>): number {
+    findVariable(instructions: Input, variable: string, dictionary: StringMap<number>): number {
         if (dictionary[variable] !== undefined) {
             return dictionary[variable];
         }

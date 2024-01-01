@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day19.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap, UObject} from "src/Utils";
+import {StringMap, UObject} from "src/Utils";
 
 type Solution = number | string | undefined;
 
@@ -31,7 +31,7 @@ export default class Day19 extends Puzzle<Input> {
         return input.split('\n').filter((line) => line !== '');
     }
 
-    solve1(workflow: UMap<Workflow[]>, categories: Category): boolean {
+    solve1(workflow: StringMap<Workflow[]>, categories: Category): boolean {
         let wf = 'in';
 
         while (true) {
@@ -64,7 +64,7 @@ export default class Day19 extends Puzzle<Input> {
         }
     }
 
-    solve2(workflows: UMap<Workflow[]>, categories: Category[], wf: string) {
+    solve2(workflows: StringMap<Workflow[]>, categories: Category[], wf: string) {
         if (wf === 'A') {
             return Math.max(0, categories[1]['x'] - categories[0]['x'] + 1) * Math.max(0, categories[1]['m'] - categories[0]['m'] + 1) * Math.max(0, categories[1]['a'] - categories[0]['a'] + 1) * Math.max(0, categories[1]['s'] - categories[0]['s'] + 1);
         } else if (wf === 'R') {
@@ -97,7 +97,7 @@ export default class Day19 extends Puzzle<Input> {
     }
 
     async run1(lines: Input): Promise<Solution> {
-        const workflows: UMap<Workflow[]> = {};
+        const workflows: StringMap<Workflow[]> = {};
         const parts: Category[] = [];
         let total = 0;
 
@@ -169,7 +169,7 @@ export default class Day19 extends Puzzle<Input> {
     }
 
     async run2(lines: Input): Promise<Solution> {
-        const workflows: UMap<Workflow[]> = {};
+        const workflows: StringMap<Workflow[]> = {};
 
         for (const line of lines) {
             if (line[0] === '{') {

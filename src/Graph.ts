@@ -1,4 +1,4 @@
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 export default interface Graph {
     get vertices(): Vertex[];
@@ -16,7 +16,7 @@ export default interface Graph {
 
 export class DirectedGraph implements Graph {
 
-    private readonly data: UMap<Vertex>;
+    private readonly data: StringMap<Vertex>;
 
     constructor(graph: Graph | undefined = undefined) {
         this.data = {};
@@ -97,7 +97,7 @@ export class DirectedGraph implements Graph {
             return [this.clone()];
         }
 
-        const visited: UMap<boolean> = {};
+        const visited: StringMap<boolean> = {};
 
         const ret = [];
 
@@ -158,7 +158,7 @@ export class DirectedGraph implements Graph {
 
 export class UndirectedGraph implements Graph {
 
-    private readonly data: UMap<Vertex>;
+    private readonly data: StringMap<Vertex>;
 
     constructor(graph: Graph | undefined = undefined) {
         this.data = {};
@@ -241,7 +241,7 @@ export class UndirectedGraph implements Graph {
             return [this.clone()];
         }
 
-        const visited: UMap<boolean> = {};
+        const visited: StringMap<boolean> = {};
 
         const ret = [];
 
@@ -285,7 +285,7 @@ export class UndirectedGraph implements Graph {
     }
 
     dotString(withWeight: boolean = false): string {
-        const visited: UMap<boolean> = {};
+        const visited: StringMap<boolean> = {};
 
         let lines = 'graph {\n';
         lines += '    edge [dir=none];\n';
@@ -315,8 +315,8 @@ export class UndirectedGraph implements Graph {
 }
 
 export class Vertex {
-    private readonly _edges: UMap<Edge>;
-    private readonly _origins: UMap<Vertex>;
+    private readonly _edges: StringMap<Edge>;
+    private readonly _origins: StringMap<Vertex>;
 
     constructor(
         public readonly id: string

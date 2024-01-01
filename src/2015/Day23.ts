@@ -4,7 +4,7 @@
 // Input file [[inputs/2015/day23.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
@@ -52,7 +52,7 @@ export default class Day23 extends Puzzle<Input> {
         });
     }
 
-    execute(instructions: Input, variables: UMap<number>): number {
+    execute(instructions: Input, variables: StringMap<number>): number {
         let line = 0;
         while (line < instructions.length) {
             if (instructions[line].command === 'jio') {

@@ -4,20 +4,20 @@
 // Input file [[inputs/2015/day16.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | undefined;
 
 interface Aunt {
     number: number;
-    presents: UMap<number>;
+    presents: StringMap<number>;
 }
 
 type Input = Aunt[];
 
 export default class Day16 extends Puzzle<Input> {
 
-    private ticket: UMap<number> = {
+    private ticket: StringMap<number> = {
         children: 3,
         cats: 7,
         samoyeds: 2,

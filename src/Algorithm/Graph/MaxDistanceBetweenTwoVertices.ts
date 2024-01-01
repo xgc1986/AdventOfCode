@@ -1,17 +1,17 @@
 import DirectedGraph, {Vertex} from "src/Graph";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 export default class MaxDistanceBetweenTwoVertices {
 
     static solve(graph: DirectedGraph, from: string, to: string, path: Vertex[]): number {
-        const visited: UMap<boolean> = {};
+        const visited: StringMap<boolean> = {};
         visited[from] = true;
         path.push(graph.getVertex(from));
 
         return MaxDistanceBetweenTwoVertices.maxDistance(graph, from, to, visited, 0, path);
     }
 
-    private static maxDistance(graph: DirectedGraph, from: string, to: string, visited: UMap<boolean> = {}, weight: number, path: Vertex[]): number {
+    private static maxDistance(graph: DirectedGraph, from: string, to: string, visited: StringMap<boolean> = {}, weight: number, path: Vertex[]): number {
         if (from === to) {
             return weight;
         }

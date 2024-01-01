@@ -4,7 +4,7 @@
 // Input file [[inputs/2023/day18.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | string| undefined;
 
@@ -19,7 +19,7 @@ type Input = DigInstruction[];
 
 export default class Day18 extends Puzzle<Input> {
 
-    private readonly directions: UMap<number[]> = {
+    private readonly directions: StringMap<number[]> = {
         U: [-1, 0],
         D: [1, 0],
         L: [0, -1],
@@ -27,7 +27,7 @@ export default class Day18 extends Puzzle<Input> {
     };
 
     parseInput(input: string): Input {
-        const d: UMap<string> = {
+        const d: StringMap<string> = {
             '0': 'R',
             '1': 'D',
             '2': 'L',

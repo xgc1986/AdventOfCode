@@ -6,7 +6,7 @@ import { Heap } from 'heap-js';
 // Input file [[inputs/2023/day17.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UMap} from "src/Utils";
+import {StringMap} from "src/Utils";
 
 type Solution = number | string| undefined;
 
@@ -36,7 +36,7 @@ export default class Day17 extends Puzzle<Input> {
             { i: 1, j: 0, heat: 0, dir: this.directions.D, momentum: 1 },
             { i: 0, j: 1, heat: 0, dir: this.directions.R, momentum: 1 },
         ]);
-        const seen: UMap<number>[][] = map.map((row) => row.map(() => ({})));
+        const seen: StringMap<number>[][] = map.map((row) => row.map(() => ({})));
         while (heap.length) {
             const h = heap.pop();
             if (h === undefined) {
