@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/10]]
 // Input file [[inputs/2023/day10.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UArray, UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UArray, UMap} from "src/Utils";
 
 type Char = '┌' | '┐' | '└' | '┘' | '─' | '│' | ' ' | 'S' | '#';
 type Directions = 'top' | 'right' | 'bottom' | 'left';

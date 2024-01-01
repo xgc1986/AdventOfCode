@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/7]]
 // Input file [[inputs/2023/day7.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMap} from "src/Utils";
 
 interface Hand {
     cards: string[];

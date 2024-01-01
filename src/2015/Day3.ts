@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2015/day/3]]
 // Input file [[inputs/2015/day3.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMap} from "src/Utils";
 
 interface Pos {
     col: number;

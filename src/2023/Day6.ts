@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/6]]
 // Input file [[inputs/2023/day6.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMath} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMath} from "src/Utils";
 
 interface Race {
     distance: number;

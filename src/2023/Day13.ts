@@ -3,7 +3,7 @@
 // [[https://adventofcode.com/2023/day/13]]
 // Input file [[inputs/2023/day13.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 
 type Input = string[][];
 

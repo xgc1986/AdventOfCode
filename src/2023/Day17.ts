@@ -5,8 +5,8 @@ import { Heap } from 'heap-js';
 // [[https://adventofcode.com/2023/day/17]]
 // Input file [[inputs/2023/day17.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMap} from "src/Utils";
 
 type Solution = number | string| undefined;
 

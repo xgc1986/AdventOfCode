@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/12]]
 // Input file [[inputs/2023/day12.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMap} from "src/Utils";
 
 interface Map {
     springs: string[];

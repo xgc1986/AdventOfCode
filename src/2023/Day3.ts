@@ -3,8 +3,8 @@
 // https://adventofcode.com/2023/day/3
 // Input file [[inputs/2023/day3.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UArray, UMap, UObject} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UArray, UMap, UObject} from "src/Utils";
 
 interface Value {
     value: number;

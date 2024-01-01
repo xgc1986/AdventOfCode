@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2022/day/5]]
 // Input file [[inputs/2022/day5.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UArray, UObject, UString} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UArray, UObject, UString} from "src/Utils";
 
 type Solution = string | undefined;
 

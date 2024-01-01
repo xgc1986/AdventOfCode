@@ -3,9 +3,9 @@
 // https://adventofcode.com/2023/day/24
 // Input file [[inputs/2023/day24.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UNumber} from "src/Utils.ts";
-import {Line3D, Point3D, Vector3D} from "src/Algebra.ts";
+import Puzzle from "src/Puzzle";
+import {UNumber} from "src/Utils";
+import {Line3D, Point3D, Vector3D} from "src/Algebra";
 
 type Input = Line3D[];
 

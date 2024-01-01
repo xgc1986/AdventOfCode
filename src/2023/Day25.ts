@@ -3,10 +3,10 @@
 // https://adventofcode.com/2023/day/25
 // Input file [[inputs/2023/day25.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import Graph, {UndirectedGraph} from "src/Graph.ts";
-import MinCut from "src/Algorithm/Graph/MinCut.ts";
-import {Debug} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import Graph, {UndirectedGraph} from "src/Graph";
+import MinCut from "src/Algorithm/Graph/MinCut";
+import {Debug} from "src/Utils";
 
 type Input = Graph;
 

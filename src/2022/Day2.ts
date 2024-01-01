@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2022/day/2]]
 // Input file [[inputs/2022/day2.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UMap} from "src/Utils";
 
 type Solution = number | undefined;
 

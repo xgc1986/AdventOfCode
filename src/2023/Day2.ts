@@ -3,7 +3,7 @@
 // https://adventofcode.com/2023/day/3
 // Input file [[inputs/2023/day2.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 
 interface Group {
     blue: number;

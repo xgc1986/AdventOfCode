@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2015/day/6]]
 // Input file [[inputs/2015/day6.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UArray} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UArray} from "src/Utils";
 
 type Solution = number | undefined;
 

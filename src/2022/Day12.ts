@@ -3,7 +3,7 @@
 // [[https://adventofcode.com/2022/day/12]]
 // Input file [[inputs/2022/day12.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 
 type Solution = number | undefined;
 

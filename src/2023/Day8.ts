@@ -3,9 +3,9 @@
 // [[https://adventofcode.com/2023/day/8]]
 // Input file [[inputs/2023/day8.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {Debug, UMap, UMath} from "src/Utils.ts";
-import {DirectedGraph} from "src/Graph.ts";
+import Puzzle from "src/Puzzle";
+import {Debug, UMap, UMath} from "src/Utils";
+import {DirectedGraph} from "src/Graph";
 
 interface Camel {
     direction: string,

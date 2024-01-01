@@ -3,10 +3,10 @@
 // [[https://adventofcode.com/2023/day/23]]
 // Input file [[inputs/2023/day23.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import Graph, {DirectedGraph, Vertex} from "src/Graph.ts";
-import {UArray} from "src/Utils.ts";
-import MaxDistanceBetweenTwoVertices from "src/Algorithm/Graph/MaxDistanceBetweenTwoVertices.ts";
+import Puzzle from "src/Puzzle";
+import Graph, {DirectedGraph, Vertex} from "src/Graph";
+import {UArray} from "src/Utils";
+import MaxDistanceBetweenTwoVertices from "src/Algorithm/Graph/MaxDistanceBetweenTwoVertices";
 
 type Solution = number | string | undefined;
 

@@ -1,5 +1,5 @@
-import DirectedGraph, {Vertex} from "src/Graph.ts";
-import {UMap} from "src/Utils.ts";
+import DirectedGraph, {Vertex} from "src/Graph";
+import {UMap} from "src/Utils";
 import * as console from "console";
 
 export default class MinCut {

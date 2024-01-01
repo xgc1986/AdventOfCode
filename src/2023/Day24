@@ -1,7 +1,7 @@
 "use strict";
 
-// [[https://adventofcode.com/2015/day/24]]
-// Input file [[inputs/2015/day24.input.txt]]
+// [[https://adventofcode.com/2023/day/24]]
+// Input file [[inputs/2023/day24.input.txt]]
 
 import Puzzle from "src/Puzzle";
 

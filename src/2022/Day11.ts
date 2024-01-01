@@ -3,9 +3,9 @@
 // [[https://adventofcode.com/2022/day/11]]
 // Input file [[inputs/2022/day11.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 import * as console from "console";
-import {UObject} from "src/Utils.ts";
+import {UObject} from "src/Utils";
 
 type Solution = number | undefined;
 

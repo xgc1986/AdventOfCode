@@ -1,4 +1,4 @@
-import {UArray, UNumber} from "src/Utils.ts";
+import {UArray, UNumber} from "src/Utils";
 
 export default class Range {
 

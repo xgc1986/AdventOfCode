@@ -3,9 +3,9 @@
 // [[https://adventofcode.com/2015/day/13]]
 // Input file [[inputs/2015/day13.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import Graph, {UndirectedGraph, Vertex} from "src/Graph.ts";
-import {Debug, UMap} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import Graph, {UndirectedGraph, Vertex} from "src/Graph";
+import {Debug, UMap} from "src/Utils";
 
 type Solution = number | undefined;
 

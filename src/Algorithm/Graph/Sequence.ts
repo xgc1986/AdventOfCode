@@ -1,4 +1,4 @@
-import {UArray} from "src/Utils.ts";
+import {UArray} from "src/Utils";
 
 export default class Sequence {
 

@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import {execSync} from "child_process";
-import Graph from "src/Graph.ts";
+import Graph from "src/Graph";
 import * as console from "console";
 import uuid4 from "uuid4";
 import * as process from "process";

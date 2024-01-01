@@ -1,4 +1,4 @@
-import {UMath} from "src/Utils.ts";
+import {UMath} from "src/Utils";
 
 export default class Permutation {
 

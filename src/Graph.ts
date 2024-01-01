@@ -1,4 +1,4 @@
-import {UMap} from "src/Utils.ts";
+import {UMap} from "src/Utils";
 
 export default interface Graph {
     get vertices(): Vertex[];

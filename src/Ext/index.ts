@@ -1,1 +1,1 @@
-import "src/Ext/Array.ts";
+import "src/Ext/Array";

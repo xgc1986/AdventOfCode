@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2015/day/12]]
 // Input file [[inputs/2015/day12.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {JSON_OBJECT} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {JSON_OBJECT} from "src/Utils";
 
 type Solution = number | undefined;
 

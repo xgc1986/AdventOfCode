@@ -3,7 +3,7 @@
 // https://adventofcode.com/2023/day/1
 // Input file [[inputs/2023/day1.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 
 export default class Day1 extends Puzzle<string[]> {
 

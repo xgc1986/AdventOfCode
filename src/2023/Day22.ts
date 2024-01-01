@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/22]]
 // Input file [[inputs/2023/day22.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import {UObject, UString} from "src/Utils.ts";
+import Puzzle from "src/Puzzle";
+import {UObject, UString} from "src/Utils";
 
 type Solution = number | string| undefined;
 

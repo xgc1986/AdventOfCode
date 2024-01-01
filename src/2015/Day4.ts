@@ -3,7 +3,7 @@
 // [[https://adventofcode.com/2015/day/4]]
 // Input file [[inputs/2015/day4.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
+import Puzzle from "src/Puzzle";
 import {createHash} from "node:crypto";
 
 type Solution = number | undefined;

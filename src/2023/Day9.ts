@@ -3,8 +3,8 @@
 // [[https://adventofcode.com/2023/day/9]]
 // Input file [[inputs/2023/day9.input.txt]]
 
-import Puzzle from "src/Puzzle.ts";
-import Sequence from "src/Algorithm/Graph/Sequence.ts";
+import Puzzle from "src/Puzzle";
+import Sequence from "src/Algorithm/Graph/Sequence";
 
 type Input = number[][];
 
