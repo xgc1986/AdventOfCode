@@ -2,13 +2,11 @@
 
 "use strict";
 
+import "src/Ext";
 import * as fs from "node:fs";
-import * as https from "node:https";
-import { request } from "node:https";
 import Puzzle from "src/Puzzle.ts";
 import {Debug, UMap} from "src/Utils.ts";
 import * as process from "process";
-import * as path from "path";
 import * as console from "console";
 
 (async function (): Promise<void> {
@@ -329,7 +327,7 @@ import * as console from "console";
         }
 
         if (!fs.existsSync(`src/${year}/Day${day}.ts`)) {
-            let sample = fs.readFileSync(`src/DaySample.ts`).toString();
+            let sample: string = fs.readFileSync(`src/DaySample.ts`).toString();
             sample = sample.replaceAll('Sample', day);
             sample = sample.replaceAll('year', year);
             fs.writeFileSync(`src/${year}/Day${day}.ts`, sample);

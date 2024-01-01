@@ -11,3 +11,5 @@ config.json
 *.js
 *.mjs
 qadana.yaml
+
+scratch.ts

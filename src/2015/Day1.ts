@@ -19,11 +19,7 @@ export default class Day1 extends Puzzle<Input> {
         let total = 0;
 
         for (const char of line) {
-            if (char === '(') {
-                total++;
-            } else {
-                total--;
-            }
+            total += char === '(' ? 1 : -1;
         }
 
         return total;
@@ -34,11 +30,7 @@ export default class Day1 extends Puzzle<Input> {
 
         let position = 1;
         for (const char of line) {
-            if (char === '(') {
-                total++;
-            } else {
-                total--;
-            }
+            total += char === '(' ? 1 : -1;
 
             if (total < 0) {
                 return position;

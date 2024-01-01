@@ -64,7 +64,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.245}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.168}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.324}}$ | $\color{lightgreen}{\texttt{0.121}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.168}}$ | $\color{lightgreen}{\texttt{0.640}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.257}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.261}}$ | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.619}}$ |         |         |         |         |         |         | $\color{orange}{\texttt{1.967}}$ | $\color{lightgreen}{\texttt{0.207}}$ |
 | **Day 4** | $\color{red}{\texttt{215.132}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.359}}$ | $\color{lightgreen}{\texttt{0.426}}$ |
@@ -95,7 +95,7 @@ $\color{darkred}{\textsf{More than 1 second}}$
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | $\color{lightgreen}{\texttt{0.108}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.108}}$ | $\color{orange}{\texttt{1.598}}$ |
+| **Day 1** | $\color{lightgreen}{\texttt{0.117}}$ | $\color{lightgreen}{\texttt{0.273}}$ |         |         |         |         |         | $\color{lightgreen}{\texttt{0.108}}$ | $\color{orange}{\texttt{1.598}}$ |
 | **Day 2** | $\color{lightgreen}{\texttt{0.130}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.246}}$ | $\color{lightgreen}{\texttt{0.103}}$ |
 | **Day 3** | $\color{orange}{\texttt{1.988}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.325}}$ | $\color{lightgreen}{\texttt{0.106}}$ |
 | **Day 4** | $\color{darkred}{\texttt{>7s}}$ |         |         |         |         |         |         | $\color{lightgreen}{\texttt{0.219}}$ | $\color{lightgreen}{\texttt{0.475}}$ |
