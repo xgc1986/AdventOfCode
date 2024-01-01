@@ -74,6 +74,35 @@ export class Debug {
         fs.rmSync(`${route}.gv`);
         console.info(`Generated grapth file '${GREEN}file://${process.cwd()}/${route}.svg${RESET}'`);
     }
+
+    static async pauseUntilEnterIsPressed(message: string | undefined = undefined): Promise<void> {
+        process.stdin.setRawMode(true);
+        if (message) {
+            console.log(message);
+        }
+        console.log('Press any key to continue...');
+
+        return new Promise(resolve => process.stdin.once('data', () => {
+            process.stdin.setRawMode(false);
+            resolve();
+        }))
+    }
+    static async pause(message: string | undefined = undefined): Promise<void> {
+        process.stdin.setRawMode(true);
+        if (message) {
+            console.log(message);
+        }
+        console.log('Press any key to continue...');
+
+        return new Promise(resolve => process.stdin.once('data', (data) => {
+            if (data.toString() === '\u0003') { // Ctrl+C
+                process.exit();
+            } else {
+                process.stdin.setRawMode(false);
+                resolve();
+            }
+        }))
+    }
 }
 
 export class UObject {
@@ -187,6 +216,18 @@ export class UArray {
 }
 
 export class UMath {
+
+    static advanceCycles(first: number, second: number, limit: number): {cycles: number, remaining: number, iteration: number} {
+        let size = second - first;
+        let realLimit = limit - second;
+
+        const iterations = Math.floor(realLimit / size);
+        return {
+            cycles: iterations,
+            remaining: realLimit % size,
+            iteration: second + size * iterations,
+        };
+    }
 
     static solveQuadratic(a: number, b: number, c: number): number[] {
         const sqrt = Math.sqrt(b * b - 4 * a * c);
