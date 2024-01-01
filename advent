@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+clear
+
 ts-node --swc src/advent.ts "$@"
 
 git add .

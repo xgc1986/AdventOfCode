@@ -51,8 +51,8 @@ export default class Day24 extends Puzzle<Input> {
 
                 if (intersection !== null) {
                     if (
-                        UNumber.between(intersection.point.x, constraints.min, constraints.max)
-                        && UNumber.between(intersection.point.y, constraints.min, constraints.max)
+                        intersection.point.x.between(constraints.min, constraints.max)
+                        && intersection.point.y.between(constraints.min, constraints.max)
                         && intersection.t1 >= 0
                         && intersection.t2 >= 0
                     ) {

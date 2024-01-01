@@ -16,7 +16,7 @@ export default class Day1 extends Puzzle<string[]> {
             .replaceAll('eighthree', 'eightthree')
             .replaceAll('eightwo', 'eighttwo')
             .replaceAll('nineight', 'nineeight')
-            .split('\n').filter((line) => line !== '');
+            .split('\n');
     }
 
     replaceNames(input: string): string {

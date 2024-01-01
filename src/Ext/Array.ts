@@ -1,5 +1,5 @@
-Array.prototype.sum = function (): number {
-    return this.reduce((acc, val) => acc + val, 0);
+Array.prototype.num = function (): number[] {
+    return this.map(Number);
 };
 
 Array.prototype.splitOn = function <T>(separator: T): T[][] {
@@ -16,3 +16,15 @@ Array.prototype.splitOn = function <T>(separator: T): T[][] {
     }
     return result;
 }
+
+Array.prototype.sum = function (): number {
+    return this.reduce((acc, val) => acc + val, 0);
+};
+
+Array.prototype.pairs = function* <T>(): Generator<T[]> {
+    for (let i = 0; i < this.length; i++) {
+        for (let j = i + 1; j < this.length; j++) {
+            yield [this[i], this[j]];
+        }
+    }
+};

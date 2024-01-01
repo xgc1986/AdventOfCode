@@ -325,14 +325,14 @@ import * as process from "node:process";
             fs.openSync(`inputs/${year}/day${day}.${mode}.txt`, 'w');
         }
 
-        if (!fs.existsSync(`src/${year}/Day${day}`)) {
+        if (!fs.existsSync(`src/${year}/Day${day}.ts`)) {
             let sample: string = fs.readFileSync(`src/DaySample.ts`).toString();
             sample = sample.replaceAll('Sample', day);
             sample = sample.replaceAll('year', year);
-            fs.writeFileSync(`src/${year}/Day${day}`, sample);
+            fs.writeFileSync(`src/${year}/Day${day}.ts`, sample);
         }
         console.info(`Description: https://adventofcode.com/${year}/day/${day}`);
-        console.info(`Runnable: file://${process.cwd()}/src/${year}/Day${day}`);
+        console.info(`Runnable: file://${process.cwd()}/src/${year}/Day${day}.ts`);
         console.info(`Input: file://${process.cwd()}/inputs/${year}/day${day}.${mode}.txt`);
         let fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
         Debug.setFile(+year, +day, 'a');

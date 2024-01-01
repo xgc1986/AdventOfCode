@@ -66,7 +66,7 @@ export default class Day5 extends Puzzle<Input> {
         for (const map of input.maps) {
             let found = false;
             for (const category of map.categories) {
-                if (!found && UNumber.between(current, category.source, category.source + category.range)) {
+                if (!found && current.between(category.source, category.source + category.range)) {
                     current = current - category.source + category.destination;
                     found = true;
                 }

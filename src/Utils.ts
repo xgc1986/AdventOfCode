@@ -75,19 +75,7 @@ export class Debug {
         console.info(`Generated grapth file '${GREEN}file://${process.cwd()}/${route}.svg${RESET}'`);
     }
 
-    static async pauseUntilEnterIsPressed(message: string | undefined = undefined): Promise<void> {
-        process.stdin.setRawMode(true);
-        if (message) {
-            console.log(message);
-        }
-        console.log('Press any key to continue...');
-
-        return new Promise(resolve => process.stdin.once('data', () => {
-            process.stdin.setRawMode(false);
-            resolve();
-        }))
-    }
-    static async pause(message: string | undefined = undefined): Promise<void> {
+    static async pause(message: unknown | undefined = undefined): Promise<void> {
         process.stdin.setRawMode(true);
         if (message) {
             console.log(message);
@@ -112,9 +100,6 @@ export class UObject {
 }
 
 export class UNumber {
-    static between(val: number, min: number, max: number): boolean {
-        return val >= min && val <= max;
-    }
 
     static parseFloat(val: unknown): number {
         const match = `${val}`.match(/[-.\d]+/gi);

@@ -31,7 +31,7 @@ export default class Day2 extends Puzzle<Input> {
     }
 
     parseInput(input: string): Input {
-        const lines = input.split('\n').filter((line) => line !== '');
+        const lines = input.split('\n');
         let id = 0;
 
         return lines.map((line) => {
