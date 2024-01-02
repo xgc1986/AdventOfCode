@@ -1,3 +1,5 @@
+import * as console from "console";
+
 export default class LoopList<T> {
 
     private _first: LoopListItem<T> | undefined;
@@ -195,6 +197,7 @@ export default class LoopList<T> {
     }
 
     advance(item: LoopListItem<T>, pos: number): void {
+        pos = (pos) % (this.length - 1);
         for (let i = 0; i < pos; i++) {
             if (i === 0 && item === this._first) {
                 this._first = item.next;
@@ -211,6 +214,8 @@ export default class LoopList<T> {
     }
 
     retreat(item: LoopListItem<T>, pos: number): void {
+        pos = (pos) % (this.length - 1);
+
         for (let i = 0; i < pos; i++) {
             if (i === 0 && item === this._first) {
                 this._first = item.next;
