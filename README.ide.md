@@ -64,7 +64,7 @@ Results marked as INF means that solved by hand
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | <span style="color:lightgreen">0.269</span> | <span style="color:lightgreen">0.121</span> |         |         |         |         |         | <span style="color:lightgreen">0.154</span> | <span style="color:lightgreen">0.640</span> |
+| **Day 1** | <span style="color:lightgreen">0.269</span> | <span style="color:lightgreen">0.121</span> |         |         |         |         |         | <span style="color:lightgreen">0.113</span> | <span style="color:lightgreen">0.640</span> |
 | **Day 2** | <span style="color:lightgreen">0.257</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.261</span> | <span style="color:lightgreen">0.106</span> |
 | **Day 3** | <span style="color:orange">1.619</span> |         |         |         |         |         |         | <span style="color:orange">1.967</span> | <span style="color:lightgreen">0.207</span> |
 | **Day 4** | <span style="color:red">215.132</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.359</span> | <span style="color:lightgreen">0.426</span> |
@@ -83,7 +83,7 @@ Results marked as INF means that solved by hand
 | **Day 17** | <span style="color:red">202.985</span> |         |         |         |         |         |         | <span style="color:orange">7.367</span> | <span style="color:red">731.511</span> |
 | **Day 18** | <span style="color:darkorange">97.254</span> |         |         |         |         |         |         | <span style="color:orange">2.568</span> | <span style="color:lightgreen">0.195</span> |
 | **Day 19** | <span style="color:orange">3.220</span> |         |         |         |         |         |         | <span style="color:darkred">>11s</span> | <span style="color:orange">1.710</span> |
-| **Day 20** | <span style="color:red">576.501</span> |         |         |         |         |         |         |         | <span style="color:darkorange">11.904</span> |
+| **Day 20** | <span style="color:red">576.501</span> |         |         |         |         |         |         | <span style="color:red">130.077</span> | <span style="color:darkorange">11.904</span> |
 | **Day 21** | <span style="color:lightgreen">0.952</span> |         |         |         |         |         |         |         | <span style="color:darkorange">47.542</span> |
 | **Day 22** | <span style="color:darkred">>11s</span> |         |         |         |         |         |         |         | <span style="color:red">209.524</span> |
 | **Day 23** | <span style="color:lightgreen">0.154</span> |         |         |         |         |         |         |         | <span style="color:orange">1.384</span> |
@@ -95,7 +95,7 @@ Results marked as INF means that solved by hand
 
 | **Day** | **2015** | **2016** | **2017** | **2018** | **2019** | **2020** | **2021** | **2022** | **2023** |
 |---------|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
-| **Day 1** | <span style="color:lightgreen">0.115</span> | <span style="color:lightgreen">0.273</span> |         |         |         |         |         | <span style="color:lightgreen">0.112</span> | <span style="color:orange">1.598</span> |
+| **Day 1** | <span style="color:lightgreen">0.115</span> | <span style="color:lightgreen">0.273</span> |         |         |         |         |         | <span style="color:lightgreen">0.102</span> | <span style="color:orange">1.598</span> |
 | **Day 2** | <span style="color:lightgreen">0.130</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.246</span> | <span style="color:lightgreen">0.103</span> |
 | **Day 3** | <span style="color:orange">1.988</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.325</span> | <span style="color:lightgreen">0.106</span> |
 | **Day 4** | <span style="color:darkred">>7s</span> |         |         |         |         |         |         | <span style="color:lightgreen">0.219</span> | <span style="color:lightgreen">0.475</span> |
@@ -119,4 +119,4 @@ Results marked as INF means that solved by hand
 | **Day 22** | <span style="color:red">412.600</span> |         |         |         |         |         |         |         | <span style="color:darkred">>1m</span> |
 | **Day 23** | <span style="color:lightgreen">0.095</span> |         |         |         |         |         |         |         | <span style="color:darkred">>5s</span> |
 | **Day 24** | <span style="color:darkred">INF</span> |         |         |         |         |         |         |         | <span style="color:darkred">>6s</span> |
-| **Day 25** | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 38</span> | <span style="color:#FFFF66">* × 50</span> |
+| **Day 25** | <span style="color:#FFFF66">* × 50</span> | <span style="color:#9999CC">* × 2</span> |         |         |         |         |         | <span style="color:#9999CC">* × 39</span> | <span style="color:#FFFF66">* × 50</span> |

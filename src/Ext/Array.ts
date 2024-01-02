@@ -1,7 +1,6 @@
 Array.prototype.num = function (): number[] {
     return this.map(Number);
 };
-
 Array.prototype.splitOn = function <T>(separator: T): T[][] {
     const result: T[][] = [];
     let current: T[] = [];
@@ -27,4 +26,8 @@ Array.prototype.pairs = function* <T>(): Generator<T[]> {
             yield [this[i], this[j]];
         }
     }
+};
+
+Array.prototype.insertAt = function <T>(index: number, value: T): T[] {
+    return [...this.slice(0, index), value, ...this.slice(index)];
 };
