@@ -34,7 +34,7 @@ export default class Day18 extends Puzzle<Input> {
     }
 
     evolve(matrix: string[][]) {
-        const copy = UObject.deepCopy(matrix);
+        const copy = UObject.clone(matrix);
         for (let r = 0; r < matrix.length; r++) {
             for (let c = 0; c < matrix.length; c++) {
                 if (this.turn(copy, r, c)) {
@@ -47,7 +47,7 @@ export default class Day18 extends Puzzle<Input> {
     }
 
     async run1(lights: Input): Promise<Solution> {
-        lights = UObject.deepCopy(lights);
+        lights = UObject.clone(lights);
         for (let i = 0; i < 100; i++) {
             this.evolve(lights);
         }

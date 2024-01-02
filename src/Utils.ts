@@ -95,7 +95,7 @@ export class Debug {
 }
 
 export class UObject {
-    static deepCopy<T>(obj: T): T {
+    static clone<T>(obj: T): T {
         return JSON.parse(JSON.stringify(obj));
     }
 }

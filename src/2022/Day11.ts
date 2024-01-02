@@ -45,7 +45,7 @@ export default class Day11 extends Puzzle<Input> {
     }
 
     async run1(monkeys: Input): Promise<Solution> {
-        monkeys = UObject.deepCopy(monkeys);
+        monkeys = UObject.clone(monkeys);
         for (let i = 0; i < 20; i++) {
             for (const monkey of monkeys) {
                 monkey.inpections += monkey.items.length;

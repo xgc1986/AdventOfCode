@@ -143,7 +143,7 @@ export default class Day16 extends Puzzle<Input> {
         if (mirror[0][0].char === '\\') {
             coords = [{x: 0, y: 0, dir: 'S'}];
         }
-        return this.energyze(UObject.deepCopy(mirror), coords as Beam[]);
+        return this.energyze(UObject.clone(mirror), coords as Beam[]);
     }
 
     async run2(mirror: Input): Promise<Solution> {
@@ -217,7 +217,7 @@ export default class Day16 extends Puzzle<Input> {
         }
 
         for (const coord of coords) {
-            const map = UObject.deepCopy(mirror)
+            const map = UObject.clone(mirror)
             let res = this.energyze(map, coord as Beam[]);
             max = Math.max(max, res);
         }

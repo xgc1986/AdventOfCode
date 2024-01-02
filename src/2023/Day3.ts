@@ -81,7 +81,7 @@ export default class Day3 extends Puzzle<Input> {
     }
 
     async run1(input: Input): Promise<number> {
-        input = UObject.deepCopy(input);
+        input = UObject.clone(input);
         let total = 0;
 
         for (let i = 0; i < input.length; i++) {

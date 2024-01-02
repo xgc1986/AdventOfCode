@@ -132,7 +132,7 @@ export default class Day22 extends Puzzle<Input> {
                 newPieces.push(pieces[i]);
             }
         }
-        newPieces = UObject.deepCopy(newPieces);
+        newPieces = UObject.clone(newPieces);
 
         this.fall(newPieces);
         let total = 0;

@@ -62,7 +62,7 @@ export default class Day5 extends Puzzle<Input> {
     }
 
     async run1(cargo: Input): Promise<Solution> {
-        cargo = UObject.deepCopy(cargo);
+        cargo = UObject.clone(cargo);
         for (const instruction of cargo.instructions) {
             for (let i = 0; i < instruction.amount; i++) {
                 cargo.stacks[instruction.to].push(cargo.stacks[instruction.from].pop() ?? '');

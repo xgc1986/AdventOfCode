@@ -76,8 +76,8 @@ export default class Day22 extends Puzzle<Input> {
         }
 
         for (const spell of this.SPELLS) {
-            const theBoss = UObject.deepCopy(boss);
-            const thePlayer = UObject.deepCopy(player);
+            const theBoss = UObject.clone(boss);
+            const thePlayer = UObject.clone(player);
 
             if (hardMode) {
                 thePlayer.health -= 1;
@@ -140,8 +140,8 @@ export default class Day22 extends Puzzle<Input> {
     }
 
     bossTurn(player: Stats, boss: Stats, mana: number, turn: number, spells: string[], hardMode: boolean = false): Result {
-        const theBoss = UObject.deepCopy(boss);
-        const thePlayer = UObject.deepCopy(player);
+        const theBoss = UObject.clone(boss);
+        const thePlayer = UObject.clone(player);
 
         if (theBoss.poison > 0) {
             theBoss.health -= 3;

@@ -71,7 +71,7 @@ export default class Day19 extends Puzzle<Input> {
             return 0;
         }
 
-        let newCategories = UObject.deepCopy(categories);
+        let newCategories = UObject.clone(categories);
         let total = 0;
 
         for (const rule of workflows[wf]) {
