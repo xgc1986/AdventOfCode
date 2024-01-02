@@ -4,9 +4,7 @@
 // Input file [[inputs/2022/day19.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Debug, StringMap} from "src/Utils.ts";
-import TextColors from "src/TextColors.ts";
-import * as console from "console";
+import {StringMap} from "src/Utils.ts";
 
 type Solution = number | undefined;
 
@@ -29,167 +27,143 @@ export default class Day19 extends Puzzle<Input> {
         });
     }
 
+    private maxGeodes = 0;
+
+    recursiveRun(blueprint: Blueprint, duration: number, ore: number, clay: number, obsidian: number, geode: number, oreProduction: number, clayProduction: number, obsidianProduction: number, geodeProduction: number, actions: string[]): number {
+        if (duration === 0) {
+            return geode;
+        }
+
+        let maxOreRequired = Math.max(blueprint.clay.ore, blueprint.obsidian.ore, blueprint.geode.ore);
+        let canGeode = ore >= blueprint.geode.ore && obsidian >= blueprint.geode.obsidian;
+        let canObsidian = ore >= blueprint.obsidian.ore && clay >= blueprint.obsidian.clay && !canGeode && (obsidianProduction < blueprint.geode.obsidian)
+        let canClay = ore >= blueprint.clay.ore && !canGeode && (clayProduction < blueprint.obsidian.clay);
+        let canOre = ore >= blueprint.ore.ore && oreProduction < maxOreRequired && !canGeode;
+        let canNothing = !canGeode;
+
+        if (canNothing) {
+            if (oreProduction >= maxOreRequired && clayProduction >= blueprint.obsidian.clay) {
+                canNothing = false;
+            } else if (clayProduction >= blueprint.obsidian.clay) {
+                if (canOre && canObsidian) {
+                    canNothing = false;
+                }
+            } else if (oreProduction >= maxOreRequired) {
+                if (canClay && canObsidian) {
+                    canNothing = false;
+                }
+            } else {
+                if (clayProduction === 0 && canOre && canClay) {
+                    canNothing = false;
+                } else if (obsidianProduction === 0 && canOre && canClay && canObsidian) {
+                    canNothing = false;
+                } else if (canOre && canClay && canObsidian) {
+                    canNothing = false;
+                }
+            }
+        }
+
+        if (canGeode) {
+            const newActions = [...actions, 'geo'];
+            let nOre = ore - blueprint.geode.ore + oreProduction;
+            let nClay = clay + clayProduction;
+            let nObsidian = obsidian - blueprint.geode.obsidian + obsidianProduction;
+            let nGeode = geode + geodeProduction;
+            let nDuration = duration - 1;
+            let nOreProduction = oreProduction;
+            let nClayProduction = clayProduction;
+            let nObsidianProduction = obsidianProduction;
+            let nGeodeProduction = geodeProduction + 1;
+
+            const g = this.recursiveRun(blueprint, nDuration, nOre, nClay, nObsidian, nGeode, nOreProduction, nClayProduction, nObsidianProduction, nGeodeProduction, newActions);
+            if (g > this.maxGeodes) {
+                this.maxGeodes = g;
+            }
+        }
+
+        if (canObsidian) {
+            const newActions = [...actions, 'obs'];
+            let nOre = ore - blueprint.obsidian.ore + oreProduction;
+            let nClay = clay - blueprint.obsidian.clay + clayProduction;
+            let nObsidian = obsidian + obsidianProduction;
+            let nGeode = geode + geodeProduction;
+            let nDuration = duration - 1;
+            let nOreProduction = oreProduction;
+            let nClayProduction = clayProduction;
+            let nObsidianProduction = obsidianProduction + 1;
+            const g = this.recursiveRun(blueprint, nDuration, nOre, nClay, nObsidian, nGeode, nOreProduction, nClayProduction, nObsidianProduction, geodeProduction, newActions);
+            if (g > this.maxGeodes) {
+                this.maxGeodes = g;
+            }
+        }
+
+        if (canClay) {
+            const newActions = [...actions, 'cla'];
+            let nOre = ore - blueprint.clay.ore + oreProduction;
+            let nClay = clay + clayProduction;
+            let nObsidian = obsidian + obsidianProduction;
+            let nGeode = geode + geodeProduction;
+            let nDuration = duration - 1;
+            let nOreProduction = oreProduction;
+            let nClayProduction = clayProduction + 1;
+            const g = this.recursiveRun(blueprint, nDuration, nOre, nClay, nObsidian, nGeode, nOreProduction, nClayProduction, obsidianProduction, geodeProduction, newActions);
+            if (g > this.maxGeodes) {
+                this.maxGeodes = g;
+            }
+        }
+
+        if (canOre) {
+            const newActions = [...actions, 'ore'];
+            let nOre = ore - blueprint.ore.ore + oreProduction;
+            let nClay = clay + clayProduction;
+            let nObsidian = obsidian + obsidianProduction;
+            let nGeode = geode + geodeProduction;
+            let nDuration = duration - 1;
+            let nOreProduction = oreProduction + 1;
+            const g = this.recursiveRun(blueprint, nDuration, nOre, nClay, nObsidian, nGeode, nOreProduction, clayProduction, obsidianProduction, geodeProduction, newActions);
+            if (g > this.maxGeodes) {
+                this.maxGeodes = g;
+            }
+        }
+
+        if (canNothing) {
+            const newActions = [...actions, '---'];
+            let nOre = ore + oreProduction;
+            let nClay = clay + clayProduction;
+            let nObsidian = obsidian + obsidianProduction;
+            let nGeode = geode + geodeProduction;
+            let nDuration = duration - 1;
+            const g = this.recursiveRun(blueprint, nDuration, nOre, nClay, nObsidian, nGeode, oreProduction, clayProduction, obsidianProduction, geodeProduction, newActions);
+            if (g > this.maxGeodes) {
+                this.maxGeodes = g;
+            }
+        }
+
+        return this.maxGeodes;
+    }
+
     async run1(blueprints: Input): Promise<Solution> {
-        let totalQuality = 0;
+        let qu = 0;
+        let i = 0;
+        for (const blueprint of blueprints) {
+            i++;
+            this.maxGeodes = 0;
+            const q = this.recursiveRun(blueprint, 24, 0, 0, 0, 0, 1, 0, 0, 0, []);
 
-        for (let i = 0; i < blueprints.length; i++) {
-            const quality = (await this.run(blueprints[i], 24)) * (i + 1);
-            console.log('Quality', quality);
-            totalQuality += quality;
-            break;
+            qu += q * i;
         }
-
-        return totalQuality;
+        return qu;
     }
 
-    async run2(_: Input): Promise<Solution> {
-        return undefined;
-    }
-
-    private async run(blueprint: Blueprint, duration: number): Promise<number> {
-        let totalOre = 0;
-        let totalClay = 0;
-        let totalObsidian = 0;
-        let totalGeode = 0;
-        let oreProduction = 1;
-        let clayProduction = 0;
-        let obsidianProduction = 0;
-        let geodeProduction = 0;
-
-        console.log(blueprint);
-        for (let minutes = 0; minutes < duration; minutes++) {
-            console.log();
-            console.log(`== Minute ${minutes + 1} ==`);
-
-            let turnsToGeode = Infinity;
-            let turnsToObsidian = Infinity;
-            let turnsToClay = ((blueprint.clay.ore - totalOre) / oreProduction);
-            let turnsToOre = ((blueprint.ore.ore - totalOre) / oreProduction);
-
-            if (clayProduction > 0) {
-                turnsToObsidian = Math.max(
-                    ((blueprint.obsidian.clay - totalClay) / clayProduction),
-                    ((blueprint.obsidian.ore - totalOre) / oreProduction)
-                );
-            }
-
-            if (obsidianProduction > 0) {
-                turnsToGeode = Math.max(
-                    ((blueprint.geode.obsidian - totalObsidian) / obsidianProduction),
-                    ((blueprint.geode.ore - totalOre) / oreProduction)
-                );
-            }
-
-            let iCanBuy = true;
-
-            // check geode
-            if (turnsToGeode <= 0) {
-                console.log(` > Purchase ${TextColors.GREEN}geode${TextColors.RESET} robot`);
-                geodeProduction++;
-                iCanBuy = false;
-                totalOre -= blueprint.geode.ore;
-                totalObsidian -= blueprint.geode.obsidian;
-                totalGeode--;
-            }
-
-            // check obsidian
-            if (iCanBuy && turnsToObsidian <= 0) {
-                let doIt = true;
-                if (obsidianProduction > 0) {
-                    const newTurnsToGeode = Math.max(
-                        ((blueprint.geode.obsidian - totalObsidian) / (obsidianProduction + 1)),
-                        ((blueprint.geode.ore - (totalOre - blueprint.obsidian.ore)) / oreProduction)
-                    );
-
-                    doIt = newTurnsToGeode <= turnsToGeode;
-                }
-
-                if (doIt) {
-                    console.log(` > Purchase ${TextColors.GREEN}obsidian${TextColors.RESET} robot`);
-                    obsidianProduction++;
-                    iCanBuy = false;
-                    totalOre -= blueprint.obsidian.ore;
-                    totalClay -= blueprint.obsidian.clay;
-                    totalObsidian--;
-                }
-            }
-
-            // check clay
-            if (iCanBuy && turnsToClay <= 0) {
-                let doIt = true;
-                if (clayProduction > 0) {
-                    const newTurnsToObsidian = Math.max(
-                        ((blueprint.obsidian.clay - totalClay) / (clayProduction + 1)),
-                        ((blueprint.obsidian.ore - (totalOre - blueprint.clay.ore)) / oreProduction)
-                    );
-
-                    doIt = newTurnsToObsidian <= turnsToObsidian;
-                }
-
-                if (doIt) {
-                    console.log(` > Purchase ${TextColors.GREEN}clay${TextColors.RESET} robot`);
-                    clayProduction++;
-                    iCanBuy = false;
-                    totalOre -= blueprint.clay.ore;
-                    totalClay--;
-                }
-            }
-
-            // check ore
-            if (iCanBuy && turnsToOre <= 0) {
-                let doIt = true;
-
-                /* check geode ?*/
-                if (obsidianProduction > 0) {
-                    const newTurnsToGeode = Math.max(
-                        ((blueprint.geode.obsidian - totalObsidian) / obsidianProduction),
-                        ((blueprint.geode.ore - (totalOre - blueprint.ore.ore)) / (oreProduction + 1))
-                    );
-
-                    doIt = newTurnsToGeode <= turnsToGeode;
-                }
-                /**/
-
-                /* check obsidian ?*/
-                if (doIt && clayProduction > 0) {
-                    const newTurnsToObsidian = Math.max(
-                        ((blueprint.obsidian.clay - totalClay) / clayProduction),
-                        ((blueprint.obsidian.ore - (totalOre - blueprint.ore.ore)) / (oreProduction + 1))
-                    );
-
-                    doIt = newTurnsToObsidian <= turnsToObsidian;
-                }
-
-                /* check clay ?*/
-                const newTurnsToClay = ((blueprint.clay.ore - totalOre) / (oreProduction + 1));
-                doIt = newTurnsToClay <= turnsToClay;
-                /**/
-
-                if (doIt) {
-                    console.log(` > Purchase ${TextColors.GREEN}ore${TextColors.RESET} robot`);
-                    oreProduction++;
-                    totalOre -= blueprint.ore.ore;
-                    iCanBuy = false;
-                    totalOre--
-                }
-            }
-
-            totalGeode += geodeProduction;
-            totalObsidian += obsidianProduction;
-            totalClay += clayProduction;
-            totalOre += oreProduction;
-
-            console.log(`Property:  ${TextColors.GREEN}${totalOre}${TextColors.RESET} ore, ${TextColors.GREEN}${totalClay}${TextColors.RESET} clay, ${TextColors.GREEN}${totalObsidian}${TextColors.RESET} obsidian, ${TextColors.GREEN}${totalGeode}${TextColors.RESET} geode`);
-            console.log(`Producing: ${TextColors.GREEN}${oreProduction}${TextColors.RESET} ore, ${TextColors.GREEN}${clayProduction}${TextColors.RESET} clay, ${TextColors.GREEN}${obsidianProduction}${TextColors.RESET} obsidian, ${TextColors.GREEN}${geodeProduction}${TextColors.RESET} geode`);
-
-            await Debug.pause();
+    async run2(blueprints: Input): Promise<Solution> {
+        let total = 1;
+        for (let i = 0; i < Math.min(3, blueprints.length); i++) {
+            this.maxGeodes = 0;
+            const q = this.recursiveRun(blueprints[i], 32, 0, 0, 0, 0, 1, 0, 0, 0, []);
+            total *= q;
         }
-
-        //console.log(`Property:  ${TextColors.GREEN}${totalOre}${TextColors.RESET} ore, ${TextColors.GREEN}${totalClay}${TextColors.RESET} clay, ${TextColors.GREEN}${totalObsidian}${TextColors.RESET} obsidian, ${TextColors.GREEN}${totalGeode}${TextColors.RESET} geode`);
-        //console.log(`Producing: ${TextColors.GREEN}${oreProduction}${TextColors.RESET} ore, ${TextColors.GREEN}${clayProduction}${TextColors.RESET} clay, ${TextColors.GREEN}${obsidianProduction}${TextColors.RESET} obsidian, ${TextColors.GREEN}${geodeProduction}${TextColors.RESET} geode`);
-
-        return totalGeode;
+        return total;
     }
 }
 
-// > 953
+// >2400
