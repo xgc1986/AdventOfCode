@@ -23,8 +23,12 @@ export class Debug {
     private static part: string = '';
     private static isExecuting: boolean = false;
 
-    static enable(b: boolean) {
-        Debug.enabled = b;
+    static enable() {
+        Debug.enabled = true;
+    }
+
+    static disable() {
+        Debug.enabled = false;
     }
 
     static executing(b: boolean) {
@@ -146,12 +150,8 @@ export class UArray {
         return [left, right];
     }
 
-    static matrixValue<T>(matrix: T[][], row: number, col: number) {
-        if (row < 0 || row >= matrix.length || col < 0 || col >= matrix[row].length) {
-            return undefined;
-        }
-
-        return matrix[row][col];
+    static matrixValue<T>(matrix: T[][], row: number, col: number): T | undefined {
+        return matrix[row]?.[col];
     }
 
     static surround4<T>(matrix: T[][], row: number, col: number): T[] {
@@ -203,7 +203,11 @@ export class UArray {
 
 export class UMath {
 
-    static advanceCycles(first: number, second: number, limit: number): {cycles: number, remaining: number, iteration: number} {
+    static advanceCycles(first: number, second: number, limit: number): {
+        cycles: number,
+        remaining: number,
+        iteration: number
+    } {
         let size = second - first;
         let realLimit = limit - second;
 

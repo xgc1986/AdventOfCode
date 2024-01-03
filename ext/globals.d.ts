@@ -3,6 +3,7 @@ interface Array<T> {
     insertAt(index: number, value: T): T[];
     num(): number[];
     range(): T[];
+    removeElement(element: T): T[];
     splitOn(separator: T): T[][];
     sum(): number;
 }
@@ -20,5 +21,6 @@ interface String {
 
 interface Object {
     copy<T>(this: T): T;
+    entries<T>(): [keyof T, T[keyof T]][];
     hideProperties<T>(this: T, properties: string[]): void;
 }

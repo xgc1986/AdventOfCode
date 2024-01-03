@@ -336,7 +336,6 @@ import * as process from "node:process";
         console.info(`Input: file://${process.cwd()}/inputs/${year}/day${day}.${mode}.txt`);
         let fileContents = fs.readFileSync(`inputs/${year}/day${day}.${mode}.txt`, 'utf8');
         Debug.setFile(+year, +day, 'a');
-        Debug.enable(mode !== 'input');
 
         const puzzle: Puzzle<unknown> = new (await import(`src/${year}/Day${day}.ts`)).default(mode);
         if (fileContents.endsWith('\n')) {
@@ -345,11 +344,9 @@ import * as process from "node:process";
         const input1 = puzzle.parseInput(fileContents);
         const input2 = puzzle.SINGLE_INPUT_PARSE ? input1 : puzzle.parseInput(fileContents);
 
-        Debug.enable(mode !== 'input');
         Debug.executing(true);
         const time1 = await execute(puzzle, input1, 'a', mode);
         Debug.executing(false);
-        Debug.enable(mode !== 'input');
         Debug.setFile(+year, +day, 'b');
         Debug.executing(true);
         const time2 = await execute(puzzle, input2, 'b', mode);
