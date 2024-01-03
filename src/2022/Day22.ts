@@ -228,8 +228,6 @@ export default class Day22 extends Puzzle<Input> {
                     cc -= this.directions[direction][1];
                     break;
                 }
-
-                note.map[cr] = note.map[cr].replaceAt(cc, this.dir[direction]);
             }
 
             if (instruction.direction !== '') {
