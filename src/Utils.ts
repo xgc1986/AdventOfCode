@@ -52,7 +52,7 @@ export class Debug {
     }
 
     static clear() {
-        if (fs.statSync(Debug.file).size === 0) {
+        if (fs.existsSync(Debug.file)) {
             fs.rmSync(Debug.file);
         }
     }

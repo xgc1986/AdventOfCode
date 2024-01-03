@@ -1,6 +1,20 @@
+const attrs = {
+    configurable: false,
+    enumerable: false,
+};
+
+
+Array.prototype.end = function <T>(): T | undefined {
+    return this[this.length - 1];
+}
+Object.defineProperty(Array.prototype, "end", attrs);
+
+
 Array.prototype.num = function (): number[] {
     return this.map(Number);
 };
+Object.defineProperty(Array.prototype, "num", attrs);
+
 Array.prototype.splitOn = function <T>(separator: T): T[][] {
     const result: T[][] = [];
     let current: T[] = [];
@@ -15,19 +29,45 @@ Array.prototype.splitOn = function <T>(separator: T): T[][] {
     }
     return result;
 }
+Object.defineProperty(Array.prototype, "splitOn", attrs);
+
 
 Array.prototype.sum = function (): number {
     return this.reduce((acc, val) => acc + val, 0);
 };
+Object.defineProperty(Array.prototype, "sum", attrs);
 
-Array.prototype.pairs = function* <T>(): Generator<T[]> {
-    for (let i = 0; i < this.length; i++) {
-        for (let j = i + 1; j < this.length; j++) {
-            yield [this[i], this[j]];
-        }
-    }
-};
 
 Array.prototype.insertAt = function <T>(index: number, value: T): T[] {
     return [...this.slice(0, index), value, ...this.slice(index)];
 };
+Object.defineProperty(Array.prototype, "insertAt", attrs);
+
+Array.prototype.range = function <T>(): T[] {
+    if (this.length === 0) {
+        return [];
+    }
+    if (this.length === 1) {
+        return [this[0]];
+    }
+    if (this.length > 2) {
+        throw new Error("Array.range() only works on arrays of length 2");
+    }
+
+    const from = this[0];
+    const to = this[1];
+    const ret = [];
+
+    if (from < to) {
+        for (let i = from; i <= to; i++) {
+            ret.push(i);
+        }
+    } else {
+        for (let i = from; i >= to; i--) {
+            ret.push(i);
+        }
+    }
+
+    return ret;
+}
+Object.defineProperty(Array.prototype, "range", attrs);

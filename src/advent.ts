@@ -349,13 +349,11 @@ import * as process from "node:process";
         Debug.executing(true);
         const time1 = await execute(puzzle, input1, 'a', mode);
         Debug.executing(false);
-        Debug.clear();
         Debug.enable(mode !== 'input');
         Debug.setFile(+year, +day, 'b');
         Debug.executing(true);
         const time2 = await execute(puzzle, input2, 'b', mode);
         Debug.executing(false);
-        Debug.clear();
         console.info();
 
         if (mode === 'input') {
