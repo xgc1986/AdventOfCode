@@ -65,28 +65,36 @@ import * as process from "node:process";
     }
 
     function createTable(content: StringMap<number[][]>, part: number): string[] {
-        let tableApp = '| **Day** |';
-        let tableWeb = '| **Day** |';
-        let tableIDE = '| **Day** |';
-        let sep = '|---------|';
+        let tableApp = '| **Day**    |';
+        let tableWeb = '| **Day**    |';
+        let tableIDE = '| **Day**    |';
+        let sepWeb = '|------------|';
+        let sepIde = '|------------|';
+        let sepApp = '|------------|';
 
+        const webWidth = 40;
+        const ideWidth = 47;
+        const appWidth = 12;
         for (const y in content) {
-            tableApp += ` **${y}** |`;
-            tableWeb += ` **${y}** |`;
-            tableIDE += ` **${y}** |`;
-            sep += `---------:|`;
+            tableApp += ` **${y}** |`.padStart(appWidth, ' ');
+            tableWeb += ` **${y}** |`.padStart(webWidth, ' ');
+            tableIDE += ` **${y}** |`.padStart(ideWidth, ' ');
+            sepApp += `---------:|`.padStart(appWidth, '-');
+            sepWeb += `---------:|`.padStart(webWidth, '-');
+            sepIde += `---------:|`.padStart(ideWidth, '-');
         }
 
-        tableApp += '\n' + sep + '\n';
-        tableWeb += '\n' + sep + '\n';
-        tableIDE += '\n' + sep + '\n';
+        tableApp += '\n' + sepApp + '\n';
+        tableWeb += '\n' + sepWeb + '\n';
+        tableIDE += '\n' + sepIde + '\n';
 
         let complete: StringMap<number> = {};
         for (let i = 0; i < 25; i++) {
-            const day = i + 1;
-            let lineWeb = `| **Day ${day}** |`;
-            let lineApp = `| **Day ${day}** |`;
-            let lineIDE = `| **Day ${day}** |`;
+            const day = (i + 1);
+            const dd = day.toString().padStart(2, ' ');
+            let lineWeb = `| **Day ${dd}** |`;
+            let lineApp = `| **Day ${dd}** |`;
+            let lineIDE = `| **Day ${dd}** |`;
             for (const year in content) {
                 complete[year] ??= 50;
                 const time = content[year][i][part] ?? -1;
@@ -103,53 +111,52 @@ import * as process from "node:process";
                 const ms = (time / 1000).toFixed(3);
                 if (day === 25 && part === 1) {
                     if (complete[year] >= 49) {
-                        lineApp += ` ⭐️ |`;
-                        lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`;
-                        lineIDE += ` <span style="color:#FFFF66">* × 50</span> |`;
+                        lineApp += ` ⭐️ |`.padStart(appWidth, ' ');
+                        lineWeb += ` $\\color{#FFFF66}{\\texttt{* × 50}}$ |`.padStart(webWidth, ' ');
+                        lineIDE += ` <span style="color:#FFFF66">* × 50</span> |`.padStart(ideWidth, ' ');
                     } else if (complete[year] > 0) {
-                        lineApp += ` * × ${complete[year]}        |`;
-                        lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`;
-                        lineIDE += ` <span style="color:#9999CC">* × ${complete[year]}</span> |`;
+                        lineApp += ` * × ${complete[year]} |`.padStart(appWidth, ' ');
+                        lineWeb += ` $\\color{#9999CC}{\\texttt{* × ${complete[year]}}}$ |`.padStart(webWidth, ' ');
+                        lineIDE += ` <span style="color:#9999CC">* × ${complete[year]}</span> |`.padStart(ideWidth, ' ');
                     } else {
-                        lineApp += `         |`;
-                        lineWeb += `         |`;
-                        lineIDE += `         |`;
+                        lineApp += `         |`.padStart(appWidth, ' ');
+                        lineWeb += `         |`.padStart(webWidth, ' ');
+                        lineIDE += `         |`.padStart(ideWidth, ' ');
                     }
                 } else if (time === -1) {
-                    lineApp += `         |`;
-                    lineWeb += `         |`;
-                    lineIDE += `         |`;
+                    lineApp += `         |`.padStart(appWidth, ' ');
+                    lineWeb += `         |`.padStart(webWidth, ' ');
+                    lineIDE += `         |`.padStart(ideWidth, ' ');
                 } else if (time === -10) {
-                    lineApp += ` _INF_ |`;
-                    //lineWeb += ` $\\color{darkred}{\\texttt{\\href{https://adventofcode.com/2022/day/10}{INF}}}$ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`;
-                    lineIDE += ` <span style="color:darkred">INF</span> |`;
+                    lineApp += ` _INF_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:darkred">INF</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 1_000) {
-                    lineApp += ` _${ms}_ |`;
-                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
-                    lineIDE += ` <span style="color:lightgreen">${ms}</span> |`;
+                    lineApp += ` _${ms}_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:lightgreen">${ms}</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 10_000) {
-                    lineApp += ` _${ms}_ |`;
-                    lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
-                    lineIDE += ` <span style="color:orange">${ms}</span> |`;
+                    lineApp += ` _${ms}_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:orange">${ms}</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 100_000) {
-                    lineApp += ` _${ms}_ |`;
-                    lineWeb += ` $\\color{darkorange}{\\texttt{${ms}}}$ |`;
-                    lineIDE += ` <span style="color:darkorange">${ms}</span> |`;
+                    lineApp += ` _${ms}_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{darkorange}{\\texttt{${ms}}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:darkorange">${ms}</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 1_000_000) {
-                    lineApp += ` _${ms}_ |`;
-                    lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`;
-                    lineIDE += ` <span style="color:red">${ms}</span> |`;
+                    lineApp += ` _${ms}_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:red">${ms}</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
-                    lineApp += ` _~${t}s_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
-                    lineIDE += ` <span style="color:darkred">>${t}s</span> |`;
+                    lineApp += ` _~${t}s_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:darkred">>${t}s</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
-                    lineApp += ` _~${t}m_ |`;
-                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
-                    lineIDE += ` <span style="color:darkred">>${t}m</span> |`;
+                    lineApp += ` _~${t}m_ |`.padStart(appWidth, ' ');
+                    lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`.padStart(webWidth, ' ');
+                    lineIDE += ` <span style="color:darkred">>${t}m</span> |`.padStart(ideWidth, ' ');
                 }
             }
             tableApp += lineApp + '\n';
