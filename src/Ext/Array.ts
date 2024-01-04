@@ -88,3 +88,9 @@ Array.prototype.sum = function (): number {
     return this.reduce((acc, val) => acc + val, 0);
 };
 Object.defineProperty(Array.prototype, "sum", { enumerable: false });
+
+
+Array.prototype.unique = function <T>(): T[] {
+    return [...new Set(this)];
+};
+Object.defineProperty(Array.prototype, "unique", { enumerable: false });

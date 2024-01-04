@@ -7,6 +7,7 @@ interface Array<T> {
     removeElement(element: T): T[];
     splitOn(separator: T): T[][];
     sum(): number;
+    unique(): T[];
 }
 
 interface Number {
@@ -17,6 +18,7 @@ interface Number {
 
 interface String {
     json(): any;
+    next(): string;
     replaceAt(index: number, replacement: string): string;
 }
 
