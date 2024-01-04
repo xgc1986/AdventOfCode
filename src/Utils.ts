@@ -79,21 +79,24 @@ export class Debug {
         console.info(`Generated grapth file '${GREEN}file://${process.cwd()}/${route}.svg${RESET}'`);
     }
 
-    static async pause(message: unknown | undefined = undefined): Promise<void> {
+    static async pause(cb: undefined | ((c: string) => void) = undefined): Promise<void> {
         process.stdin.setRawMode(true);
-        if (message) {
-            console.log(message);
-        }
         console.log('Press any key to continue...');
 
-        return new Promise(resolve => process.stdin.once('data', (data) => {
+        return new Promise(resolve => process.stdin.once('data', async (data) => {
             if (data.toString() === '\u0003') { // Ctrl+C
                 process.exit();
-            } else {
-                process.stdout.write('\x1b[1A\x1b[K');
-                process.stdin.setRawMode(false);
-                resolve();
             }
+
+            if (cb !== undefined && data.toString() !== '\r') {
+                console.log(data.toString());
+                cb(data.toString());
+                await Debug.pause(cb);
+            }
+
+            // process.stdout.write('\x1b[1A\x1b[K');
+            process.stdin.setRawMode(false);
+            resolve();
         }))
     }
 }
