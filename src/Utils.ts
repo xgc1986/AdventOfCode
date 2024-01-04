@@ -276,3 +276,7 @@ export class UString {
         return ret;
     }
 }
+
+export default function log(...args: unknown[]) {
+    console.log(...args);
+}
