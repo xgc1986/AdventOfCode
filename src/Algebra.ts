@@ -371,5 +371,9 @@ export class Matrix {
 
         return new Matrix(ret);
     }
+
+    toArray(): number[][] {
+        return this.value.copy();
+    }
 }
 

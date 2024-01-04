@@ -1,5 +1,6 @@
 interface Array<T> {
     end(): T | undefined;
+    groupsOf(size: number): T[][];
     insertAt(index: number, value: T): T[];
     num(): number[];
     range(): T[];

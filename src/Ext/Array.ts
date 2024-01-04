@@ -4,6 +4,21 @@ Array.prototype.end = function <T>(): T | undefined {
 Object.defineProperty(Array.prototype, "end", { enumerable: false });
 
 
+Array.prototype.groupsOf = function <T>(size: number): T[][] {
+    const result: T[][] = [];
+    let current: T[] = [];
+    result.push(current);
+    for (const item of this) {
+        if (current.length === size) {
+            current = [];
+            result.push(current);
+        }
+        current.push(item);
+    }
+    return result;
+}
+Object.defineProperty(Array.prototype, "groupsOf", { enumerable: false });
+
 Array.prototype.insertAt = function <T>(index: number, value: T): T[] {
     return [...this.slice(0, index), value, ...this.slice(index)];
 };
