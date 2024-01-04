@@ -120,34 +120,34 @@ import * as process from "node:process";
                     lineWeb += `         |`;
                     lineIDE += `         |`;
                 } else if (time === -10) {
-                    lineApp += ` _❌ INF_ |`;
+                    lineApp += ` _INF_ |`;
                     //lineWeb += ` $\\color{darkred}{\\texttt{\\href{https://adventofcode.com/2022/day/10}{INF}}}$ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{INF}}$ |`;
                     lineIDE += ` <span style="color:darkred">INF</span> |`;
                 } else if (time > 0 && time <= 1_000) {
-                    lineApp += ` ✅✅ _${ms}_ |`;
+                    lineApp += ` _${ms}_ |`;
                     lineWeb += ` $\\color{lightgreen}{\\texttt{${ms}}}$ |`;
                     lineIDE += ` <span style="color:lightgreen">${ms}</span> |`;
                 } else if (time > 0 && time <= 10_000) {
-                    lineApp += ` ✅ _${ms}_ |`;
+                    lineApp += ` _${ms}_ |`;
                     lineWeb += ` $\\color{orange}{\\texttt{${ms}}}$ |`;
                     lineIDE += ` <span style="color:orange">${ms}</span> |`;
                 } else if (time > 0 && time <= 100_000) {
-                    lineApp += ` ⚠️ _${ms}_ |`;
+                    lineApp += ` _${ms}_ |`;
                     lineWeb += ` $\\color{darkorange}{\\texttt{${ms}}}$ |`;
                     lineIDE += ` <span style="color:darkorange">${ms}</span> |`;
                 } else if (time > 0 && time <= 1_000_000) {
-                    lineApp += ` ⚠️⚠️ _${ms}_ |`;
+                    lineApp += ` _${ms}_ |`;
                     lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`;
                     lineIDE += ` <span style="color:red">${ms}</span> |`;
                 } else if (time > 0 && time <= 60_000_000) {
                     const t =  Math.floor(time/1000000);
-                    lineApp += ` ❌ _~${t}s_ |`;
+                    lineApp += ` _~${t}s_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`;
                     lineIDE += ` <span style="color:darkred">>${t}s</span> |`;
                 } else if (time > 0) {
                     const t =  Math.floor(time/60000000);
-                    lineApp += ` ❌ _~${t}m_ |`;
+                    lineApp += ` _~${t}m_ |`;
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`;
                     lineIDE += ` <span style="color:darkred">>${t}m</span> |`;
                 }
@@ -184,14 +184,7 @@ import * as process from "node:process";
         app = app.replaceAll('%%LINK%%', 'Web version of [Readme](./README.web.md)');
         app = app.replaceAll('%%STARS1%%', '⭐️');
         app = app.replaceAll('%%STARS2%%', '⭐️⭐️');
-        app = app.replaceAll(
-            '%%LEGEND_TABLE%%',
-            '✅✅ _Less than 1 milisecond_\n\n' +
-            '✅ _More than 1 milisecond_\n\n' +
-            '⚠️ _More than 10 milisecond_\n\n' +
-            '⚠️⚠️ _More than 100 milisecond_\n\n' +
-            '❌ _More than 1 second_\n\n'
-        );
+        app = app.replaceAll('%%LEGEND_TABLE%%', '');
         fs.writeFileSync('README.app.md', app);
 
         let web = template.replaceAll('%%PERFOMANCE_TABLE_1%%', tables1[1]);
