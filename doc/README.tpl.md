@@ -46,7 +46,7 @@ All times are in **miliseconds**
 
 Execution program is **Ts-Node**
 
-Results marked as INF means that solved by hand
+Results marked as INF means that solved with pen and paper
 
 %%LEGEND_TABLE%%
 
