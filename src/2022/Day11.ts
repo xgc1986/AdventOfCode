@@ -4,7 +4,6 @@
 // Input file [[inputs/2022/day11.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import * as console from "console";
 import {UObject} from "src/Utils";
 
 type Solution = number | undefined;

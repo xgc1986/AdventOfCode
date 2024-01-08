@@ -4,7 +4,6 @@
 // Input file [[inputs/2016/day7.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import * as console from "console";
 
 type Solution = number | undefined;
 

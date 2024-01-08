@@ -4,7 +4,6 @@
 // Input file [[inputs/2016/day3.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Matrix} from "src/Algebra.ts";
 
 type Solution = number | undefined;
 

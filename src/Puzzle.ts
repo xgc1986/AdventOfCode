@@ -13,11 +13,13 @@ export default abstract class Puzzle<T> {
 
     public SINGLE_INPUT_PARSE = true;
 
-    private z3Info: Z3Info|undefined = undefined;
+    private z3Info: Z3Info | undefined = undefined;
 
-    constructor(public readonly mode: string) {}
+    constructor(public readonly mode: string) {
+    }
 
-    public async onStart(): Promise<void> {}
+    public async onStart(): Promise<void> {
+    }
 
     public async onEnd(): Promise<void> {
         if (this.z3Info !== undefined) {
@@ -38,6 +40,8 @@ export default abstract class Puzzle<T> {
     }
 
     public abstract parseInput(input: string): T;
-    public abstract run1(input: T): Promise<string|number|undefined>;
-    public abstract run2(input: T): Promise<string|number|undefined>;
+
+    public abstract run1(input: T): Promise<string | number | undefined>;
+
+    public abstract run2(input: T): Promise<string | number | undefined>;
 }

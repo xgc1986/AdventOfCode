@@ -4,7 +4,7 @@
 // Input file [[inputs/2022/day23.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Debug, StringMap, UArray} from "src/Utils.ts";
+import {StringMap, UArray} from "src/Utils.ts";
 import * as console from "console";
 import * as process from "process";
 

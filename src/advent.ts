@@ -148,12 +148,12 @@ import * as process from "node:process";
                     lineWeb += ` $\\color{red}{\\texttt{${ms}}}$ |`.padStart(webWidth, ' ');
                     lineIDE += ` <span style="color:red">${ms}</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0 && time <= 60_000_000) {
-                    const t =  Math.floor(time/1000000);
+                    const t = Math.floor(time / 1000000);
                     lineApp += ` _~${t}s_ |`.padStart(appWidth, ' ');
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}s}}$ |`.padStart(webWidth, ' ');
                     lineIDE += ` <span style="color:darkred">>${t}s</span> |`.padStart(ideWidth, ' ');
                 } else if (time > 0) {
-                    const t =  Math.floor(time/60000000);
+                    const t = Math.floor(time / 60000000);
                     lineApp += ` _~${t}m_ |`.padStart(appWidth, ' ');
                     lineWeb += ` $\\color{darkred}{\\texttt{>${t}m}}$ |`.padStart(webWidth, ' ');
                     lineIDE += ` <span style="color:darkred">>${t}m</span> |`.padStart(ideWidth, ' ');
@@ -342,7 +342,8 @@ import * as process from "node:process";
             fileContents = fileContents.slice(0, -1);
         }
         const input1 = puzzle.parseInput(fileContents);
-        const input2 = puzzle.SINGLE_INPUT_PARSE ? input1 : puzzle.parseInput(fileContents);
+        // @ts-ignore
+        const input2 = puzzle.SINGLE_INPUT_PARSE ? input1 : input1.copy();
 
         Debug.executing(true);
         const time1 = await execute(puzzle, input1, 'a', mode);

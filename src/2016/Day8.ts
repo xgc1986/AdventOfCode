@@ -4,7 +4,7 @@
 // Input file [[inputs/2016/day8.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Debug, UArray} from "src/Utils.ts";
+import {UArray} from "src/Utils.ts";
 
 type Solution = number | string | undefined;
 
@@ -37,7 +37,6 @@ export default class Day8 extends Puzzle<Input> {
                     by: rotateParts[1]
                 };
             } else {
-                const rectParts = line.match(/rect (\d+)x(\d+)/);
                 return {
                     type: 'rect',
                     columns: rotateParts[0],
@@ -76,7 +75,7 @@ export default class Day8 extends Puzzle<Input> {
         return count;
     }
 
-    async run2(instructions: Input): Promise<Solution> {
+    async run2(_: Input): Promise<Solution> {
         return 'ZJHRKCPLYJ';
     }
 

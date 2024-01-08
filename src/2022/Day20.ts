@@ -4,10 +4,7 @@
 // Input file [[inputs/2022/day20.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UObject} from "src/Utils.ts";
-import LinkedList from "src/Utils/LinkedList.ts";
 import LoopList from "src/Utils/LoopList.ts";
-import * as console from "console";
 
 type Solution = number | undefined;
 

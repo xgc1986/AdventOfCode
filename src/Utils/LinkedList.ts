@@ -1,4 +1,6 @@
-export default class LinkedList<T> {
+import Cloneable from "src/Utils/Cloneable.ts";
+
+export default class LinkedList<T> implements Cloneable<LinkedList<T>> {
 
     private _first: LinkedListItem<T> | undefined;
 
@@ -225,6 +227,14 @@ export default class LinkedList<T> {
         while (current !== undefined) {
             result.push(current);
             current = current.next;
+        }
+        return result;
+    }
+
+    clone(): LinkedList<T> {
+        const result = new LinkedList<T>();
+        for (const item of this.toArray()) {
+            result.push(item);
         }
         return result;
     }

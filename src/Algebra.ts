@@ -1,10 +1,12 @@
+import Cloneable from "src/Utils/Cloneable.ts";
+
 interface Intersection2D {
     point: Point2D;
     t1: number;
     t2: number;
 }
 
-export class Point2D {
+export class Point2D implements Cloneable<Point2D> {
     constructor(
         public readonly x: number,
         public readonly y: number
@@ -14,9 +16,13 @@ export class Point2D {
     vectorTo(p: Point2D): Vector2D {
         return new Vector2D(p.x - this.x, p.y - this.y);
     }
+
+    clone(): Point2D {
+        return new Point2D(this.x, this.y);
+    }
 }
 
-export class Point3D {
+export class Point3D implements Cloneable<Point3D> {
     constructor(
         public readonly x: number,
         public readonly y: number,
@@ -28,7 +34,7 @@ export class Point3D {
         return new Vector3D(p.x - this.x, p.y - this.y, p.z - this.z);
     }
 
-    convertTo2D(axis: 'x'|'y'|'z'): Point2D {
+    convertTo2D(axis: 'x' | 'y' | 'z'): Point2D {
         switch (axis) {
             case 'x':
                 return new Point2D(this.y, this.z);
@@ -38,9 +44,13 @@ export class Point3D {
                 return new Point2D(this.x, this.y);
         }
     }
+
+    clone(): Point3D {
+        return new Point3D(this.x, this.y, this.z);
+    }
 }
 
-export class Vector2D {
+export class Vector2D implements Cloneable<Vector2D> {
 
     constructor(
         public readonly x: number,
@@ -51,9 +61,13 @@ export class Vector2D {
     isParallel(v: Vector2D): boolean {
         return this.x * v.y === this.y * v.x;
     }
+
+    clone(): Vector2D {
+        return new Vector2D(this.x, this.y);
+    }
 }
 
-export class Vector3D {
+export class Vector3D implements Cloneable<Vector3D> {
 
     constructor(
         public readonly x: number,
@@ -66,7 +80,7 @@ export class Vector3D {
         return (this.x / v.x === this.y * v.y) && (this.y / v.y === this.z / v.z)
     }
 
-    convertTo2D(axis: 'x'|'y'|'z'): Vector2D {
+    convertTo2D(axis: 'x' | 'y' | 'z'): Vector2D {
         switch (axis) {
             case 'x':
                 return new Vector2D(this.y, this.z);
@@ -76,9 +90,13 @@ export class Vector3D {
                 return new Vector2D(this.x, this.y);
         }
     }
+
+    clone(): Vector3D {
+        return new Vector3D(this.x, this.y, this.z);
+    }
 }
 
-export class Line2D {
+export class Line2D implements Cloneable<Line2D> {
 
     private constructor(
         public readonly point: Point2D,
@@ -95,7 +113,7 @@ export class Line2D {
     }
 
     private t(p: Point2D): number | null {
-        return  (p.x - this.point.x) / this.vector.x;
+        return (p.x - this.point.x) / this.vector.x;
     }
 
     pointAt(t: number): Point2D {
@@ -153,11 +171,14 @@ export class Line2D {
             m: this.vector.y / this.vector.x,
             n: this.point.y - this.point.x * this.vector.y / this.vector.x
         };
+    }
 
+    clone(): Line2D {
+        return new Line2D(this.point, this.vector);
     }
 }
 
-export class Line3D {
+export class Line3D implements Cloneable<Line3D> {
 
     private constructor(
         public readonly point: Point3D,
@@ -173,7 +194,7 @@ export class Line3D {
         return new Line3D(from, from.vectorTo(to));
     }
 
-    convertTo2D(axis: 'x'|'y'|'z'): Line2D {
+    convertTo2D(axis: 'x' | 'y' | 'z'): Line2D {
         switch (axis) {
             case 'x':
                 return Line2D.fromVector(this.point.convertTo2D(axis), this.vector.convertTo2D(axis));
@@ -183,9 +204,13 @@ export class Line3D {
                 return Line2D.fromVector(this.point.convertTo2D(axis), this.vector.convertTo2D(axis));
         }
     }
+
+    clone(): Line3D {
+        return new Line3D(this.point, this.vector);
+    }
 }
 
-export class Matrix {
+export class Matrix implements Cloneable<Matrix> {
 
     private readonly value: number[][];
 
@@ -374,6 +399,10 @@ export class Matrix {
 
     toArray(): number[][] {
         return this.value.copy();
+    }
+
+    clone(): Matrix {
+        return new Matrix(this.value);
     }
 }
 

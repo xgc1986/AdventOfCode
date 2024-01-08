@@ -23,6 +23,8 @@ type Input = Program;
 
 export default class Day12 extends Puzzle<Input> {
 
+    SINGLE_INPUT_PARSE = false;
+
     parseInput(input: string): Input {
         const lines = input.split('\n');
 
@@ -57,7 +59,6 @@ export default class Day12 extends Puzzle<Input> {
     }
 
     async run1(program: Input): Promise<Solution> {
-        program = program.copy();
         for (let i = 0; i < program.instructions.length; i++) {
             const instruction = program.instructions[i];
             switch (instruction.type) {

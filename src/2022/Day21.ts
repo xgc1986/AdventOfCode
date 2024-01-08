@@ -4,7 +4,7 @@
 // Input file [[inputs/2022/day21.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {StringMap, UObject} from "src/Utils.ts";
+import {StringMap} from "src/Utils.ts";
 
 type Solution = number | undefined;
 
@@ -20,6 +20,8 @@ interface Monkey {
 type Input = StringMap<Monkey>;
 
 export default class Day21 extends Puzzle<Input> {
+
+    public SINGLE_INPUT_PARSE = false;
 
     parseInput(input: string): Input {
         const monkeys: Input = {};
@@ -47,9 +49,7 @@ export default class Day21 extends Puzzle<Input> {
     }
 
     async run1(monkeys: Input): Promise<Solution> {
-        monkeys = UObject.clone(monkeys);
-        const res = this.getYell(monkeys.root, monkeys, false) ?? 0;
-        return res;
+        return this.getYell(monkeys.root, monkeys, false) ?? 0;
     }
 
     async run2(monkeys: Input): Promise<Solution> {

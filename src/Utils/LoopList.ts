@@ -1,6 +1,6 @@
-import * as console from "console";
+import Cloneable from "src/Utils/Cloneable.ts";
 
-export default class LoopList<T> {
+export default class LoopList<T> implements Cloneable<LoopList<T>> {
 
     private _first: LoopListItem<T> | undefined;
 
@@ -257,6 +257,23 @@ export default class LoopList<T> {
         let current = this._first.next;
         while (current !== this._first) {
             ret.push(current);
+            current = current.next;
+        }
+
+        return ret;
+    }
+
+    clone(): LoopList<T> {
+        const ret = new LoopList<T>();
+        const first = this._first;
+
+        if (first === undefined) {
+            return ret;
+        }
+
+        let current = first.next;
+        while (current !== first) {
+            ret.push(current.value);
             current = current.next;
         }
 

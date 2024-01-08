@@ -121,10 +121,6 @@ export default class Day24 extends Puzzle<Input> {
         return Infinity;
     }
 
-    private distance(from: number[], to: number[]): number {
-        return Math.abs(from[0] - to[0]) + Math.abs(from[1] - to[1]);
-    }
-
     private updateMap(map: string[][], winds: Wind[]): string[][] {
         const newMap = UArray.matrix(map.length, map[0].length, '.');
         for (let i = 0; i < map.length; i++) {

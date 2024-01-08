@@ -5,7 +5,6 @@
 
 import Puzzle from "src/Puzzle";
 import {StringMap} from "src/Utils.ts";
-import * as console from "console";
 
 type Solution = number | undefined;
 

@@ -4,7 +4,6 @@
 // Input file [[inputs/2016/day9.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {Debug} from "src/Utils.ts";
 
 type Solution = number | undefined;
 

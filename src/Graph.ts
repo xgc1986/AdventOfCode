@@ -1,16 +1,27 @@
 import {StringMap} from "src/Utils";
+import Cloneable from "src/Utils/Cloneable.ts";
 
-export default interface Graph {
+export default interface Graph extends Cloneable<Graph> {
     get vertices(): Vertex[];
+
     get size(): number;
+
     clone(): Graph;
+
     optVertex(id: string): Vertex | undefined;
+
     getVertex(id: string): Vertex;
+
     addVertex(id: string): Vertex;
+
     addEdge(from: string | Vertex, to: string | Vertex, weight: number): void;
+
     removeVertex(vertex: string | Vertex): void;
+
     removeEdge(from: string | Vertex, to: string | Vertex): void;
+
     separate(): Graph[];
+
     dotString(withWeight: boolean): string;
 }
 
@@ -346,7 +357,7 @@ export class Vertex {
     }
 
     toString(): string {
-        const ret =  `${this.id} -> `;
+        const ret = `${this.id} -> `;
         const e = [];
         for (const edge of this.edges) {
             e.push(edge.toString());
@@ -360,7 +371,8 @@ export class Edge {
     constructor(
         public readonly vertex: Vertex,
         public readonly weight: number
-    ) {}
+    ) {
+    }
 
     toString() {
         return `${this.vertex.id}(${this.weight})`;

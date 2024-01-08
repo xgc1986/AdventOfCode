@@ -4,7 +4,6 @@
 // Input file [[inputs/2023/day5.input.txt]]
 
 import Puzzle from "src/Puzzle";
-import {UNumber} from "src/Utils";
 
 interface Category {
     source: number,

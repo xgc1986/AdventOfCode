@@ -1,4 +1,6 @@
-export default class PriorityQueue<T> {
+import Cloneable from "src/Utils/Cloneable.ts";
+
+export default class PriorityQueue<T> implements Cloneable<PriorityQueue<T>> {
 
     private list: T[] = [];
 
@@ -6,6 +8,10 @@ export default class PriorityQueue<T> {
 
     constructor(cb: (a: T, b: T) => number) {
         this.cb = cb;
+    }
+
+    get length(): number {
+        return this.list.length;
     }
 
     push(item: T) {
@@ -19,5 +25,11 @@ export default class PriorityQueue<T> {
 
     peek(): T | undefined {
         return this.list[0];
+    }
+
+    clone(): PriorityQueue<T> {
+        const ret = new PriorityQueue<T>(this.cb);
+        ret.list = this.list.copy();
+        return ret;
     }
 }
