@@ -4,9 +4,9 @@
 
 import "src/Ext";
 import * as fs from "node:fs";
+import * as process from "node:process";
 import Puzzle from "src/Puzzle";
 import {Debug, StringMap} from "src/Utils";
-import * as process from "node:process";
 
 (async function (): Promise<void> {
     const INFO = '\x1b[1m\x1b[92m';
@@ -97,6 +97,7 @@ import * as process from "node:process";
             let lineIDE = `| **Day ${dd}** |`;
             for (const year in content) {
                 complete[year] ??= 50;
+                content[year][i] ??= [];
                 const time = content[year][i][part] ?? -1;
                 const time2 = content[year][i][part === 0 ? 1 : 0] ?? -1;
 
@@ -170,6 +171,8 @@ import * as process from "node:process";
     function registerTimes(year: number, day: number, time1: number, time2: number): void {
         const content: StringMap<number[][]> = JSON.parse(fs.readFileSync(`doc/results.json`).toString());
 
+        content[year] ??= [];
+        content[year][day - 1] ??= [];
         content[year][day - 1][0] ??= -1;
         content[year][day - 1][1] ??= -1;
         if (time1 !== -1) {

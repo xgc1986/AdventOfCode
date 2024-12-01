@@ -72,7 +72,7 @@ export default class Day15 extends Puzzle<Input> {
         let score = 0;
 
         for (let i = 0; i <= spoons[index]; i++) {
-            const newSpoons = spoons.copy();
+            const newSpoons = spoons.copy() as number[];
             newSpoons[index] -= i;
             newSpoons[index + 1] += i;
 
