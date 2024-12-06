@@ -63,16 +63,16 @@ export default class Day5 extends Puzzle<Input> {
         }
 
         for (const book of invalidBooks) {
-            while (!this.isValidBook(book, input.rules)) {
-                for (let i = 0; i < book.length - 1; i++) {
-                    const page = book[i];
-                    const next = book[i + 1];
+            for (let j = 0; j < book.length - 1; j++) {
+                for (let i = j + 1; i < book.length; i++) {
+                    const page = book[j];
+                    const next = book[i];
 
                     const rulesList = input.rules.get(next);
 
                     if (rulesList !== undefined && rulesList.includes(page)) {
-                        book[i] = next;
-                        book[i + 1] = page;
+                        book[i] = page;
+                        book[j] = next;
                     }
                 }
             }
