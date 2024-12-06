@@ -73,7 +73,6 @@ export default class Day5 extends Puzzle<Input> {
                     if (rulesList !== undefined && rulesList.includes(page)) {
                         book[i] = next;
                         book[i + 1] = page;
-                        break;
                     }
                 }
             }
