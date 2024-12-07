@@ -22,7 +22,7 @@ export default class Day7 extends Puzzle<Input> {
     async run1(input: Input): Promise<Solution> {
         let total = 0;
         for (const row of input) {
-            if (this.rec(row, row[1], 2, false)) {
+            if (this.rec2(row, row.length - 1, row[0], false)) {
                 total += row[0];
             }
         }
@@ -33,7 +33,7 @@ export default class Day7 extends Puzzle<Input> {
     async run2(input: Input): Promise<Solution> {
         let total = 0;
         for (const row of input) {
-            if (this.rec(row, row[1], 2, true)) {
+            if (this.rec2(row, row.length - 1, row[0], true)) {
                 total += row[0];
             }
         }
@@ -41,27 +41,25 @@ export default class Day7 extends Puzzle<Input> {
         return total;
     }
 
-    rec(list: number[], currentValue: number, position: number, allowConcat: boolean): boolean {
-        if (currentValue === list[0]) {
+
+    rec2(numbers: number[], pos: number, value: number, allowConcats: boolean) {
+        if (pos == 1) {
+            return value === numbers[1];
+        }
+
+        if (value >= numbers[pos] && this.rec2(numbers, pos - 1, value - numbers[pos], allowConcats)) {
             return true;
         }
 
-        if (position === list.length || currentValue > list[0]) {
-            return false;
-        }
-
-        if (this.rec(list, currentValue + list[position], position + 1, allowConcat)) {
+        if ((value % numbers[pos] == 0) && this.rec2(numbers, pos - 1, value / numbers[pos], allowConcats)) {
             return true;
         }
 
-        if (this.rec(list, currentValue * list[position], position + 1, allowConcat)) {
-            return true;
-        }
-
-        if (allowConcat) {
-            let value = ("" + currentValue + "_" + list[position]).replace("_", "");
-            if (value.length < 16) {
-                return this.rec(list, parseInt(value), position + 1, allowConcat);
+        if (allowConcats) {
+            let newValue = value - numbers[pos];
+            let factor = (Math.pow(10, Math.floor(Math.log10(numbers[pos]))) * 10);
+            if (newValue % factor == 0 && this.rec2(numbers, pos - 1, newValue / factor, allowConcats)) {
+                return true;
             }
         }
 
